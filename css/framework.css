@@ -1,0 +1,276 @@
+/* 框架详情页共享样式 */
+
+/* 英雄区域 */
+.fw-hero {
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fw-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+}
+
+.fw-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fw-logo {
+    font-size: 5rem;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.fw-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.05em;
+}
+
+.fw-hero .fw-desc {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.fw-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.fw-stat {
+    text-align: center;
+}
+
+.fw-stat-num {
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: block;
+}
+
+.fw-stat-label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.fw-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.fw-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+}
+
+.fw-btn-primary {
+    color: #0a0a0a;
+    border: none;
+}
+
+.fw-btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.fw-btn-outline {
+    background: transparent;
+    border: 2px solid;
+}
+
+.fw-btn-outline:hover {
+    transform: translateY(-2px);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    gap: 12px;
+}
+
+/* 内容区域 */
+.fw-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.fw-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.fw-section-desc {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+/* 特性卡片网格 */
+.fw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.fw-card {
+    background: #161616;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.fw-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.fw-card-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.fw-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.fw-card p {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.fw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.fw-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* 代码示例 */
+.fw-code {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto;
+}
+
+.fw-code pre {
+    margin: 0;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* 资源卡片 */
+.fw-resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.fw-resource {
+    background: #161616;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.fw-resource:hover {
+    transform: translateY(-2px);
+}
+
+.fw-resource h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.fw-resource p {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.fw-resource a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* 页脚 */
+.fw-footer {
+    background: #111;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .fw-hero h1 { font-size: 3rem; }
+    .fw-stats { gap: 24px; }
+    .fw-actions { flex-direction: column; align-items: center; }
+    .fw-btn { width: 100%; max-width: 300px; justify-content: center; }
+    .fw-section { padding: 60px 24px; }
+    .fw-section-title { font-size: 2rem; }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svelte 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0f0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255,62,0,0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #ff3e00; }
+        .fw-btn-primary { background: #ff3e00; color: #fff; }
+        .fw-btn-primary:hover { background: #e63600; box-shadow: 0 8px 25px rgba(255,62,0,0.3); }
+        .fw-btn-outline { border-color: #ff3e00; color: #ff3e00; }
+        .fw-btn-outline:hover { background: rgba(255,62,0,0.1); }
+        .back-link:hover { color: #ff3e00; }
+        .fw-card:hover { border-color: rgba(255,62,0,0.2); }
+        .fw-tag { background: rgba(255,62,0,0.1); color: #ff3e00; }
+        .fw-resource a { color: #ff3e00; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🔥</span>
+            <h1>Svelte</h1>
+            <p class="fw-desc">编译时框架的先驱，在构建阶段将组件编译为高效的原生 JavaScript 代码，零运行时开销，极致性能和开发体验。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">81k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">800k+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2016</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Vercel</span><span class="fw-stat-label">维护方</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://svelte.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/sveltejs/svelte" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <div class="fw-grid">
+                <div class="fw-card"><span class="fw-card-icon">⚡</span><h3>编译时框架</h3><p>Svelte 在构建时将组件编译为高效的原生 JS，没有 Virtual DOM，没有运行时框架代码，Bundle 极小。</p><div class="fw-tags"><span class="fw-tag">零运行时</span><span class="fw-tag">编译优化</span><span class="fw-tag">小体积</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">✨</span><h3>Svelte 5 Runes</h3><p>Svelte 5 引入的新响应式系统，使用 $state、$derived、$effect 等 Runes 实现精确的细粒度更新。</p><div class="fw-tags"><span class="fw-tag">$state</span><span class="fw-tag">$derived</span><span class="fw-tag">$effect</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">📝</span><h3>简洁语法</h3><p>更少的样板代码，更接近原生 HTML/CSS/JS。不需要 useEffect、useState 等 Hook，状态变更直接赋值。</p><div class="fw-tags"><span class="fw-tag">简洁模板</span><span class="fw-tag">直觉式</span><span class="fw-tag">少样板</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">🎭</span><h3>过渡动画</h3><p>内置声明式过渡动画系统，通过 transition:fade 等指令轻松实现元素进出动画，无需第三方库。</p><div class="fw-tags"><span class="fw-tag">transition:</span><span class="fw-tag">animate:</span><span class="fw-tag">内置动画</span></div></div>
+            </div>
+        </section>
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <div class="fw-grid">
+                <div class="fw-card"><span class="fw-card-icon">🚀</span><h3>SvelteKit</h3><p>Svelte 官方全栈框架，支持 SSR/SSG/ISR，文件路由，服务端 API，适配多种部署平台。</p><div class="fw-tags"><span class="fw-tag">SSR</span><span class="fw-tag">文件路由</span><span class="fw-tag">适配器</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">🎨</span><h3>UI 组件库</h3><p>社区提供多种高质量组件库，Skeleton 是最流行的 Svelte UI 库，Flowbite Svelte 提供 Tailwind 组件。</p><div class="fw-tags"><span class="fw-tag">Skeleton</span><span class="fw-tag">Flowbite</span><span class="fw-tag">DaisyUI</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">📦</span><h3>状态管理</h3><p>Svelte 内置 Store 机制（Svelte 5 中被 Runes 取代），也可以使用 Nanostores 等框架无关方案。</p><div class="fw-tags"><span class="fw-tag">writable</span><span class="fw-tag">readable</span><span class="fw-tag">Nanostores</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">🔍</span><h3>数据获取</h3><p>SvelteKit 内置 load 函数处理数据加载，也可以使用 TanStack Query 等通用方案。</p><div class="fw-tags"><span class="fw-tag">load()</span><span class="fw-tag">Form Actions</span><span class="fw-tag">TanStack Query</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">🧪</span><h3>测试工具</h3><p>Vitest 作为单元测试，Playwright 进行 E2E 测试，Storybook 用于组件可视化测试。</p><div class="fw-tags"><span class="fw-tag">Vitest</span><span class="fw-tag">Playwright</span><span class="fw-tag">Storybook</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon">🤖</span><h3>Svelte AI</h3><p>Svelte 团队正在探索 AI 辅助开发，SvelteLab 提供在线 REPL，社区工具日益丰富。</p><div class="fw-tags"><span class="fw-tag">SvelteLab</span><span class="fw-tag">REPL</span><span class="fw-tag">AI集成</span></div></div>
+            </div>
+        </section>
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code"><pre><code>&lt;!-- Svelte 5 组件示例 --&gt;
+&lt;script&gt;
+  let count = $state(0);
+  let double = $derived(count * 2);
+
+  function increment() {
+    count += 1;
+  }
+&lt;/script&gt;
+
+&lt;h1&gt;计数: {count}&lt;/h1&gt;
+&lt;p&gt;双倍: {double}&lt;/p&gt;
+&lt;button onclick={increment}&gt;+1&lt;/button&gt;
+
+&lt;style&gt;
+  button {
+    background: #ff3e00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+&lt;/style&gt;</code></pre></div>
+        </section>
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource"><h4>官方教程</h4><p>交互式教程，从基础到高级，非常适合入门。</p><a href="https://svelte.dev/tutorial" target="_blank">svelte.dev/tutorial →</a></div>
+                <div class="fw-resource"><h4>SvelteKit 文档</h4><p>SvelteKit 全栈框架官方文档。</p><a href="https://svelte.dev/docs/kit" target="_blank">SvelteKit Docs →</a></div>
+                <div class="fw-resource"><h4>Svelte 社区</h4><p>Discord 社区和 Reddit 讨论区。</p><a href="https://svelte.dev/community" target="_blank">svelte.dev/community →</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="fw-footer"><p>Svelte 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#ff3e00;text-decoration:none">返回首页</a></p></footer>
+</body>
+</html>

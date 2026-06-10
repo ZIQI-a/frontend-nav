@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端技术生态导航 | 70+技术领域全览</title>
+    <meta name="description" content="涵盖70+前端技术领域的完整导航，从基础到前沿，包含简要介绍和官方链接">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="site-title">前端技术生态导航</h1>
+            <p class="site-subtitle">70+ 技术领域全览 · 从基础到前沿的完整技术栈</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索技术领域、框架或工具..." class="search-input">
+                <button id="searchButton" class="search-button">搜索</button>
+            </div>
+            <div class="stats">
+                <span class="stat-item">70+ 技术领域</span>
+                <span class="stat-divider">·</span>
+                <span class="stat-item">2000+ 技术工具</span>
+                <span class="stat-divider">·</span>
+                <span class="stat-item">实时更新</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="category-nav">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">全部领域</button>
+                <button class="filter-btn" data-category="basic">基础核心</button>
+                <button class="filter-btn" data-category="framework">框架生态</button>
+                <button class="filter-btn" data-category="engineering">工程化</button>
+                <button class="filter-btn" data-category="visualization">可视化</button>
+                <button class="filter-btn" data-category="crossplatform">跨平台</button>
+                <button class="filter-btn" data-category="ai">AI与智能</button>
+                <button class="filter-btn" data-category="advanced">前沿技术</button>
+            </div>
+        </nav>
+
+        <section class="tech-grid" id="techGrid">
+            <!-- 技术卡片将通过JavaScript动态生成 -->
+        </section>
+
+        <section class="featured-frameworks">
+            <h2 class="section-title">热门框架深度解析</h2>
+            <div class="framework-cards">
+                <a href="pages/react.html" class="framework-card react">
+                    <div class="framework-icon">⚛️</div>
+                    <h3>React</h3>
+                    <p>Facebook开发的用于构建用户界面的JavaScript库</p>
+                    <span class="framework-link">查看详情 →</span>
+                </a>
+                <a href="pages/vue.html" class="framework-card vue">
+                    <div class="framework-icon">💚</div>
+                    <h3>Vue.js</h3>
+                    <p>渐进式JavaScript框架，易学易用，性能出色</p>
+                    <span class="framework-link">查看详情 →</span>
+                </a>
+                <a href="pages/angular.html" class="framework-card angular">
+                    <div class="framework-icon">🅰️</div>
+                    <h3>Angular</h3>
+                    <p>Google维护的完整前端框架，适合大型企业级应用</p>
+                    <span class="framework-link">查看详情 →</span>
+                </a>
+                <a href="pages/svelte.html" class="framework-card svelte">
+                    <div class="framework-icon">🔥</div>
+                    <h3>Svelte</h3>
+                    <p>编译时框架，零运行时开销，极致性能</p>
+                    <span class="framework-link">查看详情 →</span>
+                </a>
+                <a href="pages/nextjs.html" class="framework-card nextjs">
+                    <div class="framework-icon">▲</div>
+                    <h3>Next.js</h3>
+                    <p>React全栈框架，支持SSR、SSG、RSC等现代特性</p>
+                    <span class="framework-link">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="quick-reference">
+            <h2 class="section-title">快速选型参考</h2>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <h3>大型企业管理系统</h3>
+                    <p>React + Ant Design + Webpack + Zustand/Redux</p>
+                </div>
+                <div class="reference-item">
+                    <h3>快速原型/MVP</h3>
+                    <p>Vue 3 + Vite + Vant (移动) / Element Plus (PC)</p>
+                </div>
+                <div class="reference-item">
+                    <h3>静态文档/博客网站</h3>
+                    <p>Next.js (SSG) / Astro / Docusaurus</p>
+                </div>
+                <div class="reference-item">
+                    <h3>跨平台 App</h3>
+                    <p>React Native + Expo (快速) / Flutter (高性能)</p>
+                </div>
+                <div class="reference-item">
+                    <h3>桌面应用</h3>
+                    <p>Tauri (轻量) / Electron (生态大)</p>
+                </div>
+                <div class="reference-item">
+                    <h3>实时协作应用</h3>
+                    <p>Yjs + CRDT + WebSocket</p>
+                </div>
+                <div class="reference-item">
+                    <h3>数据大屏/可视化</h3>
+                    <p>ECharts + Three.js + Tailwind</p>
+                </div>
+                <div class="reference-item">
+                    <h3>B端中后台</h3>
+                    <p>React + Ant Design/Chakra + TanStack Query + Zustand</p>
+                </div>
+                <div class="reference-item">
+                    <h3>小程序</h3>
+                    <p>Taro (多端统一) / uni-app (多端发布) / 原生框架</p>
+                </div>
+                <div class="reference-item">
+                    <h3>个人/独立开发 (2026推荐)</h3>
+                    <p>Next.js 15 (全栈 React + RSC) / Nuxt 3 (Vue) / SvelteKit</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>前端技术生态导航 · 涵盖70个技术领域 · 覆盖从前端基础到前沿应用的完整技术栈</p>
+            <p class="footer-note">数据更新于 2026 年 6 月 · 基于前端技术大汇总文档</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
