@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESLint 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(75, 50, 195, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #4B32C3; }
+        .fw-btn-primary { background: #4B32C3; }
+        .fw-btn-primary:hover { background: #3d29a5; box-shadow: 0 8px 25px rgba(75, 50, 195, 0.3); }
+        .fw-btn-outline { border-color: #4B32C3; color: #4B32C3; }
+        .fw-btn-outline:hover { background: rgba(75, 50, 195, 0.1); }
+        .back-link:hover { color: #4B32C3; }
+        .fw-card:hover { border-color: rgba(75, 50, 195, 0.2); }
+        .fw-tag { background: rgba(75, 50, 195, 0.1); color: #4B32C3; }
+        .fw-resource a { color: #4B32C3; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🔍</span>
+            <h1>ESLint</h1>
+            <p class="fw-desc">JavaScript和TypeScript的静态代码分析工具，帮助开发者发现代码问题，统一代码风格，提升代码质量。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">24k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">40M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2013</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Nicholas C. Zakas</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://eslint.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/eslint/eslint" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">ESLint 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔍</span>
+                    <h3>代码检查</h3>
+                    <p>静态分析JavaScript/TypeScript代码，发现潜在问题。支持语法错误、逻辑错误、最佳实践检查。</p>
+                    <div class="fw-tags"><span class="fw-tag">静态分析</span><span class="fw-tag">错误检测</span><span class="fw-tag">最佳实践</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>代码风格</h3>
+                    <p>统一团队代码风格，支持自动格式化。可与Prettier集成，实现代码格式化和检查一体化。</p>
+                    <div class="fw-tags"><span class="fw-tag">代码风格</span><span class="fw-tag">自动格式化</span><span class="fw-tag">Prettier</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>可扩展性</h3>
+                    <p>插件化架构，支持自定义规则。可扩展支持React、Vue、TypeScript等框架和语言。</p>
+                    <div class="fw-tags"><span class="fw-tag">插件系统</span><span class="fw-tag">自定义规则</span><span class="fw-tag">框架支持</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>自动修复</h3>
+                    <p>支持自动修复部分代码问题。通过--fix参数自动修复格式问题，提升开发效率。</p>
+                    <div class="fw-tags"><span class="fw-tag">自动修复</span><span class="fw-tag">--fix</span><span class="fw-tag">开发效率</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 ESLint 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架插件</h3>
+                    <p>eslint-plugin-react、eslint-plugin-vue等框架插件。提供框架特定的规则和最佳实践。</p>
+                    <div class="fw-tags"><span class="fw-tag">eslint-plugin-react</span><span class="fw-tag">eslint-plugin-vue</span><span class="fw-tag">@angular-eslint</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>TypeScript支持</h3>
+                    <p>@typescript-eslint/parser和@typescript-eslint/eslint-plugin。完整支持TypeScript代码检查。</p>
+                    <div class="fw-tags"><span class="fw-tag">@typescript-eslint</span><span class="fw-tag">类型检查</span><span class="fw-tag">类型安全</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>配置预设</h3>
+                    <p>eslint-config-airbnb、eslint-config-standard等流行配置。快速启用行业最佳实践。</p>
+                    <div class="fw-tags"><span class="fw-tag">eslint-config-airbnb</span><span class="fw-tag">eslint-config-standard</span><span class="fw-tag">最佳实践</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>编辑器集成</h3>
+                    <p>VS Code、WebStorm等编辑器深度集成。实时显示错误和警告，支持保存时自动修复。</p>
+                    <div class="fw-tags"><span class="fw-tag">VS Code</span><span class="fw-tag">WebStorm</span><span class="fw-tag">实时检查</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>构建工具集成</h3>
+                    <p>Webpack、Vite、Rollup等构建工具集成。在构建过程中进行代码检查，确保代码质量。</p>
+                    <div class="fw-tags"><span class="fw-tag">eslint-loader</span><span class="fw-tag">vite-plugin-eslint</span><span class="fw-tag">构建检查</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>CI/CD集成</h3>
+                    <p>GitHub Actions、GitLab CI等CI/CD集成。在代码提交前自动检查，确保代码质量。</p>
+                    <div class="fw-tags"><span class="fw-tag">GitHub Actions</span><span class="fw-tag">GitLab CI</span><span class="fw-tag">代码质量</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装ESLint
+npm install eslint --save-dev
+
+# 初始化ESLint配置
+npx eslint --init
+
+# 检查代码
+npx eslint src/
+
+# 自动修复代码
+npx eslint src/ --fix
+
+# 检查单个文件
+npx eslint src/index.js</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// .eslintrc.js
+module.exports = {
+    env: {
+        browser: true,
+        es2021: true,
+        node: true
+    },
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended'
+    ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module'
+    },
+    plugins: ['react', '@typescript-eslint'],
+    rules: {
+        'indent': ['error', 2],
+        'linebreak-style': ['error', 'unix'],
+        'quotes': ['error', 'single'],
+        'semi': ['error', 'never'],
+        'react/react-in-jsx-scope': 'off'
+    }
+};</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的规则参考、配置指南和插件文档。</p>
+                    <a href="https://eslint.org/docs/latest/" target="_blank">eslint.org/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>ESLint GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/eslint/eslint" target="_blank">github.com/eslint/eslint →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>ESLint规则浏览器</h4>
+                    <p>在线浏览所有ESLint规则和配置。</p>
+                    <a href="https://eslint.org/docs/latest/rules/" target="_blank">Rules →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Awesome ESLint</h4>
+                    <p>社区维护的ESLint资源大全。</p>
+                    <a href="https://github.com/dustinspecker/awesome-eslint" target="_blank">Awesome ESLint →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他工具对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Prettier</h3>
+                    <p>ESLint检查代码质量和风格。Prettier专注代码格式化。两者可集成，实现代码检查和格式化一体化。</p>
+                    <div class="fw-tags"><span class="fw-tag">代码质量</span><span class="fw-tag">代码格式化</span><span class="fw-tag">集成</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs TSLint</h3>
+                    <p>ESLint支持JavaScript和TypeScript。TSLint仅支持TypeScript，已废弃，推荐使用ESLint。</p>
+                    <div class="fw-tags"><span class="fw-tag">语言支持</span><span class="fw-tag">维护状态</span><span class="fw-tag">推荐</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs JSHint</h3>
+                    <p>ESLint插件化架构，可扩展性强。JSHint配置简单，但功能较少，已不活跃维护。</p>
+                    <div class="fw-tags"><span class="fw-tag">可扩展性</span><span class="fw-tag">功能丰富度</span><span class="fw-tag">维护状态</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>ESLint 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#4B32C3;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deno 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.3) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #70FFAF; }
+        .fw-btn-primary { background: #70FFAF; color: #000; }
+        .fw-btn-primary:hover { background: #60ef9f; box-shadow: 0 8px 25px rgba(112, 255, 175, 0.3); }
+        .fw-btn-outline { border-color: #70FFAF; color: #70FFAF; }
+        .fw-btn-outline:hover { background: rgba(112, 255, 175, 0.1); }
+        .back-link:hover { color: #70FFAF; }
+        .fw-card:hover { border-color: rgba(112, 255, 175, 0.2); }
+        .fw-tag { background: rgba(112, 255, 175, 0.1); color: #70FFAF; }
+        .fw-resource a { color: #70FFAF; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🦕</span>
+            <h1>Deno</h1>
+            <p class="fw-desc">安全的JavaScript/TypeScript运行时，内置工具链。由Node.js创始人Ryan Dahl打造。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">96k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2018</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Deno Land</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://deno.land/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/denoland/deno" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Deno 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🔒 默认安全</h3>
+                    <p>默认无权限运行，需显式授权文件、网络、环境变量等访问</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 原生TypeScript</h3>
+                    <p>无需配置，直接运行TypeScript，内置类型检查</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔗 URL导入</h3>
+                    <p>支持从URL直接导入模块，无需node_modules</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🛠️ 内置工具</h3>
+                    <p>内置格式化、测试、打包、文档生成等开发工具</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ Web标准API</h3>
+                    <p>使用Web标准API（fetch、WebSocket等），减少学习成本</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🚀 现代JavaScript</h3>
+                    <p>支持Top-level await、ES模块、异步迭代等现代特性</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Deno 核心模块和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Deno Deploy</h3>
+                    <p>边缘计算平台，全球部署Deno应用</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">部署</span>
+                        <span class="fw-tag">边缘计算</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Fresh</h3>
+                    <p>Deno全栈框架，零运行时开销</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">框架</span>
+                        <span class="fw-tag">全栈</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>JSR</h3>
+                    <p>Deno官方包注册表，支持TypeScript</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">包管理</span>
+                        <span class="fw-tag">注册表</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Deno KV</h3>
+                    <p>全球分布式键值数据库</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">数据库</span>
+                        <span class="fw-tag">键值存储</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Deno
+# macOS/Linux
+curl -fsSL https://deno.land/install.sh | sh
+
+# Windows (PowerShell)
+irm https://deno.land/install.ps1 | iex
+
+# 创建TypeScript文件
+echo 'console.log("Hello from Deno!");' > main.ts
+
+# 运行TypeScript
+deno run main.ts
+
+# 运行并授权文件访问
+deno run --allow-read main.ts
+
+# 运行Web服务器
+deno run --allow-net server.ts</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// deno.json
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net main.ts",
+    "test": "deno test --allow-read",
+    "fmt": "deno fmt",
+    "lint": "deno lint"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.224.0/",
+    "oak": "https://deno.land/x/oak@v12.6.1/mod.ts"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["deno.window"]
+  }
+}
+
+// server.ts - Oak Web服务器
+import { Application, Router } from "oak";
+
+const router = new Router();
+router.get("/", (ctx) => {
+  ctx.response.body = { message: "Hello from Deno!" };
+});
+
+const app = new Application();
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+console.log("Server running on http://localhost:8000");
+await app.listen({ port: 8000 });</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://deno.land/manual" target="_blank">Deno 官方手册</a></li>
+                        <li><a href="https://github.com/denoland/deno" target="_blank">Deno GitHub仓库</a></li>
+                        <li><a href="https://deno.land/std" target="_blank">Deno 标准库</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://deno.land/manual@v1.40.0/introduction" target="_blank">入门指南</a></li>
+                        <li><a href="https://deno.land/manual@v1.40.0/basics" target="_blank">基础教程</a></li>
+                        <li><a href="https://deno.land/manual@v1.40.0/typescript" target="_blank">TypeScript支持</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他运行时对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Node.js</h3>
+                    <p>Deno默认安全、原生TypeScript、URL导入。Node.js生态更成熟、兼容性更好。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Bun</h3>
+                    <p>Deno注重安全和标准，Bun注重速度和Node兼容性。两者都支持TypeScript。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

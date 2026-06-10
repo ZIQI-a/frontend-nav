@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day.js 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #2e1a0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 107, 0, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #FF6B00; }
+        .fw-btn-primary { background: #FF6B00; }
+        .fw-btn-primary:hover { background: #e55f00; box-shadow: 0 8px 25px rgba(255, 107, 0, 0.3); }
+        .fw-btn-outline { border-color: #FF6B00; color: #FF6B00; }
+        .fw-btn-outline:hover { background: rgba(255, 107, 0, 0.1); }
+        .back-link:hover { color: #FF6B00; }
+        .fw-card:hover { border-color: rgba(255, 107, 0, 0.2); }
+        .fw-tag { background: rgba(255, 107, 0, 0.1); color: #FF6B00; }
+        .fw-resource a { color: #FF6B00; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">⏰</span>
+            <h1>Day.js</h1>
+            <p class="fw-desc">轻量级JavaScript日期库，Moment.js的替代品。仅2KB，API完全兼容Moment.js。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">46k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">25M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2018</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">iamkun</span><span class="fw-stat-label">作者</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://day.js.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/iamkun/dayjs" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Day.js 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>📦 极小体积</h3>
+                    <p>仅2KB（gzip），是Moment.js的1/40大小</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔄 Moment.js兼容</h3>
+                    <p>API完全兼容Moment.js，迁移成本极低</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔒 不可变性</h3>
+                    <p>所有操作返回新实例，避免副作用</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🌍 国际化</h3>
+                    <p>支持40+语言，按需加载语言包</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔌 插件系统</h3>
+                    <p>模块化设计，功能按需扩展</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 高性能</h3>
+                    <p>性能优于Moment.js和原生Date对象</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Day.js 核心插件和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>相对时间插件</h3>
+                    <p>显示相对时间（如"3小时前"）</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">relativeTime</span>
+                        <span class="fw-tag">时间</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>持续时间插件</h3>
+                    <p>处理时间间隔和持续时间</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">duration</span>
+                        <span class="fw-tag">间隔</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>时区插件</h3>
+                    <p>处理时区转换和时区特定日期</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">timezone</span>
+                        <span class="fw-tag">时区</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>高级格式插件</h3>
+                    <p>支持更复杂的日期格式化</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">advancedFormat</span>
+                        <span class="fw-tag">格式化</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Day.js
+npm install dayjs
+
+# 基础用法
+import dayjs from 'dayjs'
+
+dayjs() // 当前时间
+dayjs('2024-01-01') // 指定日期
+dayjs(1704067200000) // 时间戳
+
+# 格式化
+dayjs().format('YYYY-MM-DD HH:mm:ss')
+// => '2024-01-01 12:00:00'
+
+# 相对时间
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
+dayjs('2024-01-01').fromNow()
+// => '3个月前'
+
+# 国际化
+import 'dayjs/locale/zh-cn'
+dayjs.locale('zh-cn')</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 插件使用示例
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import duration from 'dayjs/plugin/duration'
+import isLeapYear from 'dayjs/plugin/isLeapYear'
+import weekOfYear from 'dayjs/plugin/weekOfYear'
+
+// 扩展插件
+dayjs.extend(relativeTime)
+dayjs.extend(duration)
+dayjs.extend(isLeapYear)
+dayjs.extend(weekOfYear)
+
+// 相对时间
+dayjs('2024-01-01').fromNow() // '3个月前'
+dayjs('2024-01-01').toNow() // '3个月后'
+
+// 持续时间
+const dur = dayjs.duration(2, 'hours')
+dur.humanize() // '2小时'
+
+// 闰年判断
+dayjs('2024-01-01').isLeapYear() // true
+
+// 一年中的第几周
+dayjs('2024-01-01').week() // 1
+
+// 日期计算
+dayjs().add(7, 'day') // 7天后
+dayjs().subtract(1, 'month') // 1个月前
+dayjs().startOf('month') // 本月第一天
+dayjs().endOf('year') // 今年最后一天
+
+// 日期比较
+dayjs('2024-01-01').isBefore('2024-02-01') // true
+dayjs('2024-01-01').isAfter('2023-12-31') // true
+dayjs('2024-01-01').isSame('2024-01-01') // true</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://day.js.org/docs/en/installation/installation" target="_blank">Day.js 官方文档</a></li>
+                        <li><a href="https://github.com/iamkun/dayjs" target="_blank">Day.js GitHub仓库</a></li>
+                        <li><a href="https://day.js.org/docs/en/plugin/plugin" target="_blank">插件文档</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://day.js.org/docs/en/parse/parse" target="_blank">解析日期</a></li>
+                        <li><a href="https://day.js.org/docs/en/display/display" target="_blank">显示日期</a></li>
+                        <li><a href="https://day.js.org/docs/en/manipulate/manipulate" target="_blank">操作日期</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他日期库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Moment.js</h3>
+                    <p>Day.js仅2KB，不可变，现代API。Moment.js体积大，已停止维护。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs date-fns</h3>
+                    <p>Day.js面向对象API，date-fns函数式API。Day.js更小，date-fns更灵活。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

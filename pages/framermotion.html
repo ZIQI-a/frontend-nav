@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer Motion 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #2e1a0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 45, 85, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #FF2D55; }
+        .fw-btn-primary { background: #FF2D55; }
+        .fw-btn-primary:hover { background: #f01d45; box-shadow: 0 8px 25px rgba(255, 45, 85, 0.3); }
+        .fw-btn-outline { border-color: #FF2D55; color: #FF2D55; }
+        .fw-btn-outline:hover { background: rgba(255, 45, 85, 0.1); }
+        .back-link:hover { color: #FF2D55; }
+        .fw-card:hover { border-color: rgba(255, 45, 85, 0.2); }
+        .fw-tag { background: rgba(255, 45, 85, 0.1); color: #FF2D55; }
+        .fw-resource a { color: #FF2D55; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">✨</span>
+            <h1>Framer Motion</h1>
+            <p class="fw-desc">React的动画库，简单且强大的动画API。生产级动效的最佳选择。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">23k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2018</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Framer</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://www.framer.com/motion/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/framer/motion" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Framer Motion 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🎯 声明式API</h3>
+                    <p>简单的属性配置即可实现复杂动画，无需编写动画逻辑</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🚀 物理动画</h3>
+                    <p>内置弹簧、惯性等物理动画引擎，动画更自然</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔄 布局动画</h3>
+                    <p>自动布局动画，无需手动计算位置变化</p>
+                </div>
+                <div class="fw-card">
+                    <h3>👋 手势支持</h3>
+                    <p>内置拖拽、点击、悬停等手势识别</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📱 退出动画</h3>
+                    <p>组件卸载时的退出动画，体验更流畅</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 性能优化</h3>
+                    <p>硬件加速，60fps流畅动画</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Framer Motion 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Motion One</h3>
+                    <p>轻量级动画库，支持所有框架</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">轻量级</span>
+                        <span class="fw-tag">框架无关</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Framer</h3>
+                    <p>可视化网站构建工具，内置Motion动画</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">设计工具</span>
+                        <span class="fw-tag">可视化</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>React Spring</h3>
+                    <p>基于物理的动画库，与Motion互补</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">物理动画</span>
+                        <span class="fw-tag">React</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>AutoAnimate</h3>
+                    <p>零配置动画库，自动添加过渡效果</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">零配置</span>
+                        <span class="fw-tag">自动</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Framer Motion
+npm install framer-motion
+
+# 基础用法
+import { motion } from "framer-motion"
+
+function App() {
+  return (
+    &lt;motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    &gt;
+      Hello Framer Motion!
+    &lt;/motion.div&gt;
+  )
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 动画变体
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  },
+  hover: {
+    scale: 1.05,
+    transition: { duration: 0.2 }
+  }
+}
+
+// 列表动画
+const listVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 }
+}
+
+function AnimatedList() {
+  return (
+    &lt;motion.ul
+      variants={listVariants}
+      initial="hidden"
+      animate="visible"
+    &gt;
+      {items.map((item, i) =&gt; (
+        &lt;motion.li key={i} variants={itemVariants}&gt;
+          {item}
+        &lt;/motion.li&gt;
+      ))}
+    &lt;/motion.ul&gt;
+  )
+}
+
+// 布局动画
+function LayoutAnimation() {
+  const [isOpen, setIsOpen] = useState(false)
+  
+  return (
+    &lt;motion.div layout&gt;
+      &lt;motion.button onClick={() =&gt; setIsOpen(!isOpen)}&gt;
+        Toggle
+      &lt;/motion.button&gt;
+      &lt;AnimatePresence&gt;
+        {isOpen && (
+          &lt;motion.div
+            layout
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+          &gt;
+            Content
+          &lt;/motion.div&gt;
+        )}
+      &lt;/AnimatePresence&gt;
+    &lt;/motion.div&gt;
+  )
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://www.framer.com/motion/introduction/" target="_blank">Framer Motion 官方文档</a></li>
+                        <li><a href="https://github.com/framer/motion" target="_blank">Framer Motion GitHub仓库</a></li>
+                        <li><a href="https://www.framer.com/motion/animation/" target="_blank">动画指南</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://www.framer.com/motion/quick-start/" target="_blank">快速入门</a></li>
+                        <li><a href="https://www.framer.com/motion/variants/" target="_blank">动画变体</a></li>
+                        <li><a href="https://www.framer.com/motion/gestures/" target="_blank">手势动画</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他动画库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs React Spring</h3>
+                    <p>Framer Motion声明式API更简单，React Spring物理动画更强大。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs GSAP</h3>
+                    <p>Framer Motion专为React设计，GSAP更通用但学习曲线更陡。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

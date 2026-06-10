@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zod 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a1a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #3B82F6; }
+        .fw-btn-primary { background: #3B82F6; }
+        .fw-btn-primary:hover { background: #2563EB; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3); }
+        .fw-btn-outline { border-color: #3B82F6; color: #3B82F6; }
+        .fw-btn-outline:hover { background: rgba(59, 130, 246, 0.1); }
+        .back-link:hover { color: #3B82F6; }
+        .fw-card:hover { border-color: rgba(59, 130, 246, 0.2); }
+        .fw-tag { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+        .fw-resource a { color: #3B82F6; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🛡️</span>
+            <h1>Zod</h1>
+            <p class="fw-desc">TypeScript优先的模式验证库。类型安全，零依赖，运行时验证。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">33k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">15M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2020</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Colin McDonnell</span><span class="fw-stat-label">作者</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://zod.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/colinhacks/zod" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Zod 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🛡️ TypeScript优先</h3>
+                    <p>专为TypeScript设计，类型推断完美</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 零依赖</h3>
+                    <p>无外部依赖，体积小，兼容性好</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔍 运行时验证</h3>
+                    <p>同时提供编译时类型和运行时验证</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎯 声明式API</h3>
+                    <p>简洁的链式API，易于阅读和维护</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 模块化设计</h3>
+                    <p>支持自定义错误消息和验证逻辑</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔄 类型推断</h3>
+                    <p>从schema自动推断TypeScript类型</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Zod 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Zodios</h3>
+                    <p>基于Zod的API客户端，类型安全</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">API</span>
+                        <span class="fw-tag">客户端</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>React Hook Form + Zod</h3>
+                    <p>与React Hook Form完美集成</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">表单</span>
+                        <span class="fw-tag">验证</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>tRPC + Zod</h3>
+                    <p>全栈类型安全的RPC框架</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">全栈</span>
+                        <span class="fw-tag">类型安全</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Prisma + Zod</h3>
+                    <p>数据库schema验证和类型生成</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">数据库</span>
+                        <span class="fw-tag">ORM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Zod
+npm install zod
+
+# 基础用法
+import { z } from 'zod'
+
+// 定义schema
+const userSchema = z.object({
+  name: z.string().min(2),
+  email: z.string().email(),
+  age: z.number().min(18).optional(),
+})
+
+// 类型推断
+type User = z.infer<typeof userSchema>
+// => { name: string; email: string; age?: number | undefined }
+
+// 验证数据
+const result = userSchema.safeParse({
+  name: 'John',
+  email: 'john@example.com',
+  age: 25,
+})
+
+if (result.success) {
+  console.log(result.data) // 验证通过的数据
+} else {
+  console.error(result.error) // 验证错误
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 常用类型验证
+import { z } from 'zod'
+
+// 字符串验证
+const stringSchema = z.string()
+  .min(5, '至少5个字符')
+  .max(50, '最多50个字符')
+  .email('请输入有效的邮箱地址')
+
+// 数字验证
+const numberSchema = z.number()
+  .min(0, '不能小于0')
+  .max(100, '不能大于100')
+  .int('必须是整数')
+
+// 数组验证
+const arraySchema = z.array(z.string())
+  .min(1, '至少需要一个元素')
+  .max(10, '最多10个元素')
+
+// 对象验证
+const addressSchema = z.object({
+  street: z.string(),
+  city: z.string(),
+  zipCode: z.string().regex(/^\d{5}$/, '邮编格式错误'),
+  country: z.string().default('中国'),
+})
+
+// 联合类型
+const statusSchema = z.union([
+  z.literal('active'),
+  z.literal('inactive'),
+  z.literal('pending'),
+])
+
+// 枚举类型
+const roleSchema = z.enum(['admin', 'user', 'guest'])
+
+// 可选和可空
+const optionalSchema = z.string().optional()
+const nullableSchema = z.string().nullable()
+const nullishSchema = z.string().nullish() // optional + nullable
+
+// 自定义验证
+const passwordSchema = z.string()
+  .min(8, '密码至少8位')
+  .regex(/[A-Z]/, '需要包含大写字母')
+  .regex(/[0-9]/, '需要包含数字')
+  .regex(/[^A-Za-z0-9]/, '需要包含特殊字符')
+
+// 表单验证示例
+const loginSchema = z.object({
+  username: z.string().min(3, '用户名至少3个字符'),
+  password: passwordSchema,
+  rememberMe: z.boolean().default(false),
+})
+
+type LoginFormData = z.infer<typeof loginSchema></code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://zod.dev/" target="_blank">Zod 官方文档</a></li>
+                        <li><a href="https://github.com/colinhacks/zod" target="_blank">Zod GitHub仓库</a></li>
+                        <li><a href="https://zod.dev/?id=installation" target="_blank">安装指南</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://zod.dev/?id=basic-usage" target="_blank">基础用法</a></li>
+                        <li><a href="https://zod.dev/?id=primitives" target="_blank">基本类型</a></li>
+                        <li><a href="https://zod.dev/?id=objects" target="_blank">对象类型</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他验证库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Yup</h3>
+                    <p>ZodTypeScript优先，类型推断更好。Yup更成熟，社区更大。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Joi</h3>
+                    <p>Zod更轻量，TypeScript支持更好。Joi更重，功能更全但体积大。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

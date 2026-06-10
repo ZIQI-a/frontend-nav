@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinia 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(66, 184, 131, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #42B883; }
+        .fw-btn-primary { background: #42B883; }
+        .fw-btn-primary:hover { background: #3aa575; box-shadow: 0 8px 25px rgba(66, 184, 131, 0.3); }
+        .fw-btn-outline { border-color: #42B883; color: #42B883; }
+        .fw-btn-outline:hover { background: rgba(66, 184, 131, 0.1); }
+        .back-link:hover { color: #42B883; }
+        .fw-card:hover { border-color: rgba(66, 184, 131, 0.2); }
+        .fw-tag { background: rgba(66, 184, 131, 0.1); color: #42B883; }
+        .fw-resource a { color: #42B883; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🍍</span>
+            <h1>Pinia</h1>
+            <p class="fw-desc">Vue的官方状态管理库，类型安全且轻量。Vuex的继任者，提供更简单的API和更好的TypeScript支持。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">12k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">3M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2019</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Vue.js</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://pinia.vuejs.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/vuejs/pinia" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Pinia 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🍍</span>
+                    <h3>Vue官方</h3>
+                    <p>Vue.js官方推荐的状态管理库。Vuex的继任者，与Vue 3深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vue官方</span><span class="fw-tag">Vuex继任者</span><span class="fw-tag">Vue 3</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>类型安全</h3>
+                    <p>完整的TypeScript支持。类型推断、类型检查，开发体验极佳。</p>
+                    <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">类型安全</span><span class="fw-tag">类型推断</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>轻量级</h3>
+                    <p>核心库仅1KB，压缩后更小。无依赖，性能优异。</p>
+                    <div class="fw-tags"><span class="fw-tag">1KB</span><span class="fw-tag">轻量级</span><span class="fw-tag">无依赖</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>简单API</h3>
+                    <p>API设计简单直观。无mutations，直接修改状态，学习成本低。</p>
+                    <div class="fw-tags"><span class="fw-tag">简单API</span><span class="fw-tag">无mutations</span><span class="fw-tag">学习成本低</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Pinia 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>Vue集成</h3>
+                    <p>与Vue 3深度集成。支持Composition API和Options API。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vue 3</span><span class="fw-tag">Composition API</span><span class="fw-tag">Options API</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>开发者工具</h3>
+                    <p>Vue DevTools集成。查看状态、时间旅行调试、状态快照。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vue DevTools</span><span class="fw-tag">时间旅行</span><span class="fw-tag">状态快照</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>持久化</h3>
+                    <p>pinia-plugin-persistedstate支持状态持久化。可存储到localStorage等。</p>
+                    <div class="fw-tags"><span class="fw-tag">persistedstate</span><span class="fw-tag">localStorage</span><span class="fw-tag">持久化</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>Nuxt集成</h3>
+                    <p>与Nuxt 3深度集成。支持SSR、自动导入等特性。</p>
+                    <div class="fw-tags"><span class="fw-tag">Nuxt 3</span><span class="fw-tag">SSR</span><span class="fw-tag">自动导入</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>插件系统</h3>
+                    <p>支持自定义插件。可扩展Pinia功能，添加中间件等。</p>
+                    <div class="fw-tags"><span class="fw-tag">插件系统</span><span class="fw-tag">自定义插件</span><span class="fw-tag">中间件</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>测试支持</h3>
+                    <p>易于测试，可单独测试store。与Vitest、Jest等测试框架集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">测试支持</span><span class="fw-tag">Vitest</span><span class="fw-tag">Jest</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Pinia
+npm install pinia
+
+# 在Vue中使用
+// main.js
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import App from "./App.vue";
+
+const pinia = createPinia();
+const app = createApp(App);
+
+app.use(pinia);
+app.mount("#app");
+
+# 创建Store
+// stores/counter.js
+import { defineStore } from "pinia";
+
+export const useCounterStore = defineStore("counter", {
+    state: () => ({
+        count: 0
+    }),
+    getters: {
+        doubleCount: (state) => state.count * 2
+    },
+    actions: {
+        increment() {
+            this.count++;
+        },
+        decrement() {
+            this.count--;
+        }
+    }
+});
+
+# 在组件中使用
+import { useCounterStore } from "@/stores/counter";
+import { storeToRefs } from "pinia";
+
+export default {
+    setup() {
+        const counter = useCounterStore();
+        const { count, doubleCount } = storeToRefs(counter);
+        
+        return {
+            count,
+            doubleCount,
+            increment: counter.increment,
+            decrement: counter.decrement
+        };
+    }
+};</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// stores/user.js - 完整Store配置
+import { defineStore } from "pinia";
+
+export const useUserStore = defineStore("user", {
+    // 状态
+    state: () => ({
+        user: null,
+        token: null,
+        loading: false,
+        error: null
+    }),
+    
+    // 计算属性
+    getters: {
+        isLoggedIn: (state) => !!state.token,
+        userName: (state) => state.user?.name || "Guest"
+    },
+    
+    // 操作
+    actions: {
+        // 登录
+        async login(credentials) {
+            this.loading = true;
+            this.error = null;
+            
+            try {
+                const response = await fetch("/api/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(credentials)
+                });
+                
+                const data = await response.json();
+                
+                this.user = data.user;
+                this.token = data.token;
+                
+                // 持久化token
+                localStorage.setItem("token", data.token);
+            } catch (error) {
+                this.error = error.message;
+            } finally {
+                this.loading = false;
+            }
+        },
+        
+        // 登出
+        logout() {
+            this.user = null;
+            this.token = null;
+            localStorage.removeItem("token");
+        },
+        
+        // 获取用户信息
+        async fetchUser() {
+            if (!this.token) return;
+            
+            this.loading = true;
+            
+            try {
+                const response = await fetch("/api/user", {
+                    headers: { Authorization: `Bearer ${this.token}` }
+                });
+                
+                this.user = await response.json();
+            } catch (error) {
+                this.error = error.message;
+                this.logout();
+            } finally {
+                this.loading = false;
+            }
+        }
+    }
+});
+
+// 持久化插件配置
+// main.js
+import { createPinia } from "pinia";
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
+
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、指南和最佳实践。</p>
+                    <a href="https://pinia.vuejs.org/" target="_blank">pinia.vuejs.org →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Pinia GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/vuejs/pinia" target="_blank">github.com/vuejs/pinia →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Pinia教程</h4>
+                    <p>官方教程和示例项目。</p>
+                    <a href="https://pinia.vuejs.org/cookbook/" target="_blank">Cookbook →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Pinia vs Vuex</h4>
+                    <p>Pinia与Vuex的对比和迁移指南。</p>
+                    <a href="https://pinia.vuejs.org/introduction.html" target="_blank">Introduction →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他状态管理库对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Vuex</h3>
+                    <p>Pinia更简单，无mutations。Vuex更成熟，适合大型项目，但较复杂。</p>
+                    <div class="fw-tags"><span class="fw-tag">简单</span><span class="fw-tag">无mutations</span><span class="fw-tag">成熟</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Redux</h3>
+                    <p>Pinia专为Vue设计，更简单。Redux通用，生态更成熟，但较复杂。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vue专用</span><span class="fw-tag">通用</span><span class="fw-tag">生态</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Zustand</h3>
+                    <p>Pinia专为Vue设计，与Vue集成更紧密。Zustand通用，支持多框架。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vue专用</span><span class="fw-tag">通用</span><span class="fw-tag">集成度</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Pinia 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#42B883;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

@@ -39,6 +39,7 @@
     --color-angular: #dd0031;
     --color-svelte: #ff3e00;
     --color-nextjs: #ffffff;
+    --color-vite: #bd34fe;
     
     /* 间距与尺寸 */
     --radius-sm: 8px;
@@ -256,7 +257,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition-normal);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
 }
@@ -443,6 +444,10 @@ body {
     --fw-color: var(--color-nextjs);
 }
 
+.framework-card.vite {
+    --fw-color: var(--color-vite);
+}
+
 .framework-icon {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -471,6 +476,48 @@ body {
 
 .framework-card:hover .framework-link {
     letter-spacing: 0.05em;
+}
+
+/* 热门技术快速访问 */
+.quick-access {
+    margin-bottom: 60px;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quick-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.quick-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
 }
 
 /* 快速参考部分 */
@@ -594,6 +641,15 @@ body {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .quick-links {
+        gap: 8px;
+    }
+    
+    .quick-link {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
     
     .framework-cards {

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #ffffff; }
+        .fw-btn-primary { background: #ffffff; color: #0a0a0a; }
+        .fw-btn-primary:hover { background: #e0e0e0; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); }
+        .fw-btn-outline { border-color: #ffffff; color: #ffffff; }
+        .fw-btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
+        .back-link:hover { color: #ffffff; }
+        .fw-card:hover { border-color: rgba(255, 255, 255, 0.2); }
+        .fw-tag { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+        .fw-resource a { color: #ffffff; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🎨</span>
+            <h1>Three.js</h1>
+            <p class="fw-desc">JavaScript 3D库，在Web浏览器中创建和显示3D图形。基于WebGL，提供高级3D图形API。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">100k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2010</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Ricardo Cabello</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://threejs.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/mrdoob/three.js" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Three.js 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>3D渲染引擎</h3>
+                    <p>基于WebGL的3D渲染引擎，支持实时光线追踪、阴影、后处理等高级渲染特性。</p>
+                    <div class="fw-tags"><span class="fw-tag">WebGL</span><span class="fw-tag">光线追踪</span><span class="fw-tag">阴影</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>几何体和材质</h3>
+                    <p>提供丰富的几何体和材质系统。支持PBR材质、法线贴图、环境贴图等。</p>
+                    <div class="fw-tags"><span class="fw-tag">几何体</span><span class="fw-tag">PBR材质</span><span class="fw-tag">贴图</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>动画系统</h3>
+                    <p>强大的动画系统，支持骨骼动画、变形动画、关键帧动画等。</p>
+                    <div class="fw-tags"><span class="fw-tag">骨骼动画</span><span class="fw-tag">变形动画</span><span class="fw-tag">关键帧</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>加载器</h3>
+                    <p>支持GLTF、OBJ、FBX、STL等3D模型格式。可加载各种3D资源。</p>
+                    <div class="fw-tags"><span class="fw-tag">GLTF</span><span class="fw-tag">OBJ</span><span class="fw-tag">FBX</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Three.js 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>React Three Fiber</h3>
+                    <p>React的Three.js绑定库。使用JSX语法创建3D场景，与React生态系统深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">@react-three/fiber</span><span class="fw-tag">React</span><span class="fw-tag">JSX</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>Drei</h3>
+                    <p>React Three Fiber的辅助库。提供常用的3D组件和工具，简化3D开发。</p>
+                    <div class="fw-tags"><span class="fw-tag">@react-three/drei</span><span class="fw-tag">组件库</span><span class="fw-tag">工具集</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>Post-processing</h3>
+                    <p>后处理效果库。支持泛光、景深、色调映射等后处理效果。</p>
+                    <div class="fw-tags"><span class="fw-tag">postprocessing</span><span class="fw-tag">泛光</span><span class="fw-tag">景深</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>Cannon.js</h3>
+                    <p>物理引擎集成。支持刚体物理、碰撞检测、关节约束等物理模拟。</p>
+                    <div class="fw-tags"><span class="fw-tag">cannon-es</span><span class="fw-tag">物理引擎</span><span class="fw-tag">碰撞检测</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>Rapier</h3>
+                    <p>Rust编写的物理引擎。性能更好，支持更复杂的物理模拟。</p>
+                    <div class="fw-tags"><span class="fw-tag">@react-three/rapier</span><span class="fw-tag">Rust</span><span class="fw-tag">高性能</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>XR支持</h3>
+                    <p>WebXR支持。可创建VR和AR体验，支持Meta Quest、Apple Vision Pro等设备。</p>
+                    <div class="fw-tags"><span class="fw-tag">WebXR</span><span class="fw-tag">VR</span><span class="fw-tag">AR</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Three.js
+npm install three
+
+# 创建3D场景
+import * as THREE from "three";
+
+// 创建场景
+const scene = new THREE.Scene();
+
+// 创建相机
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+
+// 创建渲染器
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// 创建立方体
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+// 动画循环
+function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
+animate();</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// React Three Fiber示例
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment } from "@react-three/drei";
+import { Physics, RigidBody } from "@react-three/rapier";
+
+function Scene() {
+    return (
+        <Canvas camera={{ position: [0, 0, 5] }}>
+            <ambientLight intensity={0.5} />
+            <pointLight position={[10, 10, 10]} />
+            <Physics>
+                <RigidBody>
+                    <mesh>
+                        <boxGeometry args={[1, 1, 1]} />
+                        <meshStandardMaterial color="orange" />
+                    </mesh>
+                </RigidBody>
+                <RigidBody type="fixed">
+                    <mesh position={[0, -2, 0]}>
+                        <planeGeometry args={[10, 10]} />
+                        <meshStandardMaterial color="lightblue" />
+                    </mesh>
+                </RigidBody>
+            </Physics>
+            <OrbitControls />
+            <Environment preset="city" />
+        </Canvas>
+    );
+}
+
+export default Scene;</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、示例和教程。</p>
+                    <a href="https://threejs.org/docs/" target="_blank">threejs.org/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Three.js GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/mrdoob/three.js" target="_blank">github.com/mrdoob/three.js →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Three.js示例</h4>
+                    <p>官方示例库，包含各种3D效果。</p>
+                    <a href="https://threejs.org/examples/" target="_blank">Examples →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Three.js Journey</h4>
+                    <p>全面的Three.js学习课程。</p>
+                    <a href="https://threejs-journey.com/" target="_blank">threejs-journey.com →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他3D库对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Babylon.js</h3>
+                    <p>Three.js更灵活，社区更大。Babylon.js功能更全面，适合游戏开发。</p>
+                    <div class="fw-tags"><span class="fw-tag">灵活性</span><span class="fw-tag">社区</span><span class="fw-tag">游戏开发</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs A-Frame</h3>
+                    <p>Three.js功能更强大，学习曲线陡峭。A-Frame更简单，适合快速创建VR体验。</p>
+                    <div class="fw-tags"><span class="fw-tag">功能强大</span><span class="fw-tag">简单易用</span><span class="fw-tag">VR</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs PlayCanvas</h3>
+                    <p>Three.js开源免费，社区驱动。PlayCanvas商业引擎，提供可视化编辑器。</p>
+                    <div class="fw-tags"><span class="fw-tag">开源</span><span class="fw-tag">商业</span><span class="fw-tag">可视化编辑器</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Three.js 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#ffffff;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

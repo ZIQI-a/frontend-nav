@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuxt.js 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a1a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(0, 200, 83, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #00C853; }
+        .fw-btn-primary { background: #00C853; }
+        .fw-btn-primary:hover { background: #00b848; box-shadow: 0 8px 25px rgba(0, 200, 83, 0.3); }
+        .fw-btn-outline { border-color: #00C853; color: #00C853; }
+        .fw-btn-outline:hover { background: rgba(0, 200, 83, 0.1); }
+        .back-link:hover { color: #00C853; }
+        .fw-card:hover { border-color: rgba(0, 200, 83, 0.2); }
+        .fw-tag { background: rgba(0, 200, 83, 0.1); color: #00C853; }
+        .fw-resource a { color: #00C853; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">💚</span>
+            <h1>Nuxt.js</h1>
+            <p class="fw-desc">Vue全栈框架，支持SSR/SSG/ISR，开箱即用。构建生产级Vue应用的最佳选择。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">53k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">4M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2016</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">NuxtLabs</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://nuxt.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/nuxt/nuxt" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Nuxt.js 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🚀 零配置启动</h3>
+                    <p>开箱即用的约定式配置，无需复杂配置即可开始开发</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡️ 混合渲染</h3>
+                    <p>支持SSR、SSG、ISR、客户端渲染，按路由灵活配置</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📁 自动路由</h3>
+                    <p>基于文件系统的路由，pages目录自动生成路由</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔧 自动导入</h3>
+                    <p>组合式API、组件、工具函数自动导入，无需手动import</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 服务端API</h3>
+                    <p>内置Nitro服务器引擎，轻松创建API端点</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎨 模块生态</h3>
+                    <p>丰富的官方和社区模块，快速集成各种功能</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Nuxt.js 核心模块和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Nuxt UI</h3>
+                    <p>基于Tailwind CSS的UI组件库</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">UI</span>
+                        <span class="fw-tag">组件库</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Nuxt Content</h3>
+                    <p>基于文件的CMS，支持Markdown、YAML、CSV</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">CMS</span>
+                        <span class="fw-tag">内容管理</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Nuxt Image</h3>
+                    <p>图片优化组件，自动优化和懒加载</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">性能</span>
+                        <span class="fw-tag">图片优化</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Nuxt Auth</h3>
+                    <p>认证模块，支持多种认证策略</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">认证</span>
+                        <span class="fw-tag">安全</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 创建新项目
+npx nuxi@latest init my-app
+
+# 进入项目目录
+cd my-app
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览生产版本
+npm run preview</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// nuxt.config.ts
+export default defineNuxtConfig({
+  // 应用配置
+  app: {
+    head: {
+      title: 'My Nuxt App',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ]
+    }
+  },
+
+  // 模块
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@pinia/nuxt'
+  ],
+
+  // 路由规则（混合渲染）
+  routeRules: {
+    '/': { prerender: true },
+    '/api/**': { cors: true },
+    '/admin/**': { ssr: false }
+  },
+
+  // TypeScript配置
+  typescript: {
+    strict: true
+  },
+
+  // 开发工具
+  devtools: { enabled: true }
+})</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://nuxt.com/docs" target="_blank">Nuxt.js 官方文档</a></li>
+                        <li><a href="https://github.com/nuxt/nuxt" target="_blank">Nuxt.js GitHub仓库</a></li>
+                        <li><a href="https://nuxt.com/modules" target="_blank">Nuxt 模块列表</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://nuxt.com/docs/getting-started/introduction" target="_blank">入门指南</a></li>
+                        <li><a href="https://nuxt.com/docs/guide/concepts" target="_blank">核心概念</a></li>
+                        <li><a href="https://nuxt.com/docs/guide/directory-structure" target="_blank">目录结构</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他框架对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Next.js</h3>
+                    <p>Nuxt专注于Vue生态，Next.js专注于React。Nuxt的自动导入和约定式配置更简洁。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Vue CLI</h3>
+                    <p>Vue CLI是纯客户端SPA工具，Nuxt提供SSR、SSG等现代渲染方案。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

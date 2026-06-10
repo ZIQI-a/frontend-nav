@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypress 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(23, 32, 44, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #17202C; }
+        .fw-btn-primary { background: #17202C; }
+        .fw-btn-primary:hover { background: #0e1520; box-shadow: 0 8px 25px rgba(23, 32, 44, 0.3); }
+        .fw-btn-outline { border-color: #17202C; color: #17202C; }
+        .fw-btn-outline:hover { background: rgba(23, 32, 44, 0.1); }
+        .back-link:hover { color: #17202C; }
+        .fw-card:hover { border-color: rgba(23, 32, 44, 0.2); }
+        .fw-tag { background: rgba(23, 32, 44, 0.1); color: #17202C; }
+        .fw-resource a { color: #17202C; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🌲</span>
+            <h1>Cypress</h1>
+            <p class="fw-desc">端到端测试框架，适合现代Web应用。在浏览器中运行，测试真实用户交互。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">47k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2014</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Brian Mann</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://www.cypress.io/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/cypress-io/cypress" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Cypress 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌲</span>
+                    <h3>端到端测试</h3>
+                    <p>在真实浏览器中运行测试，模拟用户交互。测试完整的用户流程，确保应用质量。</p>
+                    <div class="fw-tags"><span class="fw-tag">端到端</span><span class="fw-tag">真实浏览器</span><span class="fw-tag">用户交互</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>时间旅行</h3>
+                    <p>测试执行过程可回放。每一步操作都有快照，方便调试和问题定位。</p>
+                    <div class="fw-tags"><span class="fw-tag">时间旅行</span><span class="fw-tag">快照</span><span class="fw-tag">调试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>自动等待</h3>
+                    <p>自动等待元素出现和操作完成。无需手动添加等待时间，测试更稳定。</p>
+                    <div class="fw-tags"><span class="fw-tag">自动等待</span><span class="fw-tag">稳定性</span><span class="fw-tag">异步处理</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>实时重载</h3>
+                    <p>测试文件修改后自动重新运行。开发体验流畅，提升测试效率。</p>
+                    <div class="fw-tags"><span class="fw-tag">实时重载</span><span class="fw-tag">开发体验</span><span class="fw-tag">效率</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Cypress 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架支持</h3>
+                    <p>支持React、Vue、Angular、Svelte等所有前端框架。与框架无关，通用性强。</p>
+                    <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">Vue</span><span class="fw-tag">Angular</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>组件测试</h3>
+                    <p>支持组件测试，可在浏览器中测试单个组件。与单元测试互补。</p>
+                    <div class="fw-tags"><span class="fw-tag">组件测试</span><span class="fw-tag">浏览器测试</span><span class="fw-tag">单元测试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>插件系统</h3>
+                    <p>丰富的插件系统，支持代码覆盖率、视觉回归测试、无障碍测试等。</p>
+                    <div class="fw-tags"><span class="fw-tag">代码覆盖</span><span class="fw-tag">视觉回归</span><span class="fw-tag">无障碍</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>Cloud服务</h3>
+                    <p>Cypress Cloud提供测试录制、并行运行、失败分析等云服务。</p>
+                    <div class="fw-tags"><span class="fw-tag">Cypress Cloud</span><span class="fw-tag">测试录制</span><span class="fw-tag">并行运行</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>CI/CD集成</h3>
+                    <p>与GitHub Actions、GitLab CI、CircleCI等CI/CD工具深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">GitHub Actions</span><span class="fw-tag">GitLab CI</span><span class="fw-tag">CircleCI</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>TypeScript</h3>
+                    <p>原生TypeScript支持。类型安全的测试编写，智能代码提示。</p>
+                    <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">类型安全</span><span class="fw-tag">智能提示</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Cypress
+npm install cypress --save-dev
+
+# 打开Cypress
+npx cypress open
+
+# 创建测试文件
+echo 'describe("My First Test", () => {
+    it("visits the app", () => {
+        cy.visit("https://example.cypress.io");
+        cy.contains("type").click();
+        cy.url().should("include", "/commands/actions");
+        cy.get(".action-email")
+            .type("fake@email.com")
+            .should("have.value", "fake@email.com");
+    });
+});' > cypress/e2e/my_first_test.cy.js
+
+# 运行测试
+npx cypress run</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// cypress.config.ts
+import { defineConfig } from "cypress";
+
+export default defineConfig({
+    // 视口配置
+    viewportWidth: 1280,
+    viewportHeight: 720,
+    
+    // 超时配置
+    defaultCommandTimeout: 10000,
+    requestTimeout: 10000,
+    
+    // 测试文件配置
+    e2e: {
+        // 基础URL
+        baseUrl: "http://localhost:3000",
+        
+        // 测试文件模式
+        specPattern: "cypress/e2e/**/*.{cy,spec}.{js,jsx,ts,tsx}",
+        
+        // 支持文件
+        supportFile: "cypress/support/e2e.ts",
+        
+        // 视频录制
+        video: true,
+        
+        // 截图
+        screenshotOnRunFailure: true,
+        
+        // 设置文件
+        setupNodeEvents(on, config) {
+            // 插件配置
+        }
+    },
+    
+    // 组件测试配置
+    component: {
+        devServer: {
+            framework: "react",
+            bundler: "vite"
+        },
+        specPattern: "src/**/*.{cy,spec}.{js,jsx,ts,tsx}"
+    }
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、最佳实践和教程。</p>
+                    <a href="https://docs.cypress.io/" target="_blank">docs.cypress.io →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Cypress GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/cypress-io/cypress" target="_blank">github.com/cypress-io/cypress →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Cypress示例</h4>
+                    <p>官方示例应用和测试用例。</p>
+                    <a href="https://example.cypress.io/" target="_blank">example.cypress.io →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Cypress Real World App</h4>
+                    <p>真实世界应用示例，展示最佳实践。</p>
+                    <a href="https://github.com/cypress-io/cypress-realworld-app" target="_blank">Real World App →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他测试框架对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Playwright</h3>
+                    <p>Cypress社区更大，文档更完善。Playwright性能更好，支持更多浏览器。</p>
+                    <div class="fw-tags"><span class="fw-tag">社区</span><span class="fw-tag">性能</span><span class="fw-tag">浏览器支持</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Selenium</h3>
+                    <p>Cypress更现代，开发体验更好。Selenium生态更成熟，支持更多语言。</p>
+                    <div class="fw-tags"><span class="fw-tag">现代</span><span class="fw-tag">开发体验</span><span class="fw-tag">语言支持</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Puppeteer</h3>
+                    <p>Cypress功能更丰富，测试更稳定。Puppeteer更轻量，适合简单自动化。</p>
+                    <div class="fw-tags"><span class="fw-tag">功能丰富</span><span class="fw-tag">稳定性</span><span class="fw-tag">轻量级</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Cypress 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#17202C;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

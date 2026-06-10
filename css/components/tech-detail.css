@@ -1,0 +1,341 @@
+/**
+ * 技术详情二级菜单样式
+ * 设计理念：与主卡片风格一致，深色主题，微妙动画
+ */
+
+/* 二级菜单容器 */
+.tech-detail-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    opacity: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-detail-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 16px 0;
+}
+
+/* 技术详情项 */
+.tech-detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+.tech-detail-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tech-detail-item:first-child {
+    padding-top: 8px;
+}
+
+.tech-detail-item:last-child {
+    padding-bottom: 8px;
+}
+
+/* 技术信息区域 */
+.tech-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tech-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tech-name .hot-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.tech-description {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 技术链接区域 */
+.tech-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 16px;
+    flex-shrink: 0;
+}
+
+.tech-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--card-color, var(--color-basic));
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tech-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.tech-link svg {
+    width: 12px;
+    height: 12px;
+}
+
+.tech-link.detail-link {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tech-link.detail-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* 无链接状态 */
+.tech-link.disabled {
+    color: var(--text-muted);
+    cursor: default;
+    background: transparent;
+}
+
+.tech-link.disabled:hover {
+    background: transparent;
+    color: var(--text-muted);
+}
+
+/* 分隔线 */
+.tech-detail-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 8px 24px;
+}
+
+/* 展开按钮样式 */
+.expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.expand-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.expand-btn svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+}
+
+.expand-btn.expanded svg {
+    transform: rotate(180deg);
+}
+
+/* 技术标签可点击状态 */
+.tech-tag.clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tech-tag.clickable:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.tech-tag.clickable.has-detail {
+    position: relative;
+}
+
+.tech-tag.clickable.has-detail::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background: var(--card-color, var(--color-basic));
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.tech-tag.clickable.has-detail:hover::after {
+    opacity: 1;
+}
+
+/* 卡片容器需要相对定位 */
+.tech-card {
+    position: relative;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .tech-detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+    
+    .tech-links {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .tech-link {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .tech-detail-menu.active {
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-name {
+        font-size: 0.85rem;
+    }
+    
+    .tech-description {
+        font-size: 0.75rem;
+    }
+    
+    .tech-link {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+}
+
+/* 动画增强 */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tech-detail-menu.active {
+    animation: slideDown 0.3s ease forwards;
+}
+
+/* 滚动条样式 */
+.tech-detail-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tech-detail-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tech-detail-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.tech-detail-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 焦点样式 */
+.tech-detail-item:focus-visible {
+    outline: 2px solid var(--color-basic);
+    outline-offset: -2px;
+}
+
+.tech-link:focus-visible {
+    outline: 2px solid var(--color-basic);
+    outline-offset: 2px;
+}
+
+/* 空状态 */
+.tech-detail-empty {
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* 加载状态 */
+.tech-detail-loading {
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.tech-detail-loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--color-basic);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

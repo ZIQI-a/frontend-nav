@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a1a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(141, 214, 249, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #8dd6f9; }
+        .fw-btn-primary { background: #8dd6f9; color: #0a0a0a; }
+        .fw-btn-primary:hover { background: #7bc8f0; box-shadow: 0 8px 25px rgba(141, 214, 249, 0.3); }
+        .fw-btn-outline { border-color: #8dd6f9; color: #8dd6f9; }
+        .fw-btn-outline:hover { background: rgba(141, 214, 249, 0.1); }
+        .back-link:hover { color: #8dd6f9; }
+        .fw-card:hover { border-color: rgba(141, 214, 249, 0.2); }
+        .fw-tag { background: rgba(141, 214, 249, 0.1); color: #8dd6f9; }
+        .fw-resource a { color: #8dd6f9; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">📦</span>
+            <h1>Webpack</h1>
+            <p class="fw-desc">现代JavaScript应用程序的静态模块打包工具。将各种资源视为模块，构建依赖关系图，打包成静态资源。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">64k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">25M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2012</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Tobias Koppers</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://webpack.js.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/webpack/webpack" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Webpack 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>模块打包</h3>
+                    <p>将JavaScript、CSS、图片等资源视为模块，构建依赖关系图。支持CommonJS、ES Modules、AMD等模块系统。</p>
+                    <div class="fw-tags"><span class="fw-tag">模块系统</span><span class="fw-tag">依赖图</span><span class="fw-tag">资源打包</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>Loader系统</h3>
+                    <p>通过Loader处理非JavaScript文件。支持CSS、图片、字体、TypeScript等各种资源类型。</p>
+                    <div class="fw-tags"><span class="fw-tag">css-loader</span><span class="fw-tag">babel-loader</span><span class="fw-tag">ts-loader</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>插件系统</h3>
+                    <p>强大的插件系统，扩展Webpack功能。支持代码压缩、环境变量注入、HTML生成等。</p>
+                    <div class="fw-tags"><span class="fw-tag">HtmlWebpackPlugin</span><span class="fw-tag">MiniCssExtractPlugin</span><span class="fw-tag">DefinePlugin</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔄</span>
+                    <h3>代码分割</h3>
+                    <p>支持动态导入和代码分割，实现按需加载。优化首屏加载时间，提升用户体验。</p>
+                    <div class="fw-tags"><span class="fw-tag">动态导入</span><span class="fw-tag">按需加载</span><span class="fw-tag">分割策略</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Webpack 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架集成</h3>
+                    <p>React、Vue、Angular等框架都提供Webpack配置工具。Create React App、Vue CLI等使用Webpack。</p>
+                    <div class="fw-tags"><span class="fw-tag">Create React App</span><span class="fw-tag">Vue CLI</span><span class="fw-tag">Angular CLI</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>开发工具</h3>
+                    <p>webpack-dev-server提供热更新开发环境。支持模块热替换(HMR)，提升开发效率。</p>
+                    <div class="fw-tags"><span class="fw-tag">webpack-dev-server</span><span class="fw-tag">HMR</span><span class="fw-tag">热更新</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>优化工具</h3>
+                    <p>TerserPlugin、CssMinimizerPlugin等优化插件。支持Tree Shaking、代码压缩、资源优化。</p>
+                    <div class="fw-tags"><span class="fw-tag">TerserPlugin</span><span class="fw-tag">Tree Shaking</span><span class="fw-tag">代码压缩</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>CSS处理</h3>
+                    <p>css-loader、style-loader、MiniCssExtractPlugin等。支持CSS模块、PostCSS、Sass/Less。</p>
+                    <div class="fw-tags"><span class="fw-tag">CSS模块</span><span class="fw-tag">PostCSS</span><span class="fw-tag">Sass/Less</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>资源管理</h3>
+                    <p>file-loader、url-loader、asset modules等。处理图片、字体、媒体等静态资源。</p>
+                    <div class="fw-tags"><span class="fw-tag">file-loader</span><span class="fw-tag">url-loader</span><span class="fw-tag">asset modules</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>环境配置</h3>
+                    <p>支持开发、测试、生产等多环境配置。通过环境变量和配置文件管理不同环境。</p>
+                    <div class="fw-tags"><span class="fw-tag">环境变量</span><span class="fw-tag">多环境</span><span class="fw-tag">配置管理</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Webpack
+npm install webpack webpack-cli --save-dev
+
+# 创建Webpack配置
+echo 'const path = require("path");
+module.exports = {
+    entry: "./src/index.js",
+    output: {
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: "babel-loader"
+            }
+        ]
+    }
+};' > webpack.config.js
+
+# 创建入口文件
+mkdir src
+echo 'import "./style.css";
+console.log("Hello, Webpack!");' > src/index.js
+
+# 运行Webpack
+npx webpack --mode development</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// webpack.config.js
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css'
+        })
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
+};</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的概念指南、配置参考和API文档。</p>
+                    <a href="https://webpack.js.org/concepts/" target="_blank">webpack.js.org/concepts →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Webpack GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/webpack/webpack" target="_blank">github.com/webpack/webpack →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Webpack中文文档</h4>
+                    <p>社区维护的Webpack中文文档。</p>
+                    <a href="https://webpack.docschina.org/" target="_blank">webpack.docschina.org →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Webpack配置生成器</h4>
+                    <p>在线生成Webpack配置的工具。</p>
+                    <a href="https://webpack.js.org/configuration/" target="_blank">Configuration →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他构建工具对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Vite</h3>
+                    <p>Webpack配置更灵活，生态更成熟。Vite开发服务器更快，配置更简单，适合新项目。</p>
+                    <div class="fw-tags"><span class="fw-tag">配置灵活性</span><span class="fw-tag">开发速度</span><span class="fw-tag">生态</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Rollup</h3>
+                    <p>Webpack适合应用程序打包。Rollup适合库开发，Tree Shaking更好，输出更干净。</p>
+                    <div class="fw-tags"><span class="fw-tag">应用场景</span><span class="fw-tag">Tree Shaking</span><span class="fw-tag">输出质量</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs esbuild</h3>
+                    <p>Webpack功能更丰富，配置更灵活。esbuild速度极快，但功能较少，适合简单场景。</p>
+                    <div class="fw-tags"><span class="fw-tag">功能丰富度</span><span class="fw-tag">构建速度</span><span class="fw-tag">配置复杂度</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Webpack 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#8dd6f9;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

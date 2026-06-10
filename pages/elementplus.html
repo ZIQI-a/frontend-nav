@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Plus 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(64, 158, 255, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #409EFF; }
+        .fw-btn-primary { background: #409EFF; }
+        .fw-btn-primary:hover { background: #3a8ee6; box-shadow: 0 8px 25px rgba(64, 158, 255, 0.3); }
+        .fw-btn-outline { border-color: #409EFF; color: #409EFF; }
+        .fw-btn-outline:hover { background: rgba(64, 158, 255, 0.1); }
+        .back-link:hover { color: #409EFF; }
+        .fw-card:hover { border-color: rgba(64, 158, 255, 0.2); }
+        .fw-tag { background: rgba(64, 158, 255, 0.1); color: #409EFF; }
+        .fw-resource a { color: #409EFF; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🟢</span>
+            <h1>Element Plus</h1>
+            <p class="fw-desc">Vue 3组件库，适合中后台管理系统。饿了么前端团队出品，开箱即用。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">24k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">1.5M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2020</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">饿了么</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://element-plus.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/element-plus/element-plus" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Element Plus 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🎯 Vue 3原生</h3>
+                    <p>基于Vue 3 Composition API开发，完美支持Vue 3</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 70+组件</h3>
+                    <p>提供丰富的高质量组件，覆盖大部分业务场景</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎨 主题定制</h3>
+                    <p>支持CSS变量和SCSS，轻松定制主题风格</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🌍 国际化</h3>
+                    <p>内置多语言支持，覆盖50+语言</p>
+                </div>
+                <div class="fw-card">
+                    <h3>♿ 无障碍</h3>
+                    <p>遵循WAI-ARIA标准，提供良好的无障碍支持</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 按需导入</h3>
+                    <p>支持Tree-shaking，按需引入减小包体积</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Element Plus 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Element Plus Icons</h3>
+                    <p>官方图标库，提供1000+图标</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">图标</span>
+                        <span class="fw-tag">SVG</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Element Plus Playground</h3>
+                    <p>在线演练场，实时预览组件效果</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">工具</span>
+                        <span class="fw-tag">演练</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Vue Element Admin</h3>
+                    <p>基于Element Plus的后台管理模板</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">模板</span>
+                        <span class="fw-tag">后台</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Vite Plugin Element Plus</h3>
+                    <p>Vite插件，支持自动导入和按需加载</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">Vite</span>
+                        <span class="fw-tag">插件</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Element Plus
+npm install element-plus
+
+# 完整引入
+import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(ElementPlus)
+app.mount('#app')
+
+# 按需引入（推荐）
+npm install -D unplugin-vue-components unplugin-auto-import</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// vite.config.ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+  ],
+})
+
+// 使用示例
+&lt;template&gt;
+  &lt;el-button type="primary"&gt;主要按钮&lt;/el-button&gt;
+  &lt;el-table :data="tableData"&gt;
+    &lt;el-table-column prop="date" label="日期" /&gt;
+    &lt;el-table-column prop="name" label="姓名" /&gt;
+    &lt;el-table-column prop="address" label="地址" /&gt;
+  &lt;/el-table&gt;
+  &lt;el-pagination
+    v-model:current-page="currentPage"
+    :page-size="10"
+    :total="100"
+    layout="total, prev, pager, next"
+  /&gt;
+&lt;/template&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://element-plus.org/zh-CN/" target="_blank">Element Plus 官方文档</a></li>
+                        <li><a href="https://github.com/element-plus/element-plus" target="_blank">Element Plus GitHub仓库</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/guide/installation.html" target="_blank">安装指南</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://element-plus.org/zh-CN/guide/quickstart.html" target="_blank">快速上手</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/component/button.html" target="_blank">组件文档</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/guide/theming.html" target="_blank">主题定制</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他Vue UI库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Ant Design Vue</h3>
+                    <p>Element Plus更适合中后台，Ant Design Vue设计更现代，国际化更好。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Vuetify</h3>
+                    <p>Element Plus轻量级，Vuetify遵循Material Design，组件更丰富。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

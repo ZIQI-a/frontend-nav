@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/tech-detail.css">
 </head>
 <body>
     <header class="header">
@@ -47,39 +48,39 @@
             <!-- 技术卡片将通过JavaScript动态生成 -->
         </section>
 
-        <section class="featured-frameworks">
-            <h2 class="section-title">热门框架深度解析</h2>
-            <div class="framework-cards">
-                <a href="pages/react.html" class="framework-card react">
-                    <div class="framework-icon">⚛️</div>
-                    <h3>React</h3>
-                    <p>Facebook开发的用于构建用户界面的JavaScript库</p>
-                    <span class="framework-link">查看详情 →</span>
-                </a>
-                <a href="pages/vue.html" class="framework-card vue">
-                    <div class="framework-icon">💚</div>
-                    <h3>Vue.js</h3>
-                    <p>渐进式JavaScript框架，易学易用，性能出色</p>
-                    <span class="framework-link">查看详情 →</span>
-                </a>
-                <a href="pages/angular.html" class="framework-card angular">
-                    <div class="framework-icon">🅰️</div>
-                    <h3>Angular</h3>
-                    <p>Google维护的完整前端框架，适合大型企业级应用</p>
-                    <span class="framework-link">查看详情 →</span>
-                </a>
-                <a href="pages/svelte.html" class="framework-card svelte">
-                    <div class="framework-icon">🔥</div>
-                    <h3>Svelte</h3>
-                    <p>编译时框架，零运行时开销，极致性能</p>
-                    <span class="framework-link">查看详情 →</span>
-                </a>
-                <a href="pages/nextjs.html" class="framework-card nextjs">
-                    <div class="framework-icon">▲</div>
-                    <h3>Next.js</h3>
-                    <p>React全栈框架，支持SSR、SSG、RSC等现代特性</p>
-                    <span class="framework-link">查看详情 →</span>
-                </a>
+        <section class="quick-access">
+            <h2 class="section-title">热门技术快速访问</h2>
+            <p class="section-desc">以下为常用热门技术的详细介绍页，也可在下方卡片中展开查看</p>
+            <div class="quick-links">
+                <a href="pages/react.html" class="quick-link">React</a>
+                <a href="pages/vue.html" class="quick-link">Vue.js</a>
+                <a href="pages/angular.html" class="quick-link">Angular</a>
+                <a href="pages/svelte.html" class="quick-link">Svelte</a>
+                <a href="pages/nextjs.html" class="quick-link">Next.js</a>
+                <a href="pages/nuxtjs.html" class="quick-link">Nuxt.js</a>
+                <a href="pages/vite.html" class="quick-link">Vite</a>
+                <a href="pages/webpack.html" class="quick-link">Webpack</a>
+                <a href="pages/typescript.html" class="quick-link">TypeScript</a>
+                <a href="pages/nodejs.html" class="quick-link">Node.js</a>
+                <a href="pages/deno.html" class="quick-link">Deno</a>
+                <a href="pages/tailwindcss.html" class="quick-link">Tailwind CSS</a>
+                <a href="pages/echarts.html" class="quick-link">ECharts</a>
+                <a href="pages/elementplus.html" class="quick-link">Element Plus</a>
+                <a href="pages/antdesign.html" class="quick-link">Ant Design</a>
+                <a href="pages/redux.html" class="quick-link">Redux</a>
+                <a href="pages/zustand.html" class="quick-link">Zustand</a>
+                <a href="pages/pinia.html" class="quick-link">Pinia</a>
+                <a href="pages/jest.html" class="quick-link">Jest</a>
+                <a href="pages/vitest.html" class="quick-link">Vitest</a>
+                <a href="pages/playwright.html" class="quick-link">Playwright</a>
+                <a href="pages/tauri.html" class="quick-link">Tauri</a>
+                <a href="pages/react-native.html" class="quick-link">React Native</a>
+                <a href="pages/vercel.html" class="quick-link">Vercel</a>
+                <a href="pages/lodash.html" class="quick-link">Lodash</a>
+                <a href="pages/dayjs.html" class="quick-link">Day.js</a>
+                <a href="pages/zod.html" class="quick-link">Zod</a>
+                <a href="pages/gsap.html" class="quick-link">GSAP</a>
+                <a href="pages/framermotion.html" class="quick-link">Framer Motion</a>
             </div>
         </section>
 
@@ -137,6 +138,14 @@
         </div>
     </footer>
 
+    <!-- 数据文件 -->
+    <script src="js/data/tech-categories.js"></script>
+    <script src="js/data/tech-details.js"></script>
+    
+    <!-- 组件文件 -->
+    <script src="js/components/tech-card.js"></script>
+    
+    <!-- 主逻辑文件 -->
     <script src="js/main.js"></script>
 </body>
 </html>

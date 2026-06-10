@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #38BDF8; }
+        .fw-btn-primary { background: #38BDF8; }
+        .fw-btn-primary:hover { background: #28ade8; box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3); }
+        .fw-btn-outline { border-color: #38BDF8; color: #38BDF8; }
+        .fw-btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
+        .back-link:hover { color: #38BDF8; }
+        .fw-card:hover { border-color: rgba(56, 189, 248, 0.2); }
+        .fw-tag { background: rgba(56, 189, 248, 0.1); color: #38BDF8; }
+        .fw-resource a { color: #38BDF8; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🎨</span>
+            <h1>Tailwind CSS</h1>
+            <p class="fw-desc">功能优先的CSS框架，快速构建现代网站。无需离开HTML即可设计精美界面。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">82k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">12M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2017</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Tailwind Labs</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://tailwindcss.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Tailwind CSS 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>🎯 功能优先</h3>
+                    <p>使用功能类直接构建设计，无需编写自定义CSS</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 极速构建</h3>
+                    <p>JIT引擎按需生成CSS，开发和生产环境都极快</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📱 响应式设计</h3>
+                    <p>内置断点前缀，轻松实现响应式布局</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎨 深度定制</h3>
+                    <p>通过配置文件完全控制设计系统</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🌙 暗黑模式</h3>
+                    <p>内置暗黑模式支持，一行代码切换主题</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 Tree-shaking</h3>
+                    <p>自动移除未使用的CSS，生产包体积最小化</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Tailwind CSS 核心插件和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Tailwind UI</h3>
+                    <p>官方UI组件库，精美的现成模板</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">UI</span>
+                        <span class="fw-tag">组件库</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Headless UI</h3>
+                    <p>完全无样式、可访问的UI组件</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">组件</span>
+                        <span class="fw-tag">无样式</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Heroicons</h3>
+                    <p>官方SVG图标集，支持多种风格</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">图标</span>
+                        <span class="fw-tag">SVG</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>daisyUI</h3>
+                    <p>最受欢迎的Tailwind CSS组件库</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">组件库</span>
+                        <span class="fw-tag">主题</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Tailwind CSS
+npm install -D tailwindcss
+
+# 初始化配置
+npx tailwindcss init
+
+# 在CSS文件中添加
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+# 启动开发服务器
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+
+# 构建生产版本
+npx tailwindcss -o build.css --minify</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx,vue}",
+  ],
+  darkMode: 'class', // 或 'media'
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff',
+          500: '#3b82f6',
+          900: '#1e3a8a',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      spacing: {
+        '128': '32rem',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS 官方文档</a></li>
+                        <li><a href="https://github.com/tailwindlabs/tailwindcss" target="_blank">Tailwind CSS GitHub仓库</a></li>
+                        <li><a href="https://tailwindcss.com/docs/installation" target="_blank">安装指南</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://tailwindcss.com/docs/utility-first" target="_blank">功能优先理念</a></li>
+                        <li><a href="https://tailwindcss.com/docs/responsive-design" target="_blank">响应式设计</a></li>
+                        <li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states" target="_blank">交互状态</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他CSS框架对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Bootstrap</h3>
+                    <p>Tailwind功能优先，高度可定制。Bootstrap组件优先，开箱即用但定制受限。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs CSS Modules</h3>
+                    <p>Tailwind无需编写CSS，CSS Modules需要编写样式但作用域隔离。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

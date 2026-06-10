@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECharts 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #2e0a0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 87, 34, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #FF5722; }
+        .fw-btn-primary { background: #FF5722; }
+        .fw-btn-primary:hover { background: #f4441a; box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3); }
+        .fw-btn-outline { border-color: #FF5722; color: #FF5722; }
+        .fw-btn-outline:hover { background: rgba(255, 87, 34, 0.1); }
+        .back-link:hover { color: #FF5722; }
+        .fw-card:hover { border-color: rgba(255, 87, 34, 0.2); }
+        .fw-tag { background: rgba(255, 87, 34, 0.1); color: #FF5722; }
+        .fw-resource a { color: #FF5722; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">📊</span>
+            <h1>ECharts</h1>
+            <p class="fw-desc">基于JavaScript的开源可视化图表库，由百度开发，现为Apache顶级项目。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">60k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">3M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2013</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Apache</span><span class="fw-stat-label">维护团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://echarts.apache.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/apache/echarts" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">ECharts 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>📊 丰富图表类型</h3>
+                    <p>支持折线图、柱状图、饼图、散点图、地图等20+图表类型</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎨 强大定制能力</p>
+                    <p>每个视觉元素都可自定义，满足个性化需求</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📱 响应式设计</h3>
+                    <p>自动响应容器尺寸变化，适配各种屏幕</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🚀 高性能渲染</h3>
+                    <p>Canvas和SVG双引擎，大数据量下依然流畅</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🗺️ 地图支持</h3>
+                    <p>内置世界、中国及省市地图，支持自定义地图</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📈 数据驱动</h3>
+                    <p>声明式配置，数据变化自动更新图表</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">ECharts 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>ECharts GL</h3>
+                    <p>3D可视化扩展，支持3D地球、3D散点图等</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">3D</span>
+                        <span class="fw-tag">WebGL</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>ECharts-GL</h3>
+                    <p>地理可视化扩展，支持地图和轨迹</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">地图</span>
+                        <span class="fw-tag">地理</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>ECharts-stat</h3>
+                    <p>统计分析扩展，支持回归分析和聚类</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">统计</span>
+                        <span class="fw-tag">分析</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>DataV</h3>
+                    <p>阿里数据可视化工具，基于ECharts封装</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">数据大屏</span>
+                        <span class="fw-tag">可视化</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装ECharts
+npm install echarts
+
+# 或使用CDN
+&lt;script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 基础柱状图
+import * as echarts from 'echarts';
+
+// 初始化图表
+const chartDom = document.getElementById('main');
+const myChart = echarts.init(chartDom);
+
+// 配置项
+const option = {
+  title: {
+    text: '销售数据',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  xAxis: {
+    type: 'category',
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [{
+    name: '销量',
+    type: 'bar',
+    data: [120, 200, 150, 80, 70, 110, 130],
+    itemStyle: {
+      color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#83bff6' },
+        { offset: 0.5, color: '#188df0' },
+        { offset: 1, color: '#188df0' }
+      ])
+    }
+  }]
+};
+
+// 使用配置项显示图表
+myChart.setOption(option);
+
+// 响应式
+window.addEventListener('resize', function() {
+  myChart.resize();
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://echarts.apache.org/zh/index.html" target="_blank">ECharts 官方文档</a></li>
+                        <li><a href="https://github.com/apache/echarts" target="_blank">ECharts GitHub仓库</a></li>
+                        <li><a href="https://echarts.apache.org/examples/zh/" target="_blank">官方示例</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://echarts.apache.org/handbook/zh/basics/getting-started/" target="_blank">快速入门</a></li>
+                        <li><a href="https://echarts.apache.org/handbook/zh/concepts/dataset" target="_blank">数据集</a></li>
+                        <li><a href="https://echarts.apache.org/handbook/zh/how-to/chart-types/" target="_blank">图表类型</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他可视化库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs D3.js</h3>
+                    <p>ECharts开箱即用，配置简单。D3.js更灵活，学习曲线陡峭。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Chart.js</h3>
+                    <p>ECharts功能更强大，图表类型更丰富。Chart.js更轻量，适合简单场景。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

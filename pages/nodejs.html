@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(51, 153, 51, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #339933; }
+        .fw-btn-primary { background: #339933; }
+        .fw-btn-primary:hover { background: #2d8a2d; box-shadow: 0 8px 25px rgba(51, 153, 51, 0.3); }
+        .fw-btn-outline { border-color: #339933; color: #339933; }
+        .fw-btn-outline:hover { background: rgba(51, 153, 51, 0.1); }
+        .back-link:hover { color: #339933; }
+        .fw-card:hover { border-color: rgba(51, 153, 51, 0.2); }
+        .fw-tag { background: rgba(51, 153, 51, 0.1); color: #339933; }
+        .fw-resource a { color: #339933; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🟢</span>
+            <h1>Node.js</h1>
+            <p class="fw-desc">基于Chrome V8引擎的JavaScript运行时，构建高性能网络应用。让JavaScript在服务端运行，开启全栈开发时代。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">100k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">30M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2009</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Ryan Dahl</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://nodejs.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/nodejs/node" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Node.js 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🚀</span>
+                    <h3>事件驱动架构</h3>
+                    <p>基于事件循环的非阻塞I/O模型，单线程处理高并发请求。适合I/O密集型应用，如Web服务器、API服务。</p>
+                    <div class="fw-tags"><span class="fw-tag">事件循环</span><span class="fw-tag">非阻塞I/O</span><span class="fw-tag">高并发</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>npm生态系统</h3>
+                    <p>拥有200万+包的庞大生态系统，覆盖几乎所有开发需求。包管理工具npm是JavaScript生态的标准。</p>
+                    <div class="fw-tags"><span class="fw-tag">npm</span><span class="fw-tag">200万+包</span><span class="fw-tag">生态系统</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>V8引擎性能</h3>
+                    <p>基于Chrome V8引擎，JavaScript代码被编译为机器码执行。性能优异，适合构建高性能应用。</p>
+                    <div class="fw-tags"><span class="fw-tag">V8引擎</span><span class="fw-tag">JIT编译</span><span class="fw-tag">高性能</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>跨平台支持</h3>
+                    <p>支持Windows、macOS、Linux等主流操作系统。可以开发桌面应用、命令行工具、物联网应用。</p>
+                    <div class="fw-tags"><span class="fw-tag">跨平台</span><span class="fw-tag">桌面应用</span><span class="fw-tag">CLI工具</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Node.js 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>Web框架</h3>
+                    <p>Express、Koa、Fastify、NestJS等成熟框架。提供路由、中间件、模板引擎等完整Web开发功能。</p>
+                    <div class="fw-tags"><span class="fw-tag">Express</span><span class="fw-tag">Koa</span><span class="fw-tag">Fastify</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>测试工具</h3>
+                    <p>Jest、Mocha、Vitest等测试框架。支持单元测试、集成测试、端到端测试。</p>
+                    <div class="fw-tags"><span class="fw-tag">Jest</span><span class="fw-tag">Mocha</span><span class="fw-tag">Vitest</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>数据库驱动</h3>
+                    <p>支持MySQL、PostgreSQL、MongoDB、Redis等所有主流数据库。提供ORM和ODM工具。</p>
+                    <div class="fw-tags"><span class="fw-tag">Sequelize</span><span class="fw-tag">Prisma</span><span class="fw-tag">Mongoose</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>实时通信</h3>
+                    <p>Socket.io、ws等WebSocket库。支持实时聊天、游戏、协作编辑等实时应用。</p>
+                    <div class="fw-tags"><span class="fw-tag">Socket.io</span><span class="fw-tag">ws</span><span class="fw-tag">WebSocket</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>微服务架构</h3>
+                    <p>支持gRPC、消息队列、服务发现等微服务技术。适合构建分布式系统。</p>
+                    <div class="fw-tags"><span class="fw-tag">gRPC</span><span class="fw-tag">RabbitMQ</span><span class="fw-tag">Kafka</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>部署工具</h3>
+                    <p>PM2、Docker、Kubernetes等部署和运维工具。支持集群、负载均衡、自动重启。</p>
+                    <div class="fw-tags"><span class="fw-tag">PM2</span><span class="fw-tag">Docker</span><span class="fw-tag">Kubernetes</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Node.js
+# 从官网下载安装包或使用nvm管理版本
+nvm install 20
+nvm use 20
+
+# 创建Node.js项目
+mkdir my-node-app
+cd my-node-app
+npm init -y
+
+# 安装Express框架
+npm install express
+
+# 创建服务器文件
+echo 'const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+    res.send("Hello, Node.js!");
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});' > server.js
+
+# 启动服务器
+node server.js</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// package.json
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "description": "Node.js application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0",
+    "eslint": "^8.50.0"
+  }
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API文档、指南和教程。</p>
+                    <a href="https://nodejs.org/en/docs/" target="_blank">nodejs.org/en/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Node.js GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/nodejs/node" target="_blank">github.com/nodejs/node →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>npm文档</h4>
+                    <p>npm包管理器的完整文档和教程。</p>
+                    <a href="https://docs.npmjs.com/" target="_blank">docs.npmjs.com →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Node.js最佳实践</h4>
+                    <p>社区维护的Node.js最佳实践指南。</p>
+                    <a href="https://github.com/goldbergyoni/nodebestpractices" target="_blank">Node.js Best Practices →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他运行时对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Deno</h3>
+                    <p>Node.js生态更成熟，包管理更简单。Deno安全性更好，默认TypeScript支持，但生态较小。</p>
+                    <div class="fw-tags"><span class="fw-tag">生态系统</span><span class="fw-tag">安全性</span><span class="fw-tag">TypeScript</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Bun</h3>
+                    <p>Node.js稳定性更好，生态更完善。Bun性能更快，内置打包器、测试框架，但较新。</p>
+                    <div class="fw-tags"><span class="fw-tag">性能</span><span class="fw-tag">稳定性</span><span class="fw-tag">生态</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Python</h3>
+                    <p>Node.js适合I/O密集型和实时应用。Python适合数据科学、机器学习、脚本任务。</p>
+                    <div class="fw-tags"><span class="fw-tag">应用场景</span><span class="fw-tag">性能</span><span class="fw-tag">生态</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Node.js 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#339933;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vercel 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #ffffff; }
+        .fw-btn-primary { background: #ffffff; color: #0a0a0a; }
+        .fw-btn-primary:hover { background: #e0e0e0; box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); }
+        .fw-btn-outline { border-color: #ffffff; color: #ffffff; }
+        .fw-btn-outline:hover { background: rgba(255, 255, 255, 0.1); }
+        .back-link:hover { color: #ffffff; }
+        .fw-card:hover { border-color: rgba(255, 255, 255, 0.2); }
+        .fw-tag { background: rgba(255, 255, 255, 0.1); color: #ffffff; }
+        .fw-resource a { color: #ffffff; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">▲</span>
+            <h1>Vercel</h1>
+            <p class="fw-desc">现代Web应用部署平台，支持Next.js等框架。提供全球CDN、自动HTTPS、无服务器函数等。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">125k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">10M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2015</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Guillermo Rauch</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://vercel.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/vercel/vercel" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Vercel 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">▲</span>
+                    <h3>零配置部署</h3>
+                    <p>Git推送自动部署，零配置。支持GitHub、GitLab、Bitbucket等代码托管平台。</p>
+                    <div class="fw-tags"><span class="fw-tag">零配置</span><span class="fw-tag">自动部署</span><span class="fw-tag">Git集成</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>全球CDN</h3>
+                    <p>全球边缘网络，内容就近访问。自动HTTPS，HTTP/2支持，极致性能。</p>
+                    <div class="fw-tags"><span class="fw-tag">全球CDN</span><span class="fw-tag">边缘网络</span><span class="fw-tag">HTTPS</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>无服务器函数</h3>
+                    <p>Serverless Functions支持。自动扩缩容，按需计费，无需管理服务器。</p>
+                    <div class="fw-tags"><span class="fw-tag">Serverless</span><span class="fw-tag">自动扩缩</span><span class="fw-tag">按需计费</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>预览部署</h3>
+                    <p>每个PR自动生成预览URL。团队协作更高效，代码审查更直观。</p>
+                    <div class="fw-tags"><span class="fw-tag">预览部署</span><span class="fw-tag">PR预览</span><span class="fw-tag">团队协作</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Vercel 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>Next.js</h3>
+                    <p>Vercel开发的React全栈框架。深度集成，自动优化，最佳部署体验。</p>
+                    <div class="fw-tags"><span class="fw-tag">Next.js</span><span class="fw-tag">React</span><span class="fw-tag">全栈框架</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>Turborepo</h3>
+                    <p>Vercel开发的Monorepo构建系统。智能缓存，并行构建，提升开发效率。</p>
+                    <div class="fw-tags"><span class="fw-tag">Turborepo</span><span class="fw-tag">Monorepo</span><span class="fw-tag">智能缓存</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>Edge Runtime</h3>
+                    <p>边缘运行时，代码在CDN边缘节点执行。低延迟，高性能。</p>
+                    <div class="fw-tags"><span class="fw-tag">Edge Runtime</span><span class="fw-tag">边缘计算</span><span class="fw-tag">低延迟</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>Analytics</h3>
+                    <p>Vercel Analytics提供Web Vitals监控。真实用户性能数据，优化用户体验。</p>
+                    <div class="fw-tags"><span class="fw-tag">Analytics</span><span class="fw-tag">Web Vitals</span><span class="fw-tag">性能监控</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>Storage</h3>
+                    <p>Vercel KV、Vercel Postgres、Vercel Blob等存储服务。与部署平台深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">KV</span><span class="fw-tag">Postgres</span><span class="fw-tag">Blob</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>AI SDK</h3>
+                    <p>Vercel AI SDK，简化AI应用开发。支持OpenAI、Anthropic等AI服务。</p>
+                    <div class="fw-tags"><span class="fw-tag">AI SDK</span><span class="fw-tag">OpenAI</span><span class="fw-tag">Anthropic</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Vercel CLI
+npm install -g vercel
+
+# 登录Vercel
+vercel login
+
+# 部署项目
+vercel
+
+# 部署到生产环境
+vercel --prod
+
+# 查看部署状态
+vercel ls
+
+# 查看部署详情
+vercel inspect [deployment-url]
+
+# 删除部署
+vercel rm [deployment-url]</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// vercel.json
+{
+    // 项目名称
+    "name": "my-project",
+    
+    // 构建配置
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ],
+    
+    // 路由配置
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ],
+    
+    // 环境变量
+    "env": {
+        "DATABASE_URL": "@database-url",
+        "API_KEY": "@api-key"
+    },
+    
+    // 区域配置
+    "regions": ["iad1", "sfo1", "lhr1"],
+    
+    // 函数配置
+    "functions": {
+        "api/**/*.js": {
+            "memory": 1024,
+            "maxDuration": 10
+        }
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的指南、API参考和最佳实践。</p>
+                    <a href="https://vercel.com/docs" target="_blank">vercel.com/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vercel GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/vercel/vercel" target="_blank">github.com/vercel/vercel →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vercel模板</h4>
+                    <p>官方模板库，快速开始各种项目。</p>
+                    <a href="https://vercel.com/templates" target="_blank">Templates →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vercel博客</h4>
+                    <p>官方博客，分享最新动态和技术文章。</p>
+                    <a href="https://vercel.com/blog" target="_blank">Blog →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他部署平台对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Netlify</h3>
+                    <p>Vercel与Next.js集成更紧密。Netlify功能更全面，支持更多框架。</p>
+                    <div class="fw-tags"><span class="fw-tag">Next.js集成</span><span class="fw-tag">功能全面</span><span class="fw-tag">框架支持</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs AWS Amplify</h3>
+                    <p>Vercel更简单，部署更快。AWS Amplify功能更强大，适合复杂应用。</p>
+                    <div class="fw-tags"><span class="fw-tag">简单</span><span class="fw-tag">部署速度</span><span class="fw-tag">功能强大</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Firebase Hosting</h3>
+                    <p>Vercel更适合现代前端框架。Firebase Hosting更轻量，适合简单静态站点。</p>
+                    <div class="fw-tags"><span class="fw-tag">现代框架</span><span class="fw-tag">轻量级</span><span class="fw-tag">静态站点</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Vercel 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#ffffff;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

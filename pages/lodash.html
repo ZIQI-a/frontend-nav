@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodash 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #2e2e0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #3B82F6; }
+        .fw-btn-primary { background: #3B82F6; }
+        .fw-btn-primary:hover { background: #2563EB; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3); }
+        .fw-btn-outline { border-color: #3B82F6; color: #3B82F6; }
+        .fw-btn-outline:hover { background: rgba(59, 130, 246, 0.1); }
+        .back-link:hover { color: #3B82F6; }
+        .fw-card:hover { border-color: rgba(59, 130, 246, 0.2); }
+        .fw-tag { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+        .fw-resource a { color: #3B82F6; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🔧</span>
+            <h1>Lodash</h1>
+            <p class="fw-desc">JavaScript工具库，提供模块化、高性能的工具函数。让JavaScript编程更简单。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">59k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">50M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2012</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">John-David Dalton</span><span class="fw-stat-label">作者</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://lodash.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/lodash/lodash" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Lodash 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>📦 模块化设计</h3>
+                    <p>按需引入，支持ES模块和CommonJS</p>
+                </div>
+                <div class="fw-card">
+                    <h3>⚡ 高性能</h3>
+                    <p>经过优化的算法，性能优于原生实现</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🛡️ 零依赖</h3>
+                    <p>无外部依赖，体积小，兼容性好</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🧪 100%测试覆盖</h3>
+                    <p>完整的单元测试，稳定可靠</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📚 300+函数</h3>
+                    <p>覆盖数组、集合、函数、对象、字符串等操作</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔄 链式调用</h3>
+                    <p>支持链式调用，代码更简洁</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">Lodash 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>Lodash/fp</h3>
+                    <p>函数式编程版本，自动柯里化，数据最后</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">函数式</span>
+                        <span class="fw-tag">柯里化</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Lodash/ES</h3>
+                    <p>ES模块版本，支持Tree-shaking</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">ES模块</span>
+                        <span class="fw-tag">Tree-shaking</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Lodash-ES</h3>
+                    <p>官方ES模块包，推荐使用</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">官方</span>
+                        <span class="fw-tag">推荐</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Ramda</h3>
+                    <p>函数式编程库，与Lodash互补</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">函数式</span>
+                        <span class="fw-tag">替代</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装Lodash
+npm install lodash
+
+# 或使用ES模块版本
+npm install lodash-es
+
+# 完整引入（不推荐）
+import _ from 'lodash'
+_.chunk(['a', 'b', 'c', 'd'], 2)
+// => [['a', 'b'], ['c', 'd']]
+
+# 按需引入（推荐）
+import chunk from 'lodash/chunk'
+import get from 'lodash/get'
+import debounce from 'lodash/debounce'
+
+# 使用lodash-es（支持Tree-shaking）
+import { chunk, get, debounce } from 'lodash-es'</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 常用函数示例
+
+// 数组操作
+import { chunk, compact, flatten, uniq, sortBy } from 'lodash-es'
+
+chunk([1, 2, 3, 4, 5], 2) // [[1, 2], [3, 4], [5]]
+compact([0, 1, false, 2, '', 3]) // [1, 2, 3]
+flatten([1, [2, [3, [4]], 5]]) // [1, 2, [3, [4]], 5]
+uniq([2, 1, 2]) // [2, 1]
+sortBy([{ age: 20 }, { age: 10 }], 'age') // [{ age: 10 }, { age: 20 }]
+
+// 对象操作
+import { get, set, merge, pick, omit } from 'lodash-es'
+
+const obj = { a: { b: { c: 1 } } }
+get(obj, 'a.b.c') // 1
+get(obj, 'a.b.d', 'default') // 'default'
+set(obj, 'a.b.d', 2) // { a: { b: { c: 1, d: 2 } } }
+
+// 函数操作
+import { debounce, throttle, memoize } from 'lodash-es'
+
+const debouncedFn = debounce(() => {
+  console.log('Debounced!')
+}, 300)
+
+const throttledFn = throttle(() => {
+  console.log('Throttled!')
+}, 300)
+
+// 集合操作
+import { map, filter, find, reduce, groupBy } from 'lodash-es'
+
+const users = [
+  { name: 'John', age: 25 },
+  { name: 'Jane', age: 30 },
+  { name: 'Bob', age: 25 }
+]
+
+groupBy(users, 'age')
+// { 25: [{ name: 'John', ... }, { name: 'Bob', ... }], 30: [{ name: 'Jane', ... }] }</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://lodash.com/docs/" target="_blank">Lodash 官方文档</a></li>
+                        <li><a href="https://github.com/lodash/lodash" target="_blank">Lodash GitHub仓库</a></li>
+                        <li><a href="https://www.npmjs.com/package/lodash" target="_blank">Lodash npm包</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://lodash.com/docs/4.17.15" target="_blank">API文档</a></li>
+                        <li><a href="https://lodash.com/docs/4.17.15#chunk" target="_blank">数组函数</a></li>
+                        <li><a href="https://lodash.com/docs/4.17.15#get" target="_blank">对象函数</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他工具库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Underscore.js</h3>
+                    <p>Lodash性能更好，API更一致，功能更丰富。Underscore更轻量但功能有限。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Ramda</h3>
+                    <p>Lodash实用为主，Ramda函数式编程为主。Lodash学习曲线更低。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

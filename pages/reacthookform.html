@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hook Form 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #2e0a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(236, 72, 153, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #EC4899; }
+        .fw-btn-primary { background: #EC4899; }
+        .fw-btn-primary:hover { background: #db2777; box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3); }
+        .fw-btn-outline { border-color: #EC4899; color: #EC4899; }
+        .fw-btn-outline:hover { background: rgba(236, 72, 153, 0.1); }
+        .back-link:hover { color: #EC4899; }
+        .fw-card:hover { border-color: rgba(236, 72, 153, 0.2); }
+        .fw-tag { background: rgba(236, 72, 153, 0.1); color: #EC4899; }
+        .fw-resource a { color: #EC4899; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">📋</span>
+            <h1>React Hook Form</h1>
+            <p class="fw-desc">高性能、灵活的React表单验证库。基于Hooks，性能卓越，体积小。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">40k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2019</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Beier Luo</span><span class="fw-stat-label">作者</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://react-hook-form.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/react-hook-form/react-hook-form" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">React Hook Form 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>⚡ 极致性能</h3>
+                    <p>基于非受控组件，减少重渲染，性能卓越</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📦 极小体积</h3>
+                    <p>仅8KB（gzip），是Formik的1/5大小</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🎯 零依赖</h3>
+                    <p>无外部依赖，纯净的React实现</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🔌 验证库集成</h3>
+                    <p>支持Yup、Zod、Joi等主流验证库</p>
+                </div>
+                <div class="fw-card">
+                    <h3>📱 移动端友好</h3>
+                    <p>支持React Native，跨平台表单处理</p>
+                </div>
+                <div class="fw-card">
+                    <h3>🛡️ TypeScript支持</h3>
+                    <p>完整的TypeScript类型定义，类型安全</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">React Hook Form 核心扩展和官方工具</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <h3>@hookform/resolvers</h3>
+                    <p>验证库适配器，支持Yup、Zod、Joi等</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">验证</span>
+                        <span class="fw-tag">适配器</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>@hookform/devtools</h3>
+                    <p>开发调试工具，可视化表单状态</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">调试</span>
+                        <span class="fw-tag">工具</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>@hookform/error-message</h3>
+                    <p>错误消息组件，简化错误显示</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">错误</span>
+                        <span class="fw-tag">组件</span>
+                    </div>
+                </div>
+                <div class="fw-card">
+                    <h3>Mantine + RHF</h3>
+                    <p>与Mantine UI库完美集成</p>
+                    <div class="fw-tags">
+                        <span class="fw-tag">UI库</span>
+                        <span class="fw-tag">集成</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code-block">
+                <pre><code># 安装React Hook Form
+npm install react-hook-form
+
+# 基础用法
+import { useForm } from 'react-hook-form'
+
+function App() {
+  const { register, handleSubmit, formState: { errors } } = useForm()
+  
+  const onSubmit = (data) => {
+    console.log(data)
+  }
+  
+  return (
+    &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+      &lt;input {...register('firstName', { required: true })} /&gt;
+      {errors.firstName && &lt;span&gt;此字段必填&lt;/span&gt;}
+      
+      &lt;input {...register('email', { required: true, pattern: /^\S+@\S+$/i })} /&gt;
+      {errors.email && &lt;span&gt;请输入有效的邮箱&lt;/span&gt;}
+      
+      &lt;button type="submit"&gt;提交&lt;/button&gt;
+    &lt;/form&gt;
+  )
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code-block">
+                <pre><code>// 高级用法示例
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+
+// 使用Zod验证
+const schema = z.object({
+  username: z.string().min(3, '用户名至少3个字符'),
+  email: z.string().email('请输入有效的邮箱'),
+  password: z.string().min(8, '密码至少8位'),
+  confirmPassword: z.string(),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: '两次密码不一致',
+  path: ['confirmPassword'],
+})
+
+function AdvancedForm() {
+  const {
+    register,
+    handleSubmit,
+    control,
+    watch,
+    setValue,
+    reset,
+    formState: { errors, isSubmitting, isValid }
+  } = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+    mode: 'onChange', // 实时验证
+  })
+  
+  // 监听字段变化
+  const watchPassword = watch('password')
+  
+  // 手动设置值
+  const handleReset = () => {
+    reset() // 重置表单
+  }
+  
+  // 异步提交
+  const onSubmit = async (data) => {
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    console.log(data)
+  }
+  
+  return (
+    &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+      &lt;div&gt;
+        &lt;label&gt;用户名&lt;/label&gt;
+        &lt;input {...register('username')} /&gt;
+        {errors.username && &lt;span&gt;{errors.username.message}&lt;/span&gt;}
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;邮箱&lt;/label&gt;
+        &lt;input {...register('email')} /&gt;
+        {errors.email && &lt;span&gt;{errors.email.message}&lt;/span&gt;}
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;密码&lt;/label&gt;
+        &lt;input type="password" {...register('password')} /&gt;
+        {errors.password && &lt;span&gt;{errors.password.message}&lt;/span&gt;}
+      &lt;/div&gt;
+      
+      &lt;div&gt;
+        &lt;label&gt;确认密码&lt;/label&gt;
+        &lt;input type="password" {...register('confirmPassword')} /&gt;
+        {errors.confirmPassword && &lt;span&gt;{errors.confirmPassword.message}&lt;/span&gt;}
+      &lt;/div&gt;
+      
+      &lt;button type="submit" disabled={isSubmitting || !isValid}&gt;
+        {isSubmitting ? '提交中...' : '提交'}
+      &lt;/button&gt;
+      &lt;button type="button" onClick={handleReset}&gt;重置&lt;/button&gt;
+    &lt;/form&gt;
+  )
+}
+
+// 使用Controller包装第三方组件
+function FormWithController() {
+  const { control, handleSubmit } = useForm()
+  
+  return (
+    &lt;form onSubmit={handleSubmit(console.log)}&gt;
+      &lt;Controller
+        name="select"
+        control={control}
+        render={({ field }) =&gt; (
+          &lt;Select {...field} options={[...]} /&gt;
+        )}
+      /&gt;
+      &lt;button type="submit"&gt;提交&lt;/button&gt;
+    &lt;/form&gt;
+  )
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h3>官方资源</h3>
+                    <ul>
+                        <li><a href="https://react-hook-form.com/get-started" target="_blank">React Hook Form 官方文档</a></li>
+                        <li><a href="https://github.com/react-hook-form/react-hook-form" target="_blank">React Hook Form GitHub仓库</a></li>
+                        <li><a href="https://react-hook-form.com/api" target="_blank">API文档</a></li>
+                    </ul>
+                </div>
+                <div class="fw-resource">
+                    <h3>学习路径</h3>
+                    <ul>
+                        <li><a href="https://react-hook-form.com/get-started" target="_blank">快速入门</a></li>
+                        <li><a href="https://react-hook-form.com/api/useform" target="_blank">useForm钩子</a></li>
+                        <li><a href="https://react-hook-form.com/api/usecontroller" target="_blank">useController钩子</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他表单库对比</h2>
+            <div class="fw-comparison">
+                <div class="fw-comparison-item">
+                    <h3>vs Formik</h3>
+                    <p>RHF性能更好，体积更小。Formik更成熟，文档更完善。</p>
+                </div>
+                <div class="fw-comparison-item">
+                    <h3>vs Redux Form</h3>
+                    <p>RHF独立于Redux，性能更好。Redux Form依赖Redux，适合已使用Redux的项目。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+    </footer>
+</body>
+</html>

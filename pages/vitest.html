@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitest 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a2e0a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(114, 155, 27, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #729B1B; }
+        .fw-btn-primary { background: #729B1B; }
+        .fw-btn-primary:hover { background: #638a17; box-shadow: 0 8px 25px rgba(114, 155, 27, 0.3); }
+        .fw-btn-outline { border-color: #729B1B; color: #729B1B; }
+        .fw-btn-outline:hover { background: rgba(114, 155, 27, 0.1); }
+        .back-link:hover { color: #729B1B; }
+        .fw-card:hover { border-color: rgba(114, 155, 27, 0.2); }
+        .fw-tag { background: rgba(114, 155, 27, 0.1); color: #729B1B; }
+        .fw-resource a { color: #729B1B; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">⚡</span>
+            <h1>Vitest</h1>
+            <p class="fw-desc">Vite原生测试框架，极速的单元测试。共享Vite的配置和插件系统，与Vite深度集成。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">12k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2021</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Anthony Fu</span><span class="fw-stat-label">创始人</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://vitest.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/vitest-dev/vitest" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Vitest 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>Vite原生</h3>
+                    <p>基于Vite的模块解析和转换。共享Vite配置和插件系统，无需额外配置。</p>
+                    <div class="fw-tags"><span class="fw-tag">Vite原生</span><span class="fw-tag">模块解析</span><span class="fw-tag">共享配置</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>极速测试</h3>
+                    <p>利用Vite的HMR和ESM支持，测试速度极快。比传统测试框架快10-100倍。</p>
+                    <div class="fw-tags"><span class="fw-tag">HMR</span><span class="fw-tag">ESM</span><span class="fw-tag">极速</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>Jest兼容</h3>
+                    <p>兼容Jest API，可无缝迁移。支持expect、describe、it等Jest语法。</p>
+                    <div class="fw-tags"><span class="fw-tag">Jest兼容</span><span class="fw-tag">无缝迁移</span><span class="fw-tag">API兼容</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>TypeScript</h3>
+                    <p>原生TypeScript支持，无需额外配置。类型安全的测试编写。</p>
+                    <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">原生支持</span><span class="fw-tag">类型安全</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Vitest 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>Vue测试</h3>
+                    <p>@vue/test-utils集成。支持Vue组件测试，与Vite Vue插件深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">@vue/test-utils</span><span class="fw-tag">Vue</span><span class="fw-tag">组件测试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>React测试</h3>
+                    <p>@testing-library/react集成。支持React组件测试，与Vite React插件集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">@testing-library/react</span><span class="fw-tag">React</span><span class="fw-tag">组件测试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>覆盖率</h3>
+                    <p>内置代码覆盖率支持。支持v8和istanbul两种覆盖率提供者。</p>
+                    <div class="fw-tags"><span class="fw-tag">v8</span><span class="fw-tag">istanbul</span><span class="fw-tag">代码覆盖</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>UI测试</h3>
+                    <p>Vitest UI提供可视化测试界面。实时查看测试结果和覆盖率报告。</p>
+                    <div class="fw-tags"><span class="fw-tag">@vitest/ui</span><span class="fw-tag">可视化</span><span class="fw-tag">测试界面</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>快照测试</h3>
+                    <p>支持快照测试，与Jest快照兼容。可序列化组件、DOM、CSS等。</p>
+                    <div class="fw-tags"><span class="fw-tag">快照测试</span><span class="fw-tag">Jest兼容</span><span class="fw-tag">序列化</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>浏览器测试</h3>
+                    <p>支持浏览器环境测试。可在真实浏览器中运行测试，测试浏览器API。</p>
+                    <div class="fw-tags"><span class="fw-tag">浏览器测试</span><span class="fw-tag">真实环境</span><span class="fw-tag">浏览器API</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Vitest
+npm install vitest --save-dev
+
+# 创建测试文件
+echo 'import { describe, it, expect } from "vitest";
+
+function sum(a, b) {
+    return a + b;
+}
+
+describe("sum", () => {
+    it("adds 1 + 2 to equal 3", () => {
+        expect(sum(1, 2)).toBe(3);
+    });
+});' > sum.test.js
+
+# 运行测试
+npx vitest
+
+# 运行所有测试
+npx vitest run
+
+# 生成覆盖率报告
+npx vitest --coverage</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// vitest.config.ts
+import { defineConfig } from "vitest/config";
+import vue from "@vitejs/plugin-vue";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+    plugins: [vue(), react()],
+    test: {
+        // 测试环境
+        environment: "jsdom",
+        
+        // 全局变量
+        globals: true,
+        
+        // 覆盖率配置
+        coverage: {
+            provider: "v8",
+            reporter: ["text", "json", "html"],
+            exclude: [
+                "node_modules/",
+                "src/test/"
+            ]
+        },
+        
+        // 设置文件
+        setupFiles: ["./src/test/setup.ts"],
+        
+        // 包含模式
+        include: ["**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+        
+        // 排除模式
+        exclude: ["node_modules", "dist", ".idea", ".git", ".cache"]
+    }
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、配置指南和最佳实践。</p>
+                    <a href="https://vitest.dev/guide/" target="_blank">vitest.dev/guide →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vitest GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/vitest-dev/vitest" target="_blank">github.com/vitest-dev/vitest →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vitest配置</h4>
+                    <p>完整的配置参考和示例。</p>
+                    <a href="https://vitest.dev/config/" target="_blank">Config →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Vitest示例</h4>
+                    <p>官方示例项目和模板。</p>
+                    <a href="https://github.com/vitest-dev/vitest/tree/main/examples" target="_blank">Examples →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他测试框架对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Jest</h3>
+                    <p>Vitest性能更好，与Vite集成更紧密。Jest生态更成熟，社区更大，适合传统项目。</p>
+                    <div class="fw-tags"><span class="fw-tag">性能</span><span class="fw-tag">Vite集成</span><span class="fw-tag">生态系统</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Mocha</h3>
+                    <p>Vitest功能更丰富，配置更简单。Mocha更灵活，适合需要自定义配置的项目。</p>
+                    <div class="fw-tags"><span class="fw-tag">功能丰富度</span><span class="fw-tag">配置简单</span><span class="fw-tag">灵活性</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Jasmine</h3>
+                    <p>Vitest现代特性更多，性能更好。Jasmine更轻量，适合简单项目。</p>
+                    <div class="fw-tags"><span class="fw-tag">现代特性</span><span class="fw-tag">性能</span><span class="fw-tag">轻量级</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Vitest 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#729B1B;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

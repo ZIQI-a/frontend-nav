@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(46, 173, 51, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #2EAD33; }
+        .fw-btn-primary { background: #2EAD33; }
+        .fw-btn-primary:hover { background: #289a2d; box-shadow: 0 8px 25px rgba(46, 173, 51, 0.3); }
+        .fw-btn-outline { border-color: #2EAD33; color: #2EAD33; }
+        .fw-btn-outline:hover { background: rgba(46, 173, 51, 0.1); }
+        .back-link:hover { color: #2EAD33; }
+        .fw-card:hover { border-color: rgba(46, 173, 51, 0.2); }
+        .fw-tag { background: rgba(46, 173, 51, 0.1); color: #2EAD33; }
+        .fw-resource a { color: #2EAD33; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🎭</span>
+            <h1>Playwright</h1>
+            <p class="fw-desc">Microsoft开发的端到端测试框架。支持多浏览器、多平台，测试更稳定可靠。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">65k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">8M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2020</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Microsoft</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://playwright.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/microsoft/playwright" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">Playwright 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎭</span>
+                    <h3>多浏览器支持</h3>
+                    <p>支持Chromium、Firefox、WebKit三大浏览器引擎。一套代码，多浏览器运行。</p>
+                    <div class="fw-tags"><span class="fw-tag">Chromium</span><span class="fw-tag">Firefox</span><span class="fw-tag">WebKit</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>自动等待</h3>
+                    <p>智能等待机制，自动等待元素可操作。减少测试不稳定，提高测试可靠性。</p>
+                    <div class="fw-tags"><span class="fw-tag">自动等待</span><span class="fw-tag">智能等待</span><span class="fw-tag">可靠性</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>并行执行</h3>
+                    <p>支持并行运行测试，提升测试速度。可配置worker数量，优化测试性能。</p>
+                    <div class="fw-tags"><span class="fw-tag">并行执行</span><span class="fw-tag">多worker</span><span class="fw-tag">性能优化</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>代码生成</h3>
+                    <p>内置代码生成器，录制用户操作生成测试代码。快速创建测试用例。</p>
+                    <div class="fw-tags"><span class="fw-tag">代码生成</span><span class="fw-tag">录制</span><span class="fw-tag">快速创建</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 Playwright 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架支持</h3>
+                    <p>支持React、Vue、Angular、Svelte等所有前端框架。与框架无关，通用性强。</p>
+                    <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">Vue</span><span class="fw-tag">Angular</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>组件测试</h3>
+                    <p>支持组件测试，可在真实浏览器中测试组件。与单元测试互补。</p>
+                    <div class="fw-tags"><span class="fw-tag">组件测试</span><span class="fw-tag">真实浏览器</span><span class="fw-tag">单元测试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>视觉回归</h3>
+                    <p>内置视觉回归测试。截图对比，检测UI变化，确保视觉一致性。</p>
+                    <div class="fw-tags"><span class="fw-tag">视觉回归</span><span class="fw-tag">截图对比</span><span class="fw-tag">UI一致性</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>追踪查看器</h3>
+                    <p>内置追踪查看器，可回放测试过程。查看每一步操作、网络请求、控制台日志。</p>
+                    <div class="fw-tags"><span class="fw-tag">追踪查看器</span><span class="fw-tag">回放</span><span class="fw-tag">调试</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>API测试</h3>
+                    <p>支持API测试，可测试后端接口。与UI测试结合，覆盖更全面。</p>
+                    <div class="fw-tags"><span class="fw-tag">API测试</span><span class="fw-tag">后端接口</span><span class="fw-tag">全面覆盖</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>CI/CD集成</h3>
+                    <p>与GitHub Actions、GitLab CI、Azure Pipelines等CI/CD工具深度集成。</p>
+                    <div class="fw-tags"><span class="fw-tag">GitHub Actions</span><span class="fw-tag">GitLab CI</span><span class="fw-tag">Azure Pipelines</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装Playwright
+npm init playwright@latest
+
+# 创建测试文件
+echo 'import { test, expect } from "@playwright/test";
+
+test("has title", async ({ page }) => {
+    await page.goto("https://playwright.dev/");
+    await expect(page).toHaveTitle(/Playwright/);
+});
+
+test("get started link", async ({ page }) => {
+    await page.goto("https://playwright.dev/");
+    await page.click("text=Get Started");
+    await expect(page).toHaveURL(/.*intro/);
+});' > tests/example.spec.ts
+
+# 运行测试
+npx playwright test
+
+# 运行特定测试
+npx playwright test tests/example.spec.ts
+
+# 生成测试报告
+npx playwright show-report</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// playwright.config.ts
+import { defineConfig, devices } from "@playwright/test";
+
+export default defineConfig({
+    // 测试目录
+    testDir: "./tests",
+    
+    // 并行执行
+    fullyParallel: true,
+    
+    // 失败重试
+    retries: process.env.CI ? 2 : 0,
+    
+    // 并发worker数
+    workers: process.env.CI ? 1 : undefined,
+    
+    // 报告器
+    reporter: "html",
+    
+    // 共享配置
+    use: {
+        // 基础URL
+        baseURL: "http://localhost:3000",
+        
+        // 追踪配置
+        trace: "on-first-retry",
+        
+        // 截图配置
+        screenshot: "only-on-failure",
+        
+        // 视频配置
+        video: "retain-on-failure"
+    },
+    
+    // 浏览器配置
+    projects: [
+        {
+            name: "chromium",
+            use: { ...devices["Desktop Chrome"] }
+        },
+        {
+            name: "firefox",
+            use: { ...devices["Desktop Firefox"] }
+        },
+        {
+            name: "webkit",
+            use: { ...devices["Desktop Safari"] }
+        },
+        {
+            name: "Mobile Chrome",
+            use: { ...devices["Pixel 5"] }
+        },
+        {
+            name: "Mobile Safari",
+            use: { ...devices["iPhone 12"] }
+        }
+    ],
+    
+    // 开发服务器配置
+    webServer: {
+        command: "npm run dev",
+        url: "http://localhost:3000",
+        reuseExistingServer: !process.env.CI
+    }
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、最佳实践和教程。</p>
+                    <a href="https://playwright.dev/docs/intro" target="_blank">playwright.dev/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Playwright GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/microsoft/playwright" target="_blank">github.com/microsoft/playwright →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Playwright Test Generator</h4>
+                    <p>在线测试代码生成器。</p>
+                    <a href="https://playwright.dev/docs/codegen" target="_blank">Codegen →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>Playwright示例</h4>
+                    <p>官方示例项目和测试用例。</p>
+                    <a href="https://github.com/microsoft/playwright/tree/main/examples" target="_blank">Examples →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他测试框架对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Cypress</h3>
+                    <p>Playwright性能更好，支持更多浏览器。Cypress社区更大，文档更完善。</p>
+                    <div class="fw-tags"><span class="fw-tag">性能</span><span class="fw-tag">浏览器支持</span><span class="fw-tag">社区</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Selenium</h3>
+                    <p>Playwright更现代，API更友好。Selenium生态更成熟，支持更多语言。</p>
+                    <div class="fw-tags"><span class="fw-tag">现代</span><span class="fw-tag">API友好</span><span class="fw-tag">语言支持</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Puppeteer</h3>
+                    <p>Playwright支持更多浏览器，功能更丰富。Puppeteer更轻量，专注Chrome。</p>
+                    <div class="fw-tags"><span class="fw-tag">多浏览器</span><span class="fw-tag">功能丰富</span><span class="fw-tag">轻量级</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>Playwright 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#2EAD33;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a2e1a 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(136, 206, 2, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #88CE02; }
+        .fw-btn-primary { background: #88CE02; color: #0a0a0a; }
+        .fw-btn-primary:hover { background: #7ab802; box-shadow: 0 8px 25px rgba(136, 206, 2, 0.3); }
+        .fw-btn-outline { border-color: #88CE02; color: #88CE02; }
+        .fw-btn-outline:hover { background: rgba(136, 206, 2, 0.1); }
+        .back-link:hover { color: #88CE02; }
+        .fw-card:hover { border-color: rgba(136, 206, 2, 0.2); }
+        .fw-tag { background: rgba(136, 206, 2, 0.1); color: #88CE02; }
+        .fw-resource a { color: #88CE02; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🎬</span>
+            <h1>GSAP</h1>
+            <p class="fw-desc">专业级JavaScript动画库，高性能动画引擎。用于创建复杂的动画效果，支持所有主流浏览器。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">19k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2008</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">GreenSock</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://gsap.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/greensock/GSAP" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">GSAP 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎬</span>
+                    <h3>高性能动画</h3>
+                    <p>基于requestAnimationFrame，优化动画性能。支持硬件加速，60fps流畅动画。</p>
+                    <div class="fw-tags"><span class="fw-tag">高性能</span><span class="fw-tag">60fps</span><span class="fw-tag">硬件加速</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>丰富的API</h3>
+                    <p>提供Timeline、Tween、Stagger等高级动画API。支持复杂的动画序列和编排。</p>
+                    <div class="fw-tags"><span class="fw-tag">Timeline</span><span class="fw-tag">Tween</span><span class="fw-tag">Stagger</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚡</span>
+                    <h3>跨浏览器兼容</h3>
+                    <p>支持所有主流浏览器，包括IE6+。自动处理浏览器差异，无需额外配置。</p>
+                    <div class="fw-tags"><span class="fw-tag">跨浏览器</span><span class="fw-tag">兼容性</span><span class="fw-tag">IE6+</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>轻量级</h3>
+                    <p>核心库仅30KB，压缩后更小。按需加载插件，优化包体积。</p>
+                    <div class="fw-tags"><span class="fw-tag">轻量级</span><span class="fw-tag">30KB</span><span class="fw-tag">按需加载</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 GSAP 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架集成</h3>
+                    <p>与React、Vue、Angular等框架完美集成。提供useGSAP等Hook，简化动画开发。</p>
+                    <div class="fw-tags"><span class="fw-tag">useGSAP</span><span class="fw-tag">React</span><span class="fw-tag">Vue</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>ScrollTrigger</h3>
+                    <p>滚动触发动画插件。基于滚动位置触发动画，创建滚动驱动的交互效果。</p>
+                    <div class="fw-tags"><span class="fw-tag">ScrollTrigger</span><span class="fw-tag">滚动动画</span><span class="fw-tag">交互效果</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>MotionPath</h3>
+                    <p>运动路径插件。沿SVG路径或自定义路径运动，创建复杂的运动轨迹。</p>
+                    <div class="fw-tags"><span class="fw-tag">MotionPath</span><span class="fw-tag">SVG路径</span><span class="fw-tag">运动轨迹</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>MorphSVG</h3>
+                    <p>SVG变形插件。实现SVG形状之间的平滑变形动画。</p>
+                    <div class="fw-tags"><span class="fw-tag">MorphSVG</span><span class="fw-tag">SVG变形</span><span class="fw-tag">形状动画</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>TextPlugin</h3>
+                    <p>文本动画插件。支持打字机效果、文本逐字显示等文本动画。</p>
+                    <div class="fw-tags"><span class="fw-tag">TextPlugin</span><span class="fw-tag">打字机效果</span><span class="fw-tag">文本动画</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>Flip</h3>
+                    <p>FLIP动画插件。实现布局变化的平滑过渡动画，优化性能。</p>
+                    <div class="fw-tags"><span class="fw-tag">Flip</span><span class="fw-tag">FLIP动画</span><span class="fw-tag">布局过渡</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装GSAP
+npm install gsap
+
+# 基本使用
+import gsap from "gsap";
+
+// 简单动画
+gsap.to(".box", {
+    x: 200,
+    rotation: 360,
+    duration: 1,
+    ease: "power2.out"
+});
+
+// 时间线动画
+const tl = gsap.timeline();
+tl.to(".box1", { x: 200, duration: 1 })
+  .to(".box2", { x: 200, duration: 1 }, "-=0.5")
+  .to(".box3", { x: 200, duration: 1 }, "-=0.5");
+
+// 滚动触发动画
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".box", {
+    scrollTrigger: ".box",
+    x: 500,
+    rotation: 360,
+    duration: 3
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// GSAP配置示例
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+// 注册插件
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+// 全局配置
+gsap.config({
+    nullTargetWarn: false,
+    trialWarn: false
+});
+
+// 默认缓动函数
+gsap.defaults({
+    ease: "power2.out",
+    duration: 1
+});
+
+// 响应式动画
+ScrollTrigger.matchMedia({
+    // 桌面端
+    "(min-width: 768px)": function() {
+        gsap.to(".box", {
+            x: 200,
+            scrollTrigger: ".box"
+        });
+    },
+    // 移动端
+    "(max-width: 767px)": function() {
+        gsap.to(".box", {
+            x: 100,
+            scrollTrigger: ".box"
+        });
+    }
+});
+
+// 清理动画
+const animation = gsap.to(".box", { x: 200 });
+animation.kill(); // 停止动画
+animation.pause(); // 暂停动画
+animation.resume(); // 恢复动画
+animation.restart(); // 重新开始动画</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的API参考、教程和示例。</p>
+                    <a href="https://gsap.com/docs/v3/" target="_blank">gsap.com/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>GSAP GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/greensock/GSAP" target="_blank">github.com/greensock/GSAP →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>GSAP学习平台</h4>
+                    <p>官方学习平台，提供互动教程和课程。</p>
+                    <a href="https://gsap.com/learn/" target="_blank">GSAP Learn →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>GSAP示例</h4>
+                    <p>官方示例库，包含各种动画效果。</p>
+                    <a href="https://gsap.com/resources/demos/" target="_blank">Demos →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他动画库对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Framer Motion</h3>
+                    <p>GSAP功能更强大，适合复杂动画。Framer Motion更简单，适合React组件动画。</p>
+                    <div class="fw-tags"><span class="fw-tag">功能强大</span><span class="fw-tag">简单易用</span><span class="fw-tag">React</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Anime.js</h3>
+                    <p>GSAP性能更好，功能更丰富。Anime.js更轻量，适合简单动画场景。</p>
+                    <div class="fw-tags"><span class="fw-tag">性能</span><span class="fw-tag">功能丰富度</span><span class="fw-tag">轻量级</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs CSS动画</h3>
+                    <p>GSAP控制更精细，支持复杂编排。CSS动画性能更好，适合简单过渡效果。</p>
+                    <div class="fw-tags"><span class="fw-tag">控制精细</span><span class="fw-tag">性能</span><span class="fw-tag">过渡效果</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>GSAP 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#88CE02;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

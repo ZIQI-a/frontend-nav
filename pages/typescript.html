@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript 生态详解 | 前端技术导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/framework.css">
+    <style>
+        .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #0a1a2e 100%); }
+        .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(49, 120, 198, 0.12) 0%, transparent 50%); }
+        .fw-hero h1, .fw-stat-num { color: #3178c6; }
+        .fw-btn-primary { background: #3178c6; }
+        .fw-btn-primary:hover { background: #2a6ab5; box-shadow: 0 8px 25px rgba(49, 120, 198, 0.3); }
+        .fw-btn-outline { border-color: #3178c6; color: #3178c6; }
+        .fw-btn-outline:hover { background: rgba(49, 120, 198, 0.1); }
+        .back-link:hover { color: #3178c6; }
+        .fw-card:hover { border-color: rgba(49, 120, 198, 0.2); }
+        .fw-tag { background: rgba(49, 120, 198, 0.1); color: #3178c6; }
+        .fw-resource a { color: #3178c6; }
+        .fw-resource a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="fw-hero">
+        <div class="fw-hero-content">
+            <span class="fw-logo">🔷</span>
+            <h1>TypeScript</h1>
+            <p class="fw-desc">JavaScript的超集，添加静态类型检查和现代语言特性。由Microsoft开发维护，已成为大型前端项目的首选语言。</p>
+            <div class="fw-stats">
+                <div class="fw-stat"><span class="fw-stat-num">100k+</span><span class="fw-stat-label">GitHub Stars</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">50M+</span><span class="fw-stat-label">周下载量</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">2012</span><span class="fw-stat-label">发布年份</span></div>
+                <div class="fw-stat"><span class="fw-stat-num">Microsoft</span><span class="fw-stat-label">开发团队</span></div>
+            </div>
+            <div class="fw-actions">
+                <a href="https://www.typescriptlang.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/microsoft/TypeScript" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="../index.html" class="back-link">← 返回首页</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="fw-section">
+            <h2 class="fw-section-title">核心特性</h2>
+            <p class="fw-section-desc">TypeScript 的设计哲学和关键技术特性</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">🛡️</span>
+                    <h3>静态类型检查</h3>
+                    <p>在编译时捕获类型错误，提供完整的类型推断系统。支持接口、泛型、联合类型等高级类型特性。</p>
+                    <div class="fw-tags"><span class="fw-tag">类型推断</span><span class="fw-tag">接口</span><span class="fw-tag">泛型</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📝</span>
+                    <h3>现代语言特性</h3>
+                    <p>支持ES6+所有特性，并扩展了装饰器、枚举、元组等高级功能。与JavaScript完全兼容。</p>
+                    <div class="fw-tags"><span class="fw-tag">ES6+</span><span class="fw-tag">装饰器</span><span class="fw-tag">枚举</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🔧</span>
+                    <h3>强大的工具支持</h3>
+                    <p>提供智能代码补全、重构、导航等IDE功能。与VS Code深度集成，开发体验极佳。</p>
+                    <div class="fw-tags"><span class="fw-tag">智能提示</span><span class="fw-tag">重构</span><span class="fw-tag">VS Code</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>渐进式采用</h3>
+                    <p>可以逐步将JavaScript项目迁移到TypeScript。支持混合使用JS和TS文件，降低迁移成本。</p>
+                    <div class="fw-tags"><span class="fw-tag">渐进式</span><span class="fw-tag">兼容性</span><span class="fw-tag">迁移</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">生态系统</h2>
+            <p class="fw-section-desc">围绕 TypeScript 构建的完整工具链</p>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">⚛️</span>
+                    <h3>框架支持</h3>
+                    <p>所有主流框架都提供TypeScript支持。React、Vue、Angular、Svelte等都有完整的类型定义和开发工具。</p>
+                    <div class="fw-tags"><span class="fw-tag">@types/react</span><span class="fw-tag">@vue/runtime-dom</span><span class="fw-tag">@angular/core</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🧪</span>
+                    <h3>测试框架</h3>
+                    <p>Jest、Vitest、Mocha等测试框架都支持TypeScript。提供类型安全的测试编写和断言。</p>
+                    <div class="fw-tags"><span class="fw-tag">ts-jest</span><span class="fw-tag">vitest</span><span class="fw-tag">@types/mocha</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📄</span>
+                    <h3>构建工具</h3>
+                    <p>Webpack、Vite、Rollup等构建工具都内置TypeScript支持。无需额外配置即可使用。</p>
+                    <div class="fw-tags"><span class="fw-tag">ts-loader</span><span class="fw-tag">@rollup/plugin-typescript</span><span class="fw-tag">esbuild</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🎨</span>
+                    <h3>类型定义</h3>
+                    <p>DefinitelyTyped提供5000+流行库的类型定义。npm包大多自带类型定义或@types包。</p>
+                    <div class="fw-tags"><span class="fw-tag">@types/node</span><span class="fw-tag">@types/lodash</span><span class="fw-tag">DefinitelyTyped</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📦</span>
+                    <h3>运行时</h3>
+                    <p>Node.js、Deno、Bun等JavaScript运行时都原生支持TypeScript。无需编译即可运行。</p>
+                    <div class="fw-tags"><span class="fw-tag">tsx</span><span class="fw-tag">ts-node</span><span class="fw-tag">Deno</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">🌐</span>
+                    <h3>后端开发</h3>
+                    <p>NestJS、Express、Fastify等后端框架都支持TypeScript。提供完整的后端开发类型安全。</p>
+                    <div class="fw-tags"><span class="fw-tag">@nestjs/common</span><span class="fw-tag">@types/express</span><span class="fw-tag">fastify</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">快速入门</h2>
+            <div class="fw-code">
+                <pre><code># 安装TypeScript
+npm install -g typescript
+
+# 创建TypeScript项目
+mkdir my-ts-project
+cd my-ts-project
+npm init -y
+
+# 创建tsconfig.json
+tsc --init
+
+# 编写TypeScript代码
+echo 'function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+console.log(greet("TypeScript"));' > index.ts
+
+# 编译TypeScript
+tsc
+
+# 运行编译后的JavaScript
+node index.js</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">配置示例</h2>
+            <div class="fw-code">
+                <pre><code>// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020", "DOM"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">学习资源</h2>
+            <div class="fw-resources">
+                <div class="fw-resource">
+                    <h4>官方文档</h4>
+                    <p>全面的手册、教程和API参考文档。</p>
+                    <a href="https://www.typescriptlang.org/docs/" target="_blank">typescriptlang.org/docs →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>TypeScript GitHub</h4>
+                    <p>源代码仓库，可查看源码和参与贡献。</p>
+                    <a href="https://github.com/microsoft/TypeScript" target="_blank">github.com/microsoft/TypeScript →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>TypeScript Playground</h4>
+                    <p>在线TypeScript编辑器，实时编译和预览。</p>
+                    <a href="https://www.typescriptlang.org/play" target="_blank">typescriptlang.org/play →</a>
+                </div>
+                <div class="fw-resource">
+                    <h4>DefinitelyTyped</h4>
+                    <p>高质量TypeScript类型定义的仓库。</p>
+                    <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank">DefinitelyTyped →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="fw-section">
+            <h2 class="fw-section-title">与其他语言对比</h2>
+            <div class="fw-grid">
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs JavaScript</h3>
+                    <p>TypeScript添加了静态类型检查，提供更好的开发工具支持。JavaScript更灵活，适合小型项目和快速原型。</p>
+                    <div class="fw-tags"><span class="fw-tag">类型安全</span><span class="fw-tag">开发体验</span><span class="fw-tag">学习曲线</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs Flow</h3>
+                    <p>TypeScript生态更成熟，工具支持更好。Flow由Facebook开发，类型系统更灵活，但社区较小。</p>
+                    <div class="fw-tags"><span class="fw-tag">生态系统</span><span class="fw-tag">类型系统</span><span class="fw-tag">社区</span></div>
+                </div>
+                <div class="fw-card">
+                    <span class="fw-card-icon">📊</span>
+                    <h3>vs JSDoc</h3>
+                    <p>TypeScript提供完整的类型系统和编译时检查。JSDoc是注释中的类型标注，运行时无检查。</p>
+                    <div class="fw-tags"><span class="fw-tag">编译时检查</span><span class="fw-tag">类型系统</span><span class="fw-tag">工具支持</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fw-footer">
+        <p>TypeScript 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#3178c6;text-decoration:none">返回首页</a></p>
+    </footer>
+</body>
+</html>

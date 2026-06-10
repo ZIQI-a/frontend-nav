@@ -1,6 +1,10 @@
 /**
  * 前端技术生态导航 - 主交互脚本
- * 功能：动态生成技术卡片、搜索过滤、分类筛选
+ * 功能：动态生成技术卡片、搜索过滤、分类筛选、二级菜单
+ *
+ * 注意：categoryColors 和 categoryNames 在 tech-categories.js 中定义
+ * techDetails 和 getTechDetail() 在 tech-details.js 中定义
+ * TechCard 类在 tech-card.js 中定义
  */
 
 // 技术领域数据
@@ -173,7 +177,6 @@ const techData = [
         title: "内容管理 (CMS)",
         description: "管理和发布数字内容的系统，从传统CMS到无头CMS。",
         category: "engineering",
-        techs: ["WordPress", "Strapi", "Contentful", "Sanity", "Payload CMS", "Directus", "Ghost"],
         techs: ["WordPress", "Strapi", "Contentful", "Sanity", "Payload CMS", "Directus", "Ghost"],
         link: null
     },
@@ -638,28 +641,6 @@ const techData = [
     }
 ];
 
-// 类别颜色映射
-const categoryColors = {
-    basic: '#3b82f6',
-    framework: '#10b981',
-    engineering: '#f59e0b',
-    visualization: '#8b5cf6',
-    crossplatform: '#ec4899',
-    ai: '#06b6d4',
-    advanced: '#f97316'
-};
-
-// 类别名称映射
-const categoryNames = {
-    basic: '基础核心',
-    framework: '框架生态',
-    engineering: '工程化',
-    visualization: '可视化',
-    crossplatform: '跨平台',
-    ai: 'AI与智能',
-    advanced: '前沿技术'
-};
-
 // DOM 元素
 const techGrid = document.getElementById('techGrid');
 const searchInput = document.getElementById('searchInput');
@@ -669,6 +650,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 // 当前状态
 let currentCategory = 'all';
 let currentSearch = '';
+let techCards = []; // 存储卡片组件实例
 
 /**
  * 生成技术卡片HTML
@@ -676,36 +658,9 @@ let currentSearch = '';
  * @returns {string} 卡片HTML字符串
  */
 function createTechCard(tech) {
-    const color = categoryColors[tech.category] || categoryColors.basic;
-    const categoryName = categoryNames[tech.category] || '其他';
-    
-    const techTags = tech.techs.slice(0, 6).map(t => 
-        `<span class="tech-tag">${t}</span>`
-    ).join('');
-    
-    const linkHTML = tech.link ? 
-        `<a href="${tech.link}" target="_blank" rel="noopener noreferrer" class="card-link">
-            访问官网
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
-            </svg>
-        </a>` : 
-        `<span class="card-link disabled">暂无官网</span>`;
-    
-    return `
-        <article class="tech-card" data-category="${tech.category}" style="--card-color: ${color}">
-            <div class="card-header">
-                <span class="card-number">${tech.number}</span>
-                <span class="card-category">${categoryName}</span>
-            </div>
-            <h3 class="card-title">${tech.title}</h3>
-            <p class="card-description">${tech.description}</p>
-            <div class="card-techs">
-                ${techTags}
-            </div>
-            ${linkHTML}
-        </article>
-    `;
+    const card = new TechCard(tech, categoryColors, categoryNames);
+    techCards.push(card);
+    return card.render();
 }
 
 /**
@@ -713,12 +668,27 @@ function createTechCard(tech) {
  * @param {Array} techs - 技术数据数组
  */
 function renderTechCards(techs) {
+    techCards = []; // 重置卡片实例
     techGrid.innerHTML = techs.map(createTechCard).join('');
+    
+    // 绑定卡片事件
+    techCards.forEach(card => {
+        card.bindEvents();
+    });
     
     // 重新触发动画
     const cards = techGrid.querySelectorAll('.tech-card');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.05}s`;
+    });
+}
+
+/**
+ * 关闭所有二级菜单
+ */
+function closeAllDetailMenus() {
+    techCards.forEach(card => {
+        card.closeDetailMenu();
     });
 }
 
@@ -783,6 +753,14 @@ filterButtons.forEach(button => {
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     updateDisplay();
+    
+    // 添加全局点击事件，关闭所有二级菜单（只绑定一次）
+    document.addEventListener('click', (e) => {
+        // 如果点击的不是展开按钮或二级菜单内部，则关闭所有菜单
+        if (!e.target.closest('.expand-btn') && !e.target.closest('.tech-detail-menu')) {
+            techCards.forEach(card => card.closeDetailMenu());
+        }
+    });
     
     // 添加滚动动画观察器
     const observer = new IntersectionObserver((entries) => {
