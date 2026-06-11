@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Angular 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Angular 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Angular 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Angular 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,56 +19,55 @@
     <style>
         .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%); }
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(221,0,49,0.12) 0%, transparent 50%); }
-        .fw-hero h1, .fw-stat-num { color: #dd0031; }
-        .fw-btn-primary { background: #dd0031; color: #fff; }
-        .fw-btn-primary:hover { background: #c2002b; box-shadow: 0 8px 25px rgba(221,0,49,0.3); }
-        .fw-btn-outline { border-color: #dd0031; color: #dd0031; }
+        .fw-hero h1, .fw-stat-num { color: #ff5f73; }
+        .fw-btn-primary { background: #ff5f73; color: #fff; }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(221,0,49,0.3); }
+        .fw-btn-outline { border-color: #ff5f73; color: #ff5f73; }
         .fw-btn-outline:hover { background: rgba(221,0,49,0.1); }
-        .back-link:hover { color: #dd0031; }
+        .back-link:hover { color: #ff5f73; }
         .fw-card:hover { border-color: rgba(221,0,49,0.2); }
-        .fw-tag { background: rgba(221,0,49,0.1); color: #dd0031; }
-        .fw-resource a { color: #dd0031; }
+        .fw-tag { background: rgba(221,0,49,0.1); color: #ff5f73; }
+        .fw-resource a { color: #ff5f73; }
         .fw-resource a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🅰️</span>
+            <span class="fw-logo" aria-hidden="true">🅰️</span>
             <h1>Angular</h1>
             <p class="fw-desc">Google 维护的企业级前端框架，采用 TypeScript 开发，提供路由、表单、HTTP、测试等完整解决方案，适合大型团队和复杂项目。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">97k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">3.2M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2016</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Google</span><span class="fw-stat-label">维护方</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://angular.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/angular/angular" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/angular/angular" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <div class="fw-grid">
-                <div class="fw-card"><span class="fw-card-icon">🔷</span><h3>TypeScript 原生</h3><p>唯一以 TypeScript 为第一语言的主流框架，完整的类型安全和优秀的 IDE 支持。</p><div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">装饰器</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">📡</span><h3>Signals 响应式</h3><p>Angular 16+ 引入的细粒度响应式原语，替代 Zone.js 的变更检测，性能大幅提升。</p><div class="fw-tags"><span class="fw-tag">signal()</span><span class="fw-tag">computed()</span><span class="fw-tag">effect()</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">💉</span><h3>依赖注入</h3><p>内置强大的 DI 系统，管理服务和模块间的依赖关系，支持层级注入和懒加载。</p><div class="fw-tags"><span class="fw-tag">DI容器</span><span class="fw-tag">Provider</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">📋</span><h3>响应式表单</h3><p>内置表单模块支持模板驱动和响应式两种模式，提供完整的验证和动态表单能力。</p><div class="fw-tags"><span class="fw-tag">Reactive Forms</span><span class="fw-tag">Validators</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🔷</span><h3>TypeScript 原生</h3><p>唯一以 TypeScript 为第一语言的主流框架，完整的类型安全和优秀的 IDE 支持。</p><div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">装饰器</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">📡</span><h3>Signals 响应式</h3><p>Angular 16+ 引入的细粒度响应式原语，替代 Zone.js 的变更检测，性能大幅提升。</p><div class="fw-tags"><span class="fw-tag">signal()</span><span class="fw-tag">computed()</span><span class="fw-tag">effect()</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">💉</span><h3>依赖注入</h3><p>内置强大的 DI 系统，管理服务和模块间的依赖关系，支持层级注入和懒加载。</p><div class="fw-tags"><span class="fw-tag">DI容器</span><span class="fw-tag">Provider</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">📋</span><h3>响应式表单</h3><p>内置表单模块支持模板驱动和响应式两种模式，提供完整的验证和动态表单能力。</p><div class="fw-tags"><span class="fw-tag">Reactive Forms</span><span class="fw-tag">Validators</span></div></div>
             </div>
         </section>
         <section class="fw-section">
             <h2 class="fw-section-title">生态系统</h2>
             <div class="fw-grid">
-                <div class="fw-card"><span class="fw-card-icon">🎨</span><h3>Angular Material</h3><p>Google 官方 Material Design 组件库，30+ 高质量组件，支持 CDK 和主题定制。</p><div class="fw-tags"><span class="fw-tag">CDK</span><span class="fw-tag">Schematics</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">📦</span><h3>NgRx</h3><p>Angular 的 Redux 实现，基于 RxJS 的响应式状态管理，适合复杂应用场景。</p><div class="fw-tags"><span class="fw-tag">Store</span><span class="fw-tag">Effects</span><span class="fw-tag">RxJS</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">🌐</span><h3>Angular Universal</h3><p>Angular 的 SSR 方案，提升首屏性能和 SEO，Angular 17+ 内置 SSR 支持。</p><div class="fw-tags"><span class="fw-tag">SSR</span><span class="fw-tag">Hydration</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">🧰</span><h3>第三方组件库</h3><p>PrimeNG 提供 80+ 组件，NG-ZORRO 是 Ant Design 的 Angular 实现，Clarity 来自 VMware。</p><div class="fw-tags"><span class="fw-tag">PrimeNG</span><span class="fw-tag">NG-ZORRO</span><span class="fw-tag">Clarity</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">🚀</span><h3>Angular CLI</h3><p>官方命令行工具，一键生成组件、服务、模块，内置构建、测试、部署流程。</p><div class="fw-tags"><span class="fw-tag">ng generate</span><span class="fw-tag">ng build</span><span class="fw-tag">Schematics</span></div></div>
-                <div class="fw-card"><span class="fw-card-icon">🧪</span><h3>测试工具</h3><p>内置 TestBed、Karma/Jasmine 集成，Cypress 和 Playwright 用于 E2E 测试。</p><div class="fw-tags"><span class="fw-tag">TestBed</span><span class="fw-tag">Jasmine</span><span class="fw-tag">Karma</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🎨</span><h3>Angular Material</h3><p>Google 官方 Material Design 组件库，30+ 高质量组件，支持 CDK 和主题定制。</p><div class="fw-tags"><span class="fw-tag">CDK</span><span class="fw-tag">Schematics</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">📦</span><h3>NgRx</h3><p>Angular 的 Redux 实现，基于 RxJS 的响应式状态管理，适合复杂应用场景。</p><div class="fw-tags"><span class="fw-tag">Store</span><span class="fw-tag">Effects</span><span class="fw-tag">RxJS</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🌐</span><h3>Angular Universal</h3><p>Angular 的 SSR 方案，提升首屏性能和 SEO，Angular 17+ 内置 SSR 支持。</p><div class="fw-tags"><span class="fw-tag">SSR</span><span class="fw-tag">Hydration</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🧰</span><h3>第三方组件库</h3><p>PrimeNG 提供 80+ 组件，NG-ZORRO 是 Ant Design 的 Angular 实现，Clarity 来自 VMware。</p><div class="fw-tags"><span class="fw-tag">PrimeNG</span><span class="fw-tag">NG-ZORRO</span><span class="fw-tag">Clarity</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🚀</span><h3>Angular CLI</h3><p>官方命令行工具，一键生成组件、服务、模块，内置构建、测试、部署流程。</p><div class="fw-tags"><span class="fw-tag">ng generate</span><span class="fw-tag">ng build</span><span class="fw-tag">Schematics</span></div></div>
+                <div class="fw-card"><span class="fw-card-icon" aria-hidden="true">🧪</span><h3>测试工具</h3><p>内置 TestBed、Karma/Jasmine 集成，Cypress 和 Playwright 用于 E2E 测试。</p><div class="fw-tags"><span class="fw-tag">TestBed</span><span class="fw-tag">Jasmine</span><span class="fw-tag">Karma</span></div></div>
             </div>
         </section>
         <section class="fw-section">
@@ -85,12 +91,12 @@ export class CounterComponent {
         <section class="fw-section">
             <h2 class="fw-section-title">学习资源</h2>
             <div class="fw-resources">
-                <div class="fw-resource"><h4>官方文档</h4><p>Angular.dev 提供交互式教程和完整 API 参考。</p><a href="https://angular.dev/" target="_blank">angular.dev →</a></div>
-                <div class="fw-resource"><h4>Angular Material</h4><p>Material Design 组件库和 CDK 文档。</p><a href="https://material.angular.io/" target="_blank">material.angular.io →</a></div>
-                <div class="fw-resource"><h4>Nx 文档</h4><p>Angular 生态最佳的 Monorepo 工具。</p><a href="https://nx.dev/" target="_blank">nx.dev →</a></div>
+                <div class="fw-resource"><h4>官方文档</h4><p>Angular.dev 提供交互式教程和完整 API 参考。</p><a href="https://angular.dev/" target="_blank" rel="noopener noreferrer">angular.dev →</a></div>
+                <div class="fw-resource"><h4>Angular Material</h4><p>Material Design 组件库和 CDK 文档。</p><a href="https://material.angular.io/" target="_blank" rel="noopener noreferrer">material.angular.io →</a></div>
+                <div class="fw-resource"><h4>Nx 文档</h4><p>Angular 生态最佳的 Monorepo 工具。</p><a href="https://nx.dev/" target="_blank" rel="noopener noreferrer">nx.dev →</a></div>
             </div>
         </section>
     </main>
-    <footer class="fw-footer"><p>Angular 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#dd0031;text-decoration:none">返回首页</a></p></footer>
+    <footer class="fw-footer"><p>Angular 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#ff5f73;text-decoration:none">返回首页</a></p></footer>
 </body>
 </html>

@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Zustand 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Zustand 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Zustand 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Zustand 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,65 +19,62 @@
     <style>
         .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); }
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(59, 59, 59, 0.12) 0%, transparent 50%); }
-        .fw-hero h1, .fw-stat-num { color: #3B3B3B; }
-        .fw-btn-primary { background: #3B3B3B; }
-        .fw-btn-primary:hover { background: #2d2d2d; box-shadow: 0 8px 25px rgba(59, 59, 59, 0.3); }
-        .fw-btn-outline { border-color: #3B3B3B; color: #3B3B3B; }
+        .fw-hero h1, .fw-stat-num { color: #d4d4d4; }
+        .fw-btn-primary { background: #d4d4d4; }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(59, 59, 59, 0.3); }
+        .fw-btn-outline { border-color: #d4d4d4; color: #d4d4d4; }
         .fw-btn-outline:hover { background: rgba(59, 59, 59, 0.1); }
-        .back-link:hover { color: #3B3B3B; }
-        .fw-card:hover { border-color: rgba(极狐 GitLab
-    59, 59, 0.2); }
-        .fw-tag { background: rgba(59, 59, 59, 0.1); color: #3B3B3B; }
-        .fw-resource a { color: #3B3B3B; }
+        .back-link:hover { color: #d4d4d4; }
+        .fw-card:hover { border-color: rgba(59, 59, 59, 0.2); }
+        .fw-tag { background: rgba(59, 59, 59, 0.1); color: #d4d4d4; }
+        .fw-resource a { color: #d4d4d4; }
         .fw-resource a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🐻</span>
+            <span class="fw-logo" aria-hidden="true">🐻</span>
             <h1>Zustand</h1>
             <p class="fw-desc">轻量级状态管理库，简单、快速、可扩展。基于Hooks API，无样板代码，学习成本低。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">50k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2019</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Poimandres</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://zustand-demo.pmnd.rs/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/pmndrs/zustand" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://zustand-demo.pmnd.rs/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/pmndrs/zustand" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Zustand 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🐻</span>
-                    <h极狐 GitLab
-h3>
+                    <span class="fw-card-icon" aria-hidden="true">🐻</span>
+                    <h3>简单易用</h3>
                     <p>无Provider、无Context、无样板代码。直接创建store，使用hooks访问状态。</p>
                     <div class="fw-tags"><span class="fw-tag">无样板</span><span class="fw-tag">简单</span><span class="fw-tag">Hooks</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>轻量级</h3>
                     <p>核心库仅1KB，压缩后更小。无依赖，性能优异。</p>
                     <div class="fw-tags"><span class="fw-tag">1KB</span><span class="fw-tag">轻量级</span><span class="fw-tag">无依赖</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>高性能</h3>
                     <p>基于Proxy的状态管理，精确更新组件。避免不必要的重渲染。</p>
                     <div class="fw-tags"><span class="fw-tag">Proxy</span><span class="fw-tag">精确更新</span><span class="fw-tag">高性能</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>可扩展</h3>
                     <p>支持中间件、持久化、开发者工具等扩展。可自定义状态管理逻辑。</p>
                     <div class="fw-tags"><span class="fw-tag">中间件</span><span class="fw-tag">持久化</span><span class="fw-tag">可扩展</span></div>
@@ -83,37 +87,37 @@ h3>
             <p class="fw-section-desc">围绕 Zustand 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>React集成</h3>
                     <p>与React深度集成，支持Hooks API。可在任何React组件中使用。</p>
                     <div class="fw-tags"><span class="fw-tag">useStore</span><span class="fw-tag">React</span><span class="fw-tag">Hooks</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>持久化</h3>
                     <p>zustand/middleware支持状态持久化。可存储到localStorage、sessionStorage等。</p>
                     <div class="fw-tags"><span class="fw-tag">persist</span><span class="fw-tag">localStorage</span><span class="fw-tag">持久化</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>开发者工具</h3>
                     <p>支持Redux DevTools。可查看状态变化、时间旅行调试。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux DevTools</span><span class="fw-tag">时间旅行</span><span class="fw-tag">调试</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>Immer集成</h3>
                     <p>支持Immer，使用不可变更新语法。简化复杂状态更新。</p>
                     <div class="fw-tags"><span class="fw-tag">immer</span><span class="fw-tag">不可变更新</span><span class="fw-tag">简化</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>TypeScript</h3>
                     <p>完整的TypeScript支持。类型安全的状态定义和访问。</p>
                     <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">类型安全</span><span class="fw-tag">类型推断</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>跨框架</h3>
                     <p>不仅支持React，还支持Vue、Svelte等框架。通用状态管理方案。</p>
                     <div class="fw-tags"><span class="fw-tag">Vue</span><span class="fw-tag">Svelte</span><span class="fw-tag">通用</span></div>
@@ -130,11 +134,11 @@ npm install zustand
 # 创建Store
 import { create } from "zustand";
 
-const useStore = create((set) => ({
+const useStore = create((set) =&gt; ({
     count: 0,
-    increment: () => set((state) => ({ count: state.count + 1 })),
-    decrement: () => set((state) => ({ count: state.count - 1 })),
-    reset: () => set({ count: 0 })
+    increment: () =&gt; set((state) =&gt; ({ count: state.count + 1 })),
+    decrement: () =&gt; set((state) =&gt; ({ count: state.count - 1 })),
+    reset: () =&gt; set({ count: 0 })
 }));
 
 # 在React中使用
@@ -144,19 +148,19 @@ function Counter() {
     const { count, increment, decrement, reset } = useStore();
     
     return (
-        <div>
-            <h1>{count}</h1>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
-            <button onClick={reset}>Reset</button>
-        </div>
+        &lt;div&gt;
+            &lt;h1&gt;{count}&lt;/h1&gt;
+            &lt;button onClick={increment}&gt;+&lt;/button&gt;
+            &lt;button onClick={decrement}&gt;-&lt;/button&gt;
+            &lt;button onClick={reset}&gt;Reset&lt;/button&gt;
+        &lt;/div&gt;
     );
 }
 
 # 选择性订阅
 function Count() {
-    const count = useStore((state) => state.count);
-    return <h1>{count}</h1>;
+    const count = useStore((state) =&gt; state.count);
+    return &lt;h1&gt;{count}&lt;/h1&gt;;
 }</code></pre>
             </div>
         </section>
@@ -172,32 +176,32 @@ import { immer } from "zustand/middleware/immer";
 const useStore = create(
     devtools(
         persist(
-            immer((set, get) => ({
+            immer((set, get) =&gt; ({
                 // 用户状态
                 user: null,
-                setUser: (user) => set({ user }),
-                logout: () => set({ user: null }),
+                setUser: (user) =&gt; set({ user }),
+                logout: () =&gt; set({ user: null }),
                 
                 // 主题状态
                 theme: "light",
-                toggleTheme: () =>
-                    set((state) => {
+                toggleTheme: () =&gt;
+                    set((state) =&gt; {
                         state.theme = state.theme === "light" ? "dark" : "light";
                     }),
                 
                 // 待办事项
                 todos: [],
-                addTodo: (todo) =>
-                    set((state) => {
+                addTodo: (todo) =&gt;
+                    set((state) =&gt; {
                         state.todos.push(todo);
                     }),
-                removeTodo: (id) =>
-                    set((state) => {
-                        state.todos = state.todos.filter((todo) => todo.id !== id);
+                removeTodo: (id) =&gt;
+                    set((state) =&gt; {
+                        state.todos = state.todos.filter((todo) =&gt; todo.id !== id);
                     }),
                 
                 // 异步操作
-                fetchUsers: async () => {
+                fetchUsers: async () =&gt; {
                     set({ loading: true });
                     try {
                         const response = await fetch("/api/users");
@@ -210,7 +214,7 @@ const useStore = create(
             })),
             {
                 name: "app-storage", // 存储键名
-                partialize: (state) => ({ user: state.user, theme: state.theme }) // 部分持久化
+                partialize: (state) =&gt; ({ user: state.user, theme: state.theme }) // 部分持久化
             }
         ),
         { name: "AppStore" } // DevTools名称
@@ -227,22 +231,22 @@ export default useStore;</code></pre>
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的API参考、指南和示例。</p>
-                    <a href="https://zustand-demo.pmnd.rs/" target="_blank">zustand-demo.pmnd.rs →</a>
+                    <a href="https://zustand-demo.pmnd.rs/" target="_blank" rel="noopener noreferrer">zustand-demo.pmnd.rs →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Zustand GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/pmndrs/zustand" target="_blank">github.com/pmndrs/zustand →</a>
+                    <a href="https://github.com/pmndrs/zustand" target="_blank" rel="noopener noreferrer">github.com/pmndrs/zustand →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Zustand示例</h4>
                     <p>官方示例项目和模板。</p>
-                    <a href="https://github.com/pmndrs/zustand/tree/main/examples" target="_blank">Examples →</a>
+                    <a href="https://github.com/pmndrs/zustand/tree/main/examples" target="_blank" rel="noopener noreferrer">Examples →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Zustand教程</h4>
                     <p>社区维护的Zustand教程和指南。</p>
-                    <a href="https://blog.logrocket.com/zustand-vs-redux/" target="_blank">Tutorials →</a>
+                    <a href="https://github.com/pmndrs/zustand#readme" target="_blank" rel="noopener noreferrer">Tutorials →</a>
                 </div>
             </div>
         </section>
@@ -251,19 +255,19 @@ export default useStore;</code></pre>
             <h2 class="fw-section-title">与其他状态管理库对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Redux</h3>
                     <p>Zustand更简单，学习成本低。Redux更规范，适合大型项目，生态更成熟。</p>
                     <div class="fw-tags"><span class="fw-tag">简单</span><span class="fw-tag">学习成本</span><span class="fw-tag">规范性</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Jotai</h3>
                     <p>Zustand集中式状态管理。Jotai原子化状态管理，适合细粒度状态控制。</p>
                     <div class="fw-tags"><span class="fw-tag">集中式</span><span class="fw-tag">原子化</span><span class="fw-tag">状态粒度</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Recoil</h3>
                     <p>Zustand更轻量，无依赖。Recoil功能更强大，但较重，适合复杂状态。</p>
                     <div class="fw-tags"><span class="fw-tag">轻量级</span><span class="fw-tag">无依赖</span><span class="fw-tag">功能强大</span></div>
@@ -273,7 +277,7 @@ export default useStore;</code></pre>
     </main>
 
     <footer class="fw-footer">
-        <p>Zustand 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#3B3B3B;text-decoration:none">返回首页</a></p>
+        <p>Zustand 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#d4d4d4;text-decoration:none">返回首页</a></p>
     </footer>
 </body>
 </html>

@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Tauri 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Tauri 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Tauri 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Tauri 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 193, 49, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #FFC131; }
         .fw-btn-primary { background: #FFC131; color: #0a0a0a; }
-        .fw-btn-primary:hover { background: #e6ad2c; box-shadow: 0 8px 25px rgba(255, 193, 49, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(255, 193, 49, 0.3); }
         .fw-btn-outline { border-color: #FFC131; color: #FFC131; }
         .fw-btn-outline:hover { background: rgba(255, 193, 49, 0.1); }
         .back-link:hover { color: #FFC131; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🦀</span>
+            <span class="fw-logo" aria-hidden="true">🦀</span>
             <h1>Tauri</h1>
             <p class="fw-desc">构建小型、快速和安全的桌面应用程序。使用Web技术构建前端，Rust编写后端，生成原生应用。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">80k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">500k+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2019</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Tauri</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://tauri.app/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/tauri-apps/tauri" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://tauri.app/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Tauri 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🦀</span>
+                    <span class="fw-card-icon" aria-hidden="true">🦀</span>
                     <h3>Rust后端</h3>
                     <p>使用Rust编写后端，提供高性能和内存安全。比Electron更轻量，资源占用更少。</p>
                     <div class="fw-tags"><span class="fw-tag">Rust</span><span class="fw-tag">高性能</span><span class="fw-tag">内存安全</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>极小体积</h3>
                     <p>打包体积小，通常只有几MB。比Electron应用小10-20倍，启动速度快。</p>
                     <div class="fw-tags"><span class="fw-tag">小体积</span><span class="fw-tag">快速启动</span><span class="fw-tag">轻量级</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>跨平台</h3>
                     <p>支持Windows、macOS、Linux三大平台。一套代码，多平台运行。</p>
                     <div class="fw-tags"><span class="fw-tag">跨平台</span><span class="fw-tag">Windows</span><span class="fw-tag">macOS</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>安全性</h3>
                     <p>默认安全配置，权限系统精细化。前端和后端隔离，防止恶意代码执行。</p>
                     <div class="fw-tags"><span class="fw-tag">安全性</span><span class="fw-tag">权限系统</span><span class="fw-tag">隔离</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 Tauri 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>前端框架</h3>
                     <p>支持React、Vue、Svelte、Angular等所有前端框架。可使用任何前端技术栈。</p>
                     <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">Vue</span><span class="fw-tag">Svelte</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>插件系统</h3>
                     <p>丰富的插件系统，支持文件系统、数据库、网络、安全等功能扩展。</p>
                     <div class="fw-tags"><span class="fw-tag">@tauri-apps/plugin-fs</span><span class="fw-tag">@tauri-apps/plugin-db</span><span class="fw-tag">插件</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>构建工具</h3>
                     <p>内置构建和打包工具。支持自动更新、代码签名、多平台构建。</p>
                     <div class="fw-tags"><span class="fw-tag">自动更新</span><span class="fw-tag">代码签名</span><span class="fw-tag">多平台构建</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>UI组件库</h3>
                     <p>可配合任何UI组件库使用。Ant Design、Element Plus、Material-UI等都支持。</p>
                     <div class="fw-tags"><span class="fw-tag">Ant Design</span><span class="fw-tag">Element Plus</span><span class="fw-tag">UI库</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>状态管理</h3>
                     <p>支持Redux、Zustand、Pinia等状态管理库。前端状态管理完全自由选择。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux</span><span class="fw-tag">Zustand</span><span class="fw-tag">Pinia</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>调试工具</h3>
                     <p>内置调试工具，支持Chrome DevTools。可远程调试Rust后端代码。</p>
                     <div class="fw-tags"><span class="fw-tag">Chrome DevTools</span><span class="fw-tag">调试</span><span class="fw-tag">远程调试</span></div>
@@ -190,22 +196,22 @@ npm run tauri build</code></pre>
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的指南、API参考和教程。</p>
-                    <a href="https://tauri.app/v1/guides/" target="_blank">tauri.app/guides →</a>
+                    <a href="https://tauri.app/v1/guides/" target="_blank" rel="noopener noreferrer">tauri.app/guides →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Tauri GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/tauri-apps/tauri" target="_blank">github.com/tauri-apps/tauri →</a>
+                    <a href="https://github.com/tauri-apps/tauri" target="_blank" rel="noopener noreferrer">github.com/tauri-apps/tauri →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Tauri插件</h4>
                     <p>官方和社区维护的插件列表。</p>
-                    <a href="https://tauri.app/v1/guides/plugins" target="_blank">Plugins →</a>
+                    <a href="https://v2.tauri.app/plugin/" target="_blank" rel="noopener noreferrer">Plugins →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Tauri示例</h4>
                     <p>官方示例项目和模板。</p>
-                    <a href="https://github.com/tauri-apps/tauri/tree/dev/examples" target="_blank">Examples →</a>
+                    <a href="https://github.com/tauri-apps/tauri/tree/dev/examples" target="_blank" rel="noopener noreferrer">Examples →</a>
                 </div>
             </div>
         </section>
@@ -214,19 +220,19 @@ npm run tauri build</code></pre>
             <h2 class="fw-section-title">与其他桌面框架对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Electron</h3>
                     <p>Tauri体积更小，性能更好。Electron生态更成熟，社区更大，适合复杂应用。</p>
                     <div class="fw-tags"><span class="fw-tag">体积</span><span class="fw-tag">性能</span><span class="fw-tag">生态</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Flutter Desktop</h3>
                     <p>Tauri使用Web技术，学习成本低。Flutter性能更好，但需要学习Dart语言。</p>
                     <div class="fw-tags"><span class="fw-tag">学习成本</span><span class="fw-tag">性能</span><span class="fw-tag">技术栈</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Qt</h3>
                     <p>Tauri开发效率高，适合快速开发。Qt性能更好，适合复杂图形应用。</p>
                     <div class="fw-tags"><span class="fw-tag">开发效率</span><span class="fw-tag">性能</span><span class="fw-tag">应用场景</span></div>

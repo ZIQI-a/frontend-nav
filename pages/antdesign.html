@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Ant Design 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Ant Design 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Ant Design 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Ant Design 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(24, 144, 255, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #1890ff; }
         .fw-btn-primary { background: #1890ff; }
-        .fw-btn-primary:hover { background: #096dd9; box-shadow: 0 8px 25px rgba(24, 144, 255, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(24, 144, 255, 0.3); }
         .fw-btn-outline { border-color: #1890ff; color: #1890ff; }
         .fw-btn-outline:hover { background: rgba(24, 144, 255, 0.1); }
         .back-link:hover { color: #1890ff; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🐜</span>
+            <span class="fw-logo" aria-hidden="true">🐜</span>
             <h1>Ant Design</h1>
             <p class="fw-desc">企业级UI设计语言和React组件库。由蚂蚁金服开发维护，广泛应用于中后台管理系统。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">90k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">15M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2015</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">蚂蚁金服</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://ant.design/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/ant-design/ant-design" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://ant.design/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/ant-design/ant-design" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Ant Design 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🐜</span>
+                    <span class="fw-card-icon" aria-hidden="true">🐜</span>
                     <h3>企业级组件</h3>
                     <p>提供60+高质量React组件，覆盖表格、表单、图表、布局等企业级应用场景。</p>
                     <div class="fw-tags"><span class="fw-tag">60+组件</span><span class="fw-tag">企业级</span><span class="fw-tag">React</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>设计系统</h3>
                     <p>完整的设计语言和规范，包括颜色、字体、间距、图标等设计Token。</p>
                     <div class="fw-tags"><span class="fw-tag">设计语言</span><span class="fw-tag">设计Token</span><span class="fw-tag">规范</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>TypeScript</h3>
                     <p>完全使用TypeScript开发，提供完整的类型定义和类型安全。</p>
                     <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">类型安全</span><span class="fw-tag">类型定义</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>国际化</h3>
                     <p>支持60+语言，覆盖全球主要市场。内置日期、数字、货币等本地化格式。</p>
                     <div class="fw-tags"><span class="fw-tag">国际化</span><span class="fw-tag">60+语言</span><span class="fw-tag">本地化</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 Ant Design 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>Ant Design Pro</h3>
                     <p>企业级中后台前端/设计解决方案。提供完整的项目模板和最佳实践。</p>
                     <div class="fw-tags"><span class="fw-tag">Ant Design Pro</span><span class="fw-tag">项目模板</span><span class="fw-tag">最佳实践</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>Ant Design Charts</h3>
                     <p>基于G2的React图表库。提供折线图、柱状图、饼图等20+图表类型。</p>
                     <div class="fw-tags"><span class="fw-tag">@ant-design/charts</span><span class="fw-tag">G2</span><span class="fw-tag">图表</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>Ant Design Icons</h3>
                     <p>丰富的图标库，提供实心、描线、双色等风格。支持按需加载和自定义图标。</p>
                     <div class="fw-tags"><span class="fw-tag">@ant-design/icons</span><span class="fw-tag">图标库</span><span class="fw-tag">按需加载</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>Ant Design Mobile</h3>
                     <p>移动端React组件库。提供触摸友好的移动端UI组件。</p>
                     <div class="fw-tags"><span class="fw-tag">antd-mobile</span><span class="fw-tag">移动端</span><span class="fw-tag">触摸友好</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>Ant Design Vue</h3>
                     <p>Vue版本的Ant Design组件库。提供与React版本一致的设计和API。</p>
                     <div class="fw-tags"><span class="fw-tag">ant-design-vue</span><span class="fw-tag">Vue</span><span class="fw-tag">组件库</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>Ant Design Mini</h3>
                     <p>小程序版本的Ant Design组件库。支持微信、支付宝、百度等小程序平台。</p>
                     <div class="fw-tags"><span class="fw-tag">ant-design-mini</span><span class="fw-tag">小程序</span><span class="fw-tag">跨平台</span></div>
@@ -134,14 +140,14 @@ echo 'import React from "react";
 import { Button, DatePicker, Space } from "antd";
 import "antd/dist/reset.css";
 
-const App = () => (
-    <Space>
-        <Button type="primary">Primary Button</Button>
-        <DatePicker />
-    </Space>
+const App = () =&gt; (
+    &lt;Space&gt;
+        &lt;Button type="primary"&gt;Primary Button&lt;/Button&gt;
+        &lt;DatePicker /&gt;
+    &lt;/Space&gt;
 );
 
-export default App;' > src/App.js
+export default App;' &gt; src/App.js
 
 # 启动项目
 npm start</code></pre>
@@ -155,8 +161,8 @@ npm start</code></pre>
 import { ConfigProvider } from "antd";
 import zhCN from "antd/locale/zh_CN";
 
-const App = () => (
-    <ConfigProvider
+const App = () =&gt; (
+    &lt;ConfigProvider
         locale={zhCN}
         theme={{
             token: {
@@ -165,9 +171,9 @@ const App = () => (
                 colorBgContainer: "#ffffff"
             }
         }}
-    >
-        <YourApp />
-    </ConfigProvider>
+    &gt;
+        &lt;YourApp /&gt;
+    &lt;/ConfigProvider&gt;
 );
 
 // 按需加载配置 (babel-plugin-import)
@@ -186,22 +192,22 @@ module.exports = {
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的组件API、设计规范和最佳实践。</p>
-                    <a href="https://ant.design/docs/react/introduce" target="_blank">ant.design/docs →</a>
+                    <a href="https://ant.design/docs/react/introduce" target="_blank" rel="noopener noreferrer">ant.design/docs →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Ant Design Pro</h4>
                     <p>企业级中后台前端解决方案。</p>
-                    <a href="https://pro.ant.design/" target="_blank">pro.ant.design →</a>
+                    <a href="https://pro.ant.design/" target="_blank" rel="noopener noreferrer">pro.ant.design →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Ant Design GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/ant-design/ant-design" target="_blank">github.com/ant-design/ant-design →</a>
+                    <a href="https://github.com/ant-design/ant-design" target="_blank" rel="noopener noreferrer">github.com/ant-design/ant-design →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Ant Design 图标</h4>
                     <p>丰富的图标库和图标搜索工具。</p>
-                    <a href="https://ant.design/components/icon" target="_blank">Icons →</a>
+                    <a href="https://ant.design/components/icon" target="_blank" rel="noopener noreferrer">Icons →</a>
                 </div>
             </div>
         </section>
@@ -210,19 +216,19 @@ module.exports = {
             <h2 class="fw-section-title">与其他UI库对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Element Plus</h3>
                     <p>Ant Design React生态更成熟。Element Plus Vue生态更完善，适合Vue项目。</p>
                     <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">Vue</span><span class="fw-tag">生态系统</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Material-UI</h3>
                     <p>Ant Design更适合中后台系统。Material-UI遵循Material Design，适合C端产品。</p>
                     <div class="fw-tags"><span class="fw-tag">设计风格</span><span class="fw-tag">应用场景</span><span class="fw-tag">国际化</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Chakra UI</h3>
                     <p>Ant Design组件更丰富，企业级特性更强。Chakra UI更灵活，适合自定义设计。</p>
                     <div class="fw-tags"><span class="fw-tag">组件丰富度</span><span class="fw-tag">灵活性</span><span class="fw-tag">自定义</span></div>

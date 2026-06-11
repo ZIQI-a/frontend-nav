@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Tailwind CSS 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Tailwind CSS 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Tailwind CSS 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Tailwind CSS 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #38BDF8; }
         .fw-btn-primary { background: #38BDF8; }
-        .fw-btn-primary:hover { background: #28ade8; box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(56, 189, 248, 0.3); }
         .fw-btn-outline { border-color: #38BDF8; color: #38BDF8; }
         .fw-btn-outline:hover { background: rgba(56, 189, 248, 0.1); }
         .back-link:hover { color: #38BDF8; }
@@ -25,26 +32,25 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🎨</span>
+            <span class="fw-logo" aria-hidden="true">🎨</span>
             <h1>Tailwind CSS</h1>
             <p class="fw-desc">功能优先的CSS框架，快速构建现代网站。无需离开HTML即可设计精美界面。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">82k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">12M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2017</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Tailwind Labs</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://tailwindcss.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Tailwind CSS 的设计哲学和关键技术特性</p>
@@ -178,17 +184,17 @@ module.exports = {
                 <div class="fw-resource">
                     <h3>官方资源</h3>
                     <ul>
-                        <li><a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS 官方文档</a></li>
-                        <li><a href="https://github.com/tailwindlabs/tailwindcss" target="_blank">Tailwind CSS GitHub仓库</a></li>
-                        <li><a href="https://tailwindcss.com/docs/installation" target="_blank">安装指南</a></li>
+                        <li><a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer">Tailwind CSS 官方文档</a></li>
+                        <li><a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener noreferrer">Tailwind CSS GitHub仓库</a></li>
+                        <li><a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener noreferrer">安装指南</a></li>
                     </ul>
                 </div>
                 <div class="fw-resource">
                     <h3>学习路径</h3>
                     <ul>
-                        <li><a href="https://tailwindcss.com/docs/utility-first" target="_blank">功能优先理念</a></li>
-                        <li><a href="https://tailwindcss.com/docs/responsive-design" target="_blank">响应式设计</a></li>
-                        <li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states" target="_blank">交互状态</a></li>
+                        <li><a href="https://tailwindcss.com/docs/utility-first" target="_blank" rel="noopener noreferrer">功能优先理念</a></li>
+                        <li><a href="https://tailwindcss.com/docs/responsive-design" target="_blank" rel="noopener noreferrer">响应式设计</a></li>
+                        <li><a href="https://tailwindcss.com/docs/hover-focus-and-other-states" target="_blank" rel="noopener noreferrer">交互状态</a></li>
                     </ul>
                 </div>
             </div>
@@ -210,7 +216,7 @@ module.exports = {
     </main>
 
     <footer class="fw-footer">
-        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-11</p>
     </footer>
 </body>
 </html>

@@ -5,26 +5,28 @@
 
 /* 二级菜单容器 */
 .tech-detail-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: relative;
     background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
     padding: 0;
+    margin-top: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease, margin 0.3s ease;
     opacity: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow-lg);
+    visibility: hidden;
 }
 
 .tech-detail-menu.active {
-    max-height: 500px;
+    max-height: min(70vh, 720px);
     opacity: 1;
     padding: 16px 0;
+    margin-top: 16px;
+    border-color: rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    visibility: visible;
+    scrollbar-gutter: stable;
 }
 
 /* 技术详情项 */
@@ -34,7 +36,6 @@
     justify-content: space-between;
     padding: 12px 24px;
     transition: background 0.2s ease;
-    cursor: pointer;
 }
 
 .tech-detail-item:hover {
@@ -68,7 +69,7 @@
 .tech-name .hot-badge {
     font-size: 0.65rem;
     padding: 2px 6px;
-    background: linear-gradient(135deg, #f97316, #ef4444);
+    background: linear-gradient(135deg, #c2410c, #b91c1c);
     color: white;
     border-radius: 4px;
     font-weight: 500;
@@ -241,7 +242,7 @@
     }
     
     .tech-detail-menu.active {
-        max-height: 600px;
+        max-height: min(65vh, 600px);
     }
 }
 
@@ -294,48 +295,7 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* 焦点样式 */
-.tech-detail-item:focus-visible {
-    outline: 2px solid var(--color-basic);
-    outline-offset: -2px;
-}
-
 .tech-link:focus-visible {
     outline: 2px solid var(--color-basic);
     outline-offset: 2px;
-}
-
-/* 空状态 */
-.tech-detail-empty {
-    padding: 16px 24px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* 加载状态 */
-.tech-detail-loading {
-    padding: 16px 24px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.tech-detail-loading::after {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-top-color: var(--color-basic);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
 }

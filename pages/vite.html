@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Vite 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Vite 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Vite 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Vite 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,63 +19,62 @@
     <style>
         .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%); }
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(189, 52, 254, 0.12) 0%, transparent 50%); }
-        .fw-hero h1, .fw-stat-num { color: #bd34fe; }
-        .fw-btn-primary { background: #bd34fe; }
-        .fw-btn-primary:hover { background: #a429e6; box-shadow: 0 8px 25px rgba(189, 52, 254, 0.3); }
-        .fw-btn-outline { border-color: #bd34fe; color: #bd34fe; }
+        .fw-hero h1, .fw-stat-num { color: #c084fc; }
+        .fw-btn-primary { background: #c084fc; }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(189, 52, 254, 0.3); }
+        .fw-btn-outline { border-color: #c084fc; color: #c084fc; }
         .fw-btn-outline:hover { background: rgba(189, 52, 254, 0.1); }
-        .back-link:hover { color: #bd34fe; }
+        .back-link:hover { color: #c084fc; }
         .fw-card:hover { border-color: rgba(189, 52, 254, 0.2); }
-        .fw-tag { background: rgba(189, 52, 254, 0.1); color: #bd34fe; }
-        .fw-resource a { color: #bd34fe; }
+        .fw-tag { background: rgba(189, 52, 254, 0.1); color: #c084fc; }
+        .fw-resource a { color: #c084fc; }
         .fw-resource a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">⚡</span>
+            <span class="fw-logo" aria-hidden="true">⚡</span>
             <h1>Vite</h1>
             <p class="fw-desc">下一代前端构建工具，基于ESM和原生ES模块，提供极速的开发服务器和优化的构建体验。由Vue.js团队开发，现已成为行业标准构建工具。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">65k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">12M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2020</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">尤雨溪</span><span class="fw-stat-label">创始人</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://vitejs.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/vitejs/vite" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/vitejs/vite" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Vite 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🚀</span>
+                    <span class="fw-card-icon" aria-hidden="true">🚀</span>
                     <h3>极速开发服务器</h3>
                     <p>基于ESM的开发服务器，无需打包，冷启动时间极快。支持热模块替换(HMR)，修改代码后立即更新。</p>
                     <div class="fw-tags"><span class="fw-tag">ESM</span><span class="fw-tag">HMR</span><span class="fw-tag">原生模块</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>优化构建</h3>
                     <p>生产环境使用Rollup进行打包，支持代码分割、Tree Shaking、CSS代码分割等优化特性。</p>
                     <div class="fw-tags"><span class="fw-tag">Rollup</span><span class="fw-tag">Tree Shaking</span><span class="fw-tag">代码分割</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>原生ES模块</h3>
                     <p>开发时直接使用浏览器原生ES模块，无需打包，启动速度极快。按需编译，只编译当前页面需要的模块。</p>
                     <div class="fw-tags"><span class="fw-tag">ES Modules</span><span class="fw-tag">按需编译</span><span class="fw-tag">零配置</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>丰富的插件系统</h3>
                     <p>基于Rollup插件接口，同时扩展了Vite特有的API。支持React、Vue、Svelte等框架的官方插件。</p>
                     <div class="fw-tags"><span class="fw-tag">插件API</span><span class="fw-tag">Rollup兼容</span><span class="fw-tag">框架支持</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 Vite 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>框架支持</h3>
                     <p>官方支持React、Vue、Svelte、Lit、Preact等主流框架。通过@vitejs/plugin-react等插件提供开箱即用的支持。</p>
                     <div class="fw-tags"><span class="fw-tag">@vitejs/plugin-react</span><span class="fw-tag">@vitejs/plugin-vue</span><span class="fw-tag">svelte-vite</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>测试工具</h3>
                     <p>Vitest是Vite原生测试框架，共享Vite的配置和插件系统。支持单元测试、组件测试，性能优异。</p>
                     <div class="fw-tags"><span class="fw-tag">Vitest</span><span class="fw-tag">单元测试</span><span class="fw-tag">组件测试</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>文档工具</h3>
                     <p>VitePress是基于Vite的静态站点生成器，用于构建快速、美观的文档网站。Vue官方文档即使用VitePress构建。</p>
                     <div class="fw-tags"><span class="fw-tag">VitePress</span><span class="fw-tag">Markdown</span><span class="fw-tag">SSG</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>CSS处理</h3>
                     <p>内置CSS模块、PostCSS、Sass/Less/Stylus支持。支持CSS代码分割、CSS变量等现代CSS特性。</p>
                     <div class="fw-tags"><span class="fw-tag">CSS模块</span><span class="fw-tag">PostCSS</span><span class="fw-tag">Sass/Less</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>依赖优化</h3>
                     <p>自动预构建依赖项（node_modules），将CommonJS模块转换为ESM，提升加载性能。</p>
                     <div class="fw-tags"><span class="fw-tag">预构建</span><span class="fw-tag">依赖优化</span><span class="fw-tag">CJS转ESM</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>环境变量</h3>
                     <p>支持.env文件加载环境变量，区分开发和生产环境。支持TypeScript类型定义。</p>
                     <div class="fw-tags"><span class="fw-tag">.env文件</span><span class="fw-tag">环境变量</span><span class="fw-tag">TypeScript</span></div>
@@ -174,22 +180,22 @@ export default defineConfig({
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的指南、配置参考和API文档。</p>
-                    <a href="https://vitejs.dev/guide/" target="_blank">vitejs.dev/guide →</a>
+                    <a href="https://vitejs.dev/guide/" target="_blank" rel="noopener noreferrer">vitejs.dev/guide →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Vite GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/vitejs/vite" target="_blank">github.com/vitejs/vite →</a>
+                    <a href="https://github.com/vitejs/vite" target="_blank" rel="noopener noreferrer">github.com/vitejs/vite →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Awesome Vite</h4>
                     <p>社区维护的Vite资源大全。</p>
-                    <a href="https://github.com/vitejs/awesome-vite" target="_blank">awesome-vite →</a>
+                    <a href="https://github.com/vitejs/awesome-vite" target="_blank" rel="noopener noreferrer">awesome-vite →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>ViteConf</h4>
                     <p>Vite官方年度会议，分享最新技术和最佳实践。</p>
-                    <a href="https://viteconf.org/" target="_blank">viteconf.org →</a>
+                    <a href="https://viteconf.org/" target="_blank" rel="noopener noreferrer">viteconf.org →</a>
                 </div>
             </div>
         </section>
@@ -198,19 +204,19 @@ export default defineConfig({
             <h2 class="fw-section-title">与其他构建工具对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Webpack</h3>
                     <p>Vite开发服务器启动时间比Webpack快10-100倍。HMR更新速度更快，配置更简单。Webpack生态更成熟，适合复杂项目。</p>
                     <div class="fw-tags"><span class="fw-tag">启动速度</span><span class="fw-tag">HMR</span><span class="fw-tag">配置</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Parcel</h3>
                     <p>两者都是零配置构建工具。Vite基于ESM，Parcel基于多核编译。Vite性能更好，Parcel配置更简单。</p>
                     <div class="fw-tags"><span class="fw-tag">ESM</span><span class="fw-tag">多核编译</span><span class="fw-tag">零配置</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs esbuild</h3>
                     <p>esbuild是底层打包器，Vite使用esbuild进行依赖预构建。Vite提供完整开发体验，esbuild专注打包性能。</p>
                     <div class="fw-tags"><span class="fw-tag">依赖预构建</span><span class="fw-tag">开发体验</span><span class="fw-tag">打包性能</span></div>
@@ -220,7 +226,7 @@ export default defineConfig({
     </main>
 
     <footer class="fw-footer">
-        <p>Vite 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#bd34fe;text-decoration:none">返回首页</a></p>
+        <p>Vite 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#c084fc;text-decoration:none">返回首页</a></p>
     </footer>
 </body>
 </html>

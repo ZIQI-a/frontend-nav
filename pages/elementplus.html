@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Element Plus 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Element Plus 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Element Plus 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Element Plus 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(64, 158, 255, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #409EFF; }
         .fw-btn-primary { background: #409EFF; }
-        .fw-btn-primary:hover { background: #3a8ee6; box-shadow: 0 8px 25px rgba(64, 158, 255, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(64, 158, 255, 0.3); }
         .fw-btn-outline { border-color: #409EFF; color: #409EFF; }
         .fw-btn-outline:hover { background: rgba(64, 158, 255, 0.1); }
         .back-link:hover { color: #409EFF; }
@@ -25,26 +32,25 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🟢</span>
+            <span class="fw-logo" aria-hidden="true">🟢</span>
             <h1>Element Plus</h1>
             <p class="fw-desc">Vue 3组件库，适合中后台管理系统。饿了么前端团队出品，开箱即用。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">24k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">1.5M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2020</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">饿了么</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://element-plus.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/element-plus/element-plus" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://element-plus.org/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/element-plus/element-plus" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Element Plus 的设计哲学和关键技术特性</p>
@@ -182,17 +188,17 @@ export default defineConfig({
                 <div class="fw-resource">
                     <h3>官方资源</h3>
                     <ul>
-                        <li><a href="https://element-plus.org/zh-CN/" target="_blank">Element Plus 官方文档</a></li>
-                        <li><a href="https://github.com/element-plus/element-plus" target="_blank">Element Plus GitHub仓库</a></li>
-                        <li><a href="https://element-plus.org/zh-CN/guide/installation.html" target="_blank">安装指南</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/" target="_blank" rel="noopener noreferrer">Element Plus 官方文档</a></li>
+                        <li><a href="https://github.com/element-plus/element-plus" target="_blank" rel="noopener noreferrer">Element Plus GitHub仓库</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/guide/installation.html" target="_blank" rel="noopener noreferrer">安装指南</a></li>
                     </ul>
                 </div>
                 <div class="fw-resource">
                     <h3>学习路径</h3>
                     <ul>
-                        <li><a href="https://element-plus.org/zh-CN/guide/quickstart.html" target="_blank">快速上手</a></li>
-                        <li><a href="https://element-plus.org/zh-CN/component/button.html" target="_blank">组件文档</a></li>
-                        <li><a href="https://element-plus.org/zh-CN/guide/theming.html" target="_blank">主题定制</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/guide/quickstart.html" target="_blank" rel="noopener noreferrer">快速上手</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/component/button.html" target="_blank" rel="noopener noreferrer">组件文档</a></li>
+                        <li><a href="https://element-plus.org/zh-CN/guide/theming.html" target="_blank" rel="noopener noreferrer">主题定制</a></li>
                     </ul>
                 </div>
             </div>
@@ -214,7 +220,7 @@ export default defineConfig({
     </main>
 
     <footer class="fw-footer">
-        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-11</p>
     </footer>
 </body>
 </html>

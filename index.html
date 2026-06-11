@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>前端技术生态导航 | 70+技术领域全览</title>
-    <meta name="description" content="涵盖70+前端技术领域的完整导航，从基础到前沿，包含简要介绍和官方链接">
+    <meta name="description" content="涵盖70+前端技术领域与400+技术工具的完整导航，从基础到前沿快速了解现代前端生态。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="前端技术生态导航">
+    <meta property="og:description" content="涵盖70+前端技术领域与400+技术工具，从基础到前沿快速了解现代前端生态。">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,26 +18,28 @@
     <link rel="stylesheet" href="css/components/tech-detail.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="header">
         <div class="header-content">
             <h1 class="site-title">前端技术生态导航</h1>
             <p class="site-subtitle">70+ 技术领域全览 · 从基础到前沿的完整技术栈</p>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="搜索技术领域、框架或工具..." class="search-input">
-                <button id="searchButton" class="search-button">搜索</button>
+                <label class="sr-only" for="searchInput">搜索技术领域、框架或工具</label>
+                <input type="search" id="searchInput" placeholder="搜索技术领域、框架或工具..." class="search-input" autocomplete="off">
+                <button type="button" id="searchButton" class="search-button">搜索</button>
             </div>
             <div class="stats">
                 <span class="stat-item">70+ 技术领域</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">2000+ 技术工具</span>
-                <span class="stat-divider">·</span>
-                <span class="stat-item">实时更新</span>
+                <span class="stat-divider" aria-hidden="true">·</span>
+                <span class="stat-item">400+ 技术与工具</span>
+                <span class="stat-divider" aria-hidden="true">·</span>
+                <span class="stat-item">持续维护</span>
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <nav class="category-nav">
+    <main class="main-content" id="main-content">
+        <nav class="category-nav" aria-label="技术领域筛选">
             <div class="category-filters">
                 <button class="filter-btn active" data-category="all">全部领域</button>
                 <button class="filter-btn" data-category="basic">基础核心</button>
@@ -44,13 +52,17 @@
             </div>
         </nav>
 
-        <section class="tech-grid" id="techGrid">
+        <p class="results-summary" id="resultsSummary" aria-live="polite"></p>
+        <section class="tech-grid" id="techGrid" aria-labelledby="resultsSummary">
             <!-- 技术卡片将通过JavaScript动态生成 -->
+            <noscript>
+                <p class="empty-state">本站需要启用 JavaScript 才能展示技术导航与筛选功能。</p>
+            </noscript>
         </section>
 
         <section class="quick-access">
             <h2 class="section-title">热门技术快速访问</h2>
-            <p class="section-desc">以下为常用热门技术的详细介绍页，也可在下方卡片中展开查看</p>
+            <p class="section-desc">以下为常用热门技术的详细介绍页，也可在上方卡片中展开查看</p>
             <div class="quick-links">
                 <a href="pages/react.html" class="quick-link">React</a>
                 <a href="pages/vue.html" class="quick-link">Vue.js</a>
@@ -116,6 +128,10 @@
                     <p>ECharts + Three.js + Tailwind</p>
                 </div>
                 <div class="reference-item">
+                    <h3>Web 游戏 / 互动内容</h3>
+                    <p>Cocos Creator / Phaser / PlayCanvas / Three.js</p>
+                </div>
+                <div class="reference-item">
                     <h3>B端中后台</h3>
                     <p>React + Ant Design/Chakra + TanStack Query + Zustand</p>
                 </div>
@@ -124,8 +140,8 @@
                     <p>Taro (多端统一) / uni-app (多端发布) / 原生框架</p>
                 </div>
                 <div class="reference-item">
-                    <h3>个人/独立开发 (2026推荐)</h3>
-                    <p>Next.js 15 (全栈 React + RSC) / Nuxt 3 (Vue) / SvelteKit</p>
+                    <h3>个人 / 独立开发</h3>
+                    <p>Next.js (React) / Nuxt (Vue) / SvelteKit</p>
                 </div>
             </div>
         </section>

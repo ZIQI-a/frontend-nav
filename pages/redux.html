@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Redux 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Redux 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Redux 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Redux 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,63 +19,62 @@
     <style>
         .fw-hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%); }
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(118, 74, 188, 0.12) 0%, transparent 50%); }
-        .fw-hero h1, .fw-stat-num { color: #764ABC; }
-        .fw-btn-primary { background: #764ABC; }
-        .fw-btn-primary:hover { background: #6a42a8; box-shadow: 0 8px 25px rgba(118, 74, 188, 0.3); }
-        .fw-btn-outline { border-color: #764ABC; color: #764ABC; }
+        .fw-hero h1, .fw-stat-num { color: #a78bfa; }
+        .fw-btn-primary { background: #a78bfa; }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(118, 74, 188, 0.3); }
+        .fw-btn-outline { border-color: #a78bfa; color: #a78bfa; }
         .fw-btn-outline:hover { background: rgba(118, 74, 188, 0.1); }
-        .back-link:hover { color: #764ABC; }
+        .back-link:hover { color: #a78bfa; }
         .fw-card:hover { border-color: rgba(118, 74, 188, 0.2); }
-        .fw-tag { background: rgba(118, 74, 188, 0.1); color: #764ABC; }
-        .fw-resource a { color: #764ABC; }
+        .fw-tag { background: rgba(118, 74, 188, 0.1); color: #a78bfa; }
+        .fw-resource a { color: #a78bfa; }
         .fw-resource a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🔄</span>
+            <span class="fw-logo" aria-hidden="true">🔄</span>
             <h1>Redux</h1>
             <p class="fw-desc">JavaScript应用的可预测状态容器。集中管理应用状态，提供可预测的状态更新机制。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">60k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">10M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2015</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Dan Abramov</span><span class="fw-stat-label">创始人</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://redux.js.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/reduxjs/redux" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/reduxjs/redux" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Redux 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔄</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔄</span>
                     <h3>单一数据源</h3>
                     <p>整个应用的状态存储在一个单一的store中。状态树清晰，便于调试和状态管理。</p>
                     <div class="fw-tags"><span class="fw-tag">单一Store</span><span class="fw-tag">状态树</span><span class="fw-tag">集中管理</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>状态只读</h3>
                     <p>状态只能通过dispatch action来修改。保证状态变化可追踪，可预测。</p>
                     <div class="fw-tags"><span class="fw-tag">dispatch</span><span class="fw-tag">action</span><span class="fw-tag">不可变</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>纯函数更新</h3>
                     <p>使用纯函数(reducer)来描述状态变化。相同输入总是产生相同输出，易于测试。</p>
                     <div class="fw-tags"><span class="fw-tag">reducer</span><span class="fw-tag">纯函数</span><span class="fw-tag">可测试</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>可预测性</h3>
                     <p>状态变化可预测，支持时间旅行调试。可回放状态变化，方便调试。</p>
                     <div class="fw-tags"><span class="fw-tag">可预测</span><span class="fw-tag">时间旅行</span><span class="fw-tag">调试</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 Redux 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>React-Redux</h3>
                     <p>React官方绑定库。提供useSelector、useDispatch等Hook，简化React组件与Redux的连接。</p>
                     <div class="fw-tags"><span class="fw-tag">react-redux</span><span class="fw-tag">useSelector</span><span class="fw-tag">useDispatch</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>Redux Toolkit</h3>
                     <p>官方推荐的Redux工具集。简化Redux开发，减少模板代码，提供最佳实践。</p>
                     <div class="fw-tags"><span class="fw-tag">@reduxjs/toolkit</span><span class="fw-tag">createSlice</span><span class="fw-tag">RTK Query</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>Redux DevTools</h3>
                     <p>强大的浏览器扩展。支持时间旅行调试、状态快照、action回放等。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux DevTools</span><span class="fw-tag">时间旅行</span><span class="fw-tag">调试</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>中间件</h3>
                     <p>支持Redux Thunk、Redux Saga等中间件。处理异步操作、副作用等复杂场景。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux Thunk</span><span class="fw-tag">Redux Saga</span><span class="fw-tag">中间件</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>RTK Query</h3>
                     <p>Redux Toolkit内置的数据获取和缓存工具。类似TanStack Query，与Redux深度集成。</p>
                     <div class="fw-tags"><span class="fw-tag">RTK Query</span><span class="fw-tag">数据获取</span><span class="fw-tag">缓存</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>TypeScript支持</h3>
                     <p>完整的TypeScript支持。类型安全的state、action、selector。</p>
                     <div class="fw-tags"><span class="fw-tag">TypeScript</span><span class="fw-tag">类型安全</span><span class="fw-tag">类型推断</span></div>
@@ -144,9 +150,9 @@ const counterSlice = createSlice({
     name: "counter",
     initialState: { value: 0 },
     reducers: {
-        increment: state => { state.value += 1 },
-        decrement: state => { state.value -= 1 },
-        incrementByAmount: (state, action) => {
+        increment: state =&gt; { state.value += 1 },
+        decrement: state =&gt; { state.value -= 1 },
+        incrementByAmount: (state, action) =&gt; {
             state.value += action.payload;
         }
     }
@@ -160,15 +166,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./counterSlice";
 
 function Counter() {
-    const count = useSelector(state => state.counter.value);
+    const count = useSelector(state =&gt; state.counter.value);
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <span>{count}</span>
-            <button onClick={() => dispatch(increment())}>+</button>
-        </div>
+        &lt;div&gt;
+            &lt;button onClick={() =&gt; dispatch(decrement())}&gt;-&lt;/button&gt;
+            &lt;span&gt;{count}&lt;/span&gt;
+            &lt;button onClick={() =&gt; dispatch(increment())}&gt;+&lt;/button&gt;
+        &lt;/div&gt;
     );
 }</code></pre>
             </div>
@@ -190,14 +196,14 @@ export const store = configureStore({
         users: usersReducer,
         [usersApi.reducerPath]: usersApi.reducer
     },
-    middleware: (getDefaultMiddleware) =>
+    middleware: (getDefaultMiddleware) =&gt;
         getDefaultMiddleware().concat(usersApi.middleware),
     devTools: process.env.NODE_ENV !== "production"
 });
 
 setupListeners(store.dispatch);
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType&lt;typeof store.getState&gt;;
 export type AppDispatch = typeof store.dispatch;</code></pre>
             </div>
         </section>
@@ -208,22 +214,22 @@ export type AppDispatch = typeof store.dispatch;</code></pre>
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的教程、API参考和最佳实践。</p>
-                    <a href="https://redux.js.org/" target="_blank">redux.js.org →</a>
+                    <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer">redux.js.org →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Redux Toolkit文档</h4>
                     <p>官方推荐的Redux开发工具集文档。</p>
-                    <a href="https://redux-toolkit.js.org/" target="_blank">redux-toolkit.js.org →</a>
+                    <a href="https://redux-toolkit.js.org/" target="_blank" rel="noopener noreferrer">redux-toolkit.js.org →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Redux GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/reduxjs/redux" target="_blank">github.com/reduxjs/redux →</a>
+                    <a href="https://github.com/reduxjs/redux" target="_blank" rel="noopener noreferrer">github.com/reduxjs/redux →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Redux示例</h4>
                     <p>官方示例项目和模板。</p>
-                    <a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" target="_blank">Tutorials →</a>
+                    <a href="https://redux.js.org/tutorials/essentials/part-1-overview-concepts" target="_blank" rel="noopener noreferrer">Tutorials →</a>
                 </div>
             </div>
         </section>
@@ -232,19 +238,19 @@ export type AppDispatch = typeof store.dispatch;</code></pre>
             <h2 class="fw-section-title">与其他状态管理库对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Zustand</h3>
                     <p>Redux更规范，适合大型项目。Zustand更简单，适合中小型项目，学习成本低。</p>
                     <div class="fw-tags"><span class="fw-tag">规范性</span><span class="fw-tag">学习成本</span><span class="fw-tag">项目规模</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs MobX</h3>
                     <p>Redux可预测性强，适合需要严格状态管理的场景。MobX更灵活，适合复杂对象。</p>
                     <div class="fw-tags"><span class="fw-tag">可预测性</span><span class="fw-tag">灵活性</span><span class="fw-tag">状态管理</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Jotai</h3>
                     <p>Redux集中式状态管理。Jotai原子化状态管理，适合细粒度状态控制。</p>
                     <div class="fw-tags"><span class="fw-tag">集中式</span><span class="fw-tag">原子化</span><span class="fw-tag">状态粒度</span></div>
@@ -254,7 +260,7 @@ export type AppDispatch = typeof store.dispatch;</code></pre>
     </main>
 
     <footer class="fw-footer">
-        <p>Redux 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#764ABC;text-decoration:none">返回首页</a></p>
+        <p>Redux 生态详解 · 前端技术导航 · <a href="../index.html" style="color:#a78bfa;text-decoration:none">返回首页</a></p>
     </footer>
 </body>
 </html>

@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Sass 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Sass 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Sass 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Sass 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(204, 102, 153, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #CC6699; }
         .fw-btn-primary { background: #CC6699; }
-        .fw-btn-primary:hover { background: #b85a87; box-shadow: 0 8px 25px rgba(204, 102, 153, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(204, 102, 153, 0.3); }
         .fw-btn-outline { border-color: #CC6699; color: #CC6699; }
         .fw-btn-outline:hover { background: rgba(204, 102, 153, 0.1); }
         .back-link:hover { color: #CC6699; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">💅</span>
+            <span class="fw-logo" aria-hidden="true">💅</span>
             <h1>Sass</h1>
             <p class="fw-desc">CSS预处理器，扩展CSS功能。支持变量、嵌套、混入、继承等高级特性，提升CSS开发效率。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">21k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">25M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2006</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Hampton Catlin</span><span class="fw-stat-label">创始人</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://sass-lang.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/sass/sass" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/sass/sass" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Sass 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">💅</span>
+                    <span class="fw-card-icon" aria-hidden="true">💅</span>
                     <h3>变量系统</h3>
                     <p>支持变量定义，统一管理颜色、字体、间距等设计Token。提升代码可维护性。</p>
                     <div class="fw-tags"><span class="fw-tag">变量</span><span class="fw-tag">设计Token</span><span class="fw-tag">可维护性</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>嵌套规则</h3>
                     <p>支持CSS规则嵌套，减少重复代码。结构更清晰，更符合HTML层级结构。</p>
                     <div class="fw-tags"><span class="fw-tag">嵌套</span><span class="fw-tag">减少重复</span><span class="fw-tag">结构清晰</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>混入和继承</h3>
                     <p>支持混入(Mixin)和继承(Extend)。代码复用，减少重复，提升开发效率。</p>
                     <div class="fw-tags"><span class="fw-tag">Mixin</span><span class="fw-tag">Extend</span><span class="fw-tag">代码复用</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>模块系统</h3>
                     <p>支持模块化组织CSS代码。@use和@forward规则，实现CSS模块化。</p>
                     <div class="fw-tags"><span class="fw-tag">@use</span><span class="fw-tag">@forward</span><span class="fw-tag">模块化</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 Sass 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>框架支持</h3>
                     <p>所有主流框架都支持Sass。React、Vue、Angular等可通过构建工具使用Sass。</p>
                     <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">Vue</span><span class="fw-tag">Angular</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>构建工具</h3>
                     <p>Webpack、Vite、Rollup等构建工具都支持Sass。通过loader或插件集成。</p>
                     <div class="fw-tags"><span class="fw-tag">sass-loader</span><span class="fw-tag">vite-plugin-sass</span><span class="fw-tag">构建工具</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>CSS框架</h3>
                     <p>Bootstrap、Foundation等CSS框架使用Sass。提供Sass源码，可自定义主题。</p>
                     <div class="fw-tags"><span class="fw-tag">Bootstrap</span><span class="fw-tag">Foundation</span><span class="fw-tag">自定义主题</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>工具库</h3>
                     <p>Compass、Bourbon等Sass工具库。提供常用混入和函数，加速开发。</p>
                     <div class="fw-tags"><span class="fw-tag">Compass</span><span class="fw-tag">Bourbon</span><span class="fw-tag">工具库</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>PostCSS集成</h3>
                     <p>可与PostCSS配合使用。Sass处理预处理器功能，PostCSS处理后处理器功能。</p>
                     <div class="fw-tags"><span class="fw-tag">PostCSS</span><span class="fw-tag">后处理器</span><span class="fw-tag">集成</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>在线编辑器</h3>
                     <p>Sass在线编辑器，实时编译和预览。方便学习和调试Sass代码。</p>
                     <div class="fw-tags"><span class="fw-tag">在线编辑器</span><span class="fw-tag">实时编译</span><span class="fw-tag">学习</span></div>
@@ -177,7 +183,7 @@ $font-stack: "Helvetica Neue", Arial, sans-serif;
     @extend %button-base;
     background: white;
     color: $primary-color;
-}' > styles.scss
+}' &gt; styles.scss
 
 # 编译Sass
 npx sass styles.scss styles.css
@@ -243,22 +249,22 @@ export default defineConfig({
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的指南、API参考和最佳实践。</p>
-                    <a href="https://sass-lang.com/documentation" target="_blank">sass-lang.com/documentation →</a>
+                    <a href="https://sass-lang.com/documentation" target="_blank" rel="noopener noreferrer">sass-lang.com/documentation →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Sass GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/sass/sass" target="_blank">github.com/sass/sass →</a>
+                    <a href="https://github.com/sass/sass" target="_blank" rel="noopener noreferrer">github.com/sass/sass →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Sass在线编辑器</h4>
                     <p>在线编写和测试Sass代码。</p>
-                    <a href="https://sass-lang.com/playground" target="_blank">Playground →</a>
+                    <a href="https://sass-lang.com/playground" target="_blank" rel="noopener noreferrer">Playground →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Sass指南</h4>
                     <p>社区维护的Sass最佳实践指南。</p>
-                    <a href="https://sass-guidelin.es/" target="_blank">sass-guidelin.es →</a>
+                    <a href="https://sass-guidelin.es/" target="_blank" rel="noopener noreferrer">sass-guidelin.es →</a>
                 </div>
             </div>
         </section>
@@ -267,19 +273,19 @@ export default defineConfig({
             <h2 class="fw-section-title">与其他CSS预处理器对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Less</h3>
                     <p>Sass功能更强大，社区更活跃。Less更简单，学习曲线低，适合简单项目。</p>
                     <div class="fw-tags"><span class="fw-tag">功能强大</span><span class="fw-tag">社区</span><span class="fw-tag">简单</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Stylus</h3>
                     <p>Sass语法更规范，工具支持更好。Stylus语法更灵活，但社区较小。</p>
                     <div class="fw-tags"><span class="fw-tag">语法规范</span><span class="fw-tag">工具支持</span><span class="fw-tag">灵活性</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs PostCSS</h3>
                     <p>Sass是预处理器，扩展CSS语法。PostCSS是后处理器，转换CSS代码。可配合使用。</p>
                     <div class="fw-tags"><span class="fw-tag">预处理器</span><span class="fw-tag">后处理器</span><span class="fw-tag">配合使用</span></div>

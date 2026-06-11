@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 ECharts 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="ECharts 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 ECharts 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>ECharts 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(255, 87, 34, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #FF5722; }
         .fw-btn-primary { background: #FF5722; }
-        .fw-btn-primary:hover { background: #f4441a; box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3); }
         .fw-btn-outline { border-color: #FF5722; color: #FF5722; }
         .fw-btn-outline:hover { background: rgba(255, 87, 34, 0.1); }
         .back-link:hover { color: #FF5722; }
@@ -25,26 +32,25 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">📊</span>
+            <span class="fw-logo" aria-hidden="true">📊</span>
             <h1>ECharts</h1>
             <p class="fw-desc">基于JavaScript的开源可视化图表库，由百度开发，现为Apache顶级项目。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">60k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">3M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2013</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Apache</span><span class="fw-stat-label">维护团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://echarts.apache.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/apache/echarts" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://echarts.apache.org/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/apache/echarts" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">ECharts 的设计哲学和关键技术特性</p>
@@ -54,7 +60,7 @@
                     <p>支持折线图、柱状图、饼图、散点图、地图等20+图表类型</p>
                 </div>
                 <div class="fw-card">
-                    <h3>🎨 强大定制能力</p>
+                    <h3>🎨 强大定制能力</h3>
                     <p>每个视觉元素都可自定义，满足个性化需求</p>
                 </div>
                 <div class="fw-card">
@@ -182,17 +188,17 @@ window.addEventListener('resize', function() {
                 <div class="fw-resource">
                     <h3>官方资源</h3>
                     <ul>
-                        <li><a href="https://echarts.apache.org/zh/index.html" target="_blank">ECharts 官方文档</a></li>
-                        <li><a href="https://github.com/apache/echarts" target="_blank">ECharts GitHub仓库</a></li>
-                        <li><a href="https://echarts.apache.org/examples/zh/" target="_blank">官方示例</a></li>
+                        <li><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener noreferrer">ECharts 官方文档</a></li>
+                        <li><a href="https://github.com/apache/echarts" target="_blank" rel="noopener noreferrer">ECharts GitHub仓库</a></li>
+                        <li><a href="https://echarts.apache.org/examples/zh/" target="_blank" rel="noopener noreferrer">官方示例</a></li>
                     </ul>
                 </div>
                 <div class="fw-resource">
                     <h3>学习路径</h3>
                     <ul>
-                        <li><a href="https://echarts.apache.org/handbook/zh/basics/getting-started/" target="_blank">快速入门</a></li>
-                        <li><a href="https://echarts.apache.org/handbook/zh/concepts/dataset" target="_blank">数据集</a></li>
-                        <li><a href="https://echarts.apache.org/handbook/zh/how-to/chart-types/" target="_blank">图表类型</a></li>
+                        <li><a href="https://echarts.apache.org/handbook/en/get-started/" target="_blank" rel="noopener noreferrer">快速入门</a></li>
+                        <li><a href="https://echarts.apache.org/handbook/zh/concepts/dataset" target="_blank" rel="noopener noreferrer">数据集</a></li>
+                        <li><a href="https://echarts.apache.org/handbook/zh/how-to/chart-types/" target="_blank" rel="noopener noreferrer">图表类型</a></li>
                     </ul>
                 </div>
             </div>
@@ -214,7 +220,7 @@ window.addEventListener('resize', function() {
     </main>
 
     <footer class="fw-footer">
-        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-11</p>
     </footer>
 </body>
 </html>

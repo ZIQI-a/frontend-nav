@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Lodash 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Lodash 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Lodash 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Lodash 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #3B82F6; }
         .fw-btn-primary { background: #3B82F6; }
-        .fw-btn-primary:hover { background: #2563EB; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3); }
         .fw-btn-outline { border-color: #3B82F6; color: #3B82F6; }
         .fw-btn-outline:hover { background: rgba(59, 130, 246, 0.1); }
         .back-link:hover { color: #3B82F6; }
@@ -25,26 +32,25 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">🔧</span>
+            <span class="fw-logo" aria-hidden="true">🔧</span>
             <h1>Lodash</h1>
             <p class="fw-desc">JavaScript工具库，提供模块化、高性能的工具函数。让JavaScript编程更简单。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">59k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">50M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2012</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">John-David Dalton</span><span class="fw-stat-label">作者</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://lodash.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/lodash/lodash" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://lodash.com/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/lodash/lodash" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Lodash 的设计哲学和关键技术特性</p>
@@ -127,7 +133,7 @@ npm install lodash-es
 # 完整引入（不推荐）
 import _ from 'lodash'
 _.chunk(['a', 'b', 'c', 'd'], 2)
-// => [['a', 'b'], ['c', 'd']]
+// =&gt; [['a', 'b'], ['c', 'd']]
 
 # 按需引入（推荐）
 import chunk from 'lodash/chunk'
@@ -164,11 +170,11 @@ set(obj, 'a.b.d', 2) // { a: { b: { c: 1, d: 2 } } }
 // 函数操作
 import { debounce, throttle, memoize } from 'lodash-es'
 
-const debouncedFn = debounce(() => {
+const debouncedFn = debounce(() =&gt; {
   console.log('Debounced!')
 }, 300)
 
-const throttledFn = throttle(() => {
+const throttledFn = throttle(() =&gt; {
   console.log('Throttled!')
 }, 300)
 
@@ -192,17 +198,17 @@ groupBy(users, 'age')
                 <div class="fw-resource">
                     <h3>官方资源</h3>
                     <ul>
-                        <li><a href="https://lodash.com/docs/" target="_blank">Lodash 官方文档</a></li>
-                        <li><a href="https://github.com/lodash/lodash" target="_blank">Lodash GitHub仓库</a></li>
-                        <li><a href="https://www.npmjs.com/package/lodash" target="_blank">Lodash npm包</a></li>
+                        <li><a href="https://lodash.com/docs/" target="_blank" rel="noopener noreferrer">Lodash 官方文档</a></li>
+                        <li><a href="https://github.com/lodash/lodash" target="_blank" rel="noopener noreferrer">Lodash GitHub仓库</a></li>
+                        <li><a href="https://www.npmjs.com/package/lodash" target="_blank" rel="noopener noreferrer">Lodash npm包</a></li>
                     </ul>
                 </div>
                 <div class="fw-resource">
                     <h3>学习路径</h3>
                     <ul>
-                        <li><a href="https://lodash.com/docs/4.17.15" target="_blank">API文档</a></li>
-                        <li><a href="https://lodash.com/docs/4.17.15#chunk" target="_blank">数组函数</a></li>
-                        <li><a href="https://lodash.com/docs/4.17.15#get" target="_blank">对象函数</a></li>
+                        <li><a href="https://lodash.com/docs/4.17.15" target="_blank" rel="noopener noreferrer">API文档</a></li>
+                        <li><a href="https://lodash.com/docs/4.17.15#chunk" target="_blank" rel="noopener noreferrer">数组函数</a></li>
+                        <li><a href="https://lodash.com/docs/4.17.15#get" target="_blank" rel="noopener noreferrer">对象函数</a></li>
                     </ul>
                 </div>
             </div>
@@ -224,7 +230,7 @@ groupBy(users, 'age')
     </main>
 
     <footer class="fw-footer">
-        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-11</p>
     </footer>
 </body>
 </html>

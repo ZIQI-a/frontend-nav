@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 Vue.js 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="Vue.js 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 Vue.js 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Vue.js 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(66,184,131,0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #42b883; }
         .fw-btn-primary { background: #42b883; }
-        .fw-btn-primary:hover { background: #35a06e; box-shadow: 0 8px 25px rgba(66,184,131,0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(66,184,131,0.3); }
         .fw-btn-outline { border-color: #42b883; color: #42b883; }
         .fw-btn-outline:hover { background: rgba(66,184,131,0.1); }
         .back-link:hover { color: #42b883; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">💚</span>
+            <span class="fw-logo" aria-hidden="true">💚</span>
             <h1>Vue.js</h1>
             <p class="fw-desc">渐进式 JavaScript 框架，易学易用、性能出色、生态丰富。尤雨溪创建，由社区驱动，是中国最受欢迎的前端框架之一。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">208k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">4.5M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2014</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">社区</span><span class="fw-stat-label">维护方</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://vuejs.org/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/vuejs/core" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/vuejs/core" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">Vue 3 的现代化设计理念</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📐</span>
+                    <span class="fw-card-icon" aria-hidden="true">📐</span>
                     <h3>组合式 API</h3>
                     <p>Vue 3 引入的 Composition API，通过 ref、reactive、computed 等函数组织逻辑，支持更好的代码复用和 TypeScript 集成。</p>
                     <div class="fw-tags"><span class="fw-tag">ref</span><span class="fw-tag">reactive</span><span class="fw-tag">computed</span><span class="fw-tag">watch</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>响应式系统</h3>
                     <p>基于 Proxy 的细粒度响应式系统，自动追踪依赖、精确更新。Vue 3 的响应式性能大幅优于 Vue 2。</p>
                     <div class="fw-tags"><span class="fw-tag">Proxy</span><span class="fw-tag">依赖追踪</span><span class="fw-tag">自动更新</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧩</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧩</span>
                     <h3>单文件组件 (SFC)</h3>
                     <p>将模板、逻辑和样式组织在一个 .vue 文件中，直观清晰，是 Vue 的标志性特性。</p>
                     <div class="fw-tags"><span class="fw-tag">&lt;template&gt;</span><span class="fw-tag">&lt;script setup&gt;</span><span class="fw-tag">&lt;style scoped&gt;</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔥</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔥</span>
                     <h3>Vapor Mode</h3>
                     <p>Vue 正在开发的编译优化模式，移除 Virtual DOM 开销，生成直接的 DOM 操作代码，性能接近原生 JS。</p>
                     <div class="fw-tags"><span class="fw-tag">编译优化</span><span class="fw-tag">零VDOM</span><span class="fw-tag">实验性</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">Vue 官方维护的核心库和社区工具</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧭</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧭</span>
                     <h3>Vue Router</h3>
                     <p>Vue.js 官方路由管理器，支持嵌套路由、导航守卫、路由懒加载等。Vue Router 4 适配 Vue 3。</p>
                     <div class="fw-tags"><span class="fw-tag">嵌套路由</span><span class="fw-tag">导航守卫</span><span class="fw-tag">路由懒加载</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🍍</span>
+                    <span class="fw-card-icon" aria-hidden="true">🍍</span>
                     <h3>Pinia</h3>
                     <p>Vue 官方新一代状态管理，取代 Vuex。API 简洁，完美支持 TypeScript 和组合式 API。</p>
                     <div class="fw-tags"><span class="fw-tag">Store</span><span class="fw-tag">组合式API</span><span class="fw-tag">DevTools</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🛠️</span>
+                    <span class="fw-card-icon" aria-hidden="true">🛠️</span>
                     <h3>VueUse</h3>
                     <p>组合式工具函数集合，提供 200+ 实用函数，覆盖浏览器 API、传感器、动画等场景。</p>
                     <div class="fw-tags"><span class="fw-tag">useMouse</span><span class="fw-tag">useStorage</span><span class="fw-tag">useFetch</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>UI 组件库</h3>
                     <p>Element Plus 适合中后台，Naive UI 设计精美，Vant 是移动端首选，Quasar 跨端一体。</p>
                     <div class="fw-tags"><span class="fw-tag">Element Plus</span><span class="fw-tag">Naive UI</span><span class="fw-tag">Vant</span><span class="fw-tag">Quasar</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>Vite</h3>
                     <p>Vue 团队开发的下一代构建工具，基于 ESM 和 esbuild，极速冷启动和 HMR，已成行业标准。</p>
                     <div class="fw-tags"><span class="fw-tag">ESM</span><span class="fw-tag">HMR</span><span class="fw-tag">插件系统</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📝</span>
+                    <span class="fw-card-icon" aria-hidden="true">📝</span>
                     <h3>表单与验证</h3>
                     <p>VeeValidate 是最流行的 Vue 表单验证库，FormKit 提供完整的表单构建方案。</p>
                     <div class="fw-tags"><span class="fw-tag">VeeValidate</span><span class="fw-tag">FormKit</span><span class="fw-tag">Zod</span></div>
@@ -124,19 +130,19 @@
             <p class="fw-section-desc">基于 Vue 的全栈解决方案</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">💚</span>
+                    <span class="fw-card-icon" aria-hidden="true">💚</span>
                     <h3>Nuxt.js</h3>
                     <p>Vue 全栈框架，支持 SSR/SSG/ISR，自动导入、文件路由、服务端 API 等开箱即用。</p>
                     <div class="fw-tags"><span class="fw-tag">自动导入</span><span class="fw-tag">文件路由</span><span class="fw-tag">Nitro引擎</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📖</span>
+                    <span class="fw-card-icon" aria-hidden="true">📖</span>
                     <h3>VitePress</h3>
                     <p>基于 Vue 和 Vite 的静态站点生成器，极速构建文档站点，Vue 官方文档即用此构建。</p>
                     <div class="fw-tags"><span class="fw-tag">Markdown</span><span class="fw-tag">SSG</span><span class="fw-tag">主题系统</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌌</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌌</span>
                     <h3>Astro</h3>
                     <p>支持 Vue 的多框架 SSG，采用群岛架构实现零 JS 水合，极致性能。</p>
                     <div class="fw-tags"><span class="fw-tag">群岛架构</span><span class="fw-tag">零JS</span><span class="fw-tag">多框架</span></div>
@@ -183,17 +189,17 @@ function addTodo() {
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的指南、教程和 API 参考，支持中文。</p>
-                    <a href="https://vuejs.org/guide/" target="_blank">vuejs.org/guide →</a>
+                    <a href="https://vuejs.org/guide/" target="_blank" rel="noopener noreferrer">vuejs.org/guide →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Vue Mastery</h4>
                     <p>高质量的 Vue 视频课程和教程。</p>
-                    <a href="https://www.vuemastery.com/" target="_blank">vuemastery.com →</a>
+                    <a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer">vuemastery.com →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Nuxt 文档</h4>
                     <p>Nuxt.js 官方文档和学习资源。</p>
-                    <a href="https://nuxt.com/docs" target="_blank">nuxt.com/docs →</a>
+                    <a href="https://nuxt.com/docs" target="_blank" rel="noopener noreferrer">nuxt.com/docs →</a>
                 </div>
             </div>
         </section>

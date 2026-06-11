@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 React 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="React 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 React 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>React 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(97,218,251,0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #61dafb; }
         .fw-btn-primary { background: #61dafb; }
-        .fw-btn-primary:hover { background: #4fc3f7; box-shadow: 0 8px 25px rgba(97,218,251,0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(97,218,251,0.3); }
         .fw-btn-outline { border-color: #61dafb; color: #61dafb; }
         .fw-btn-outline:hover { background: rgba(97,218,251,0.1); }
         .back-link:hover { color: #61dafb; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">⚛️</span>
+            <span class="fw-logo" aria-hidden="true">⚛️</span>
             <h1>React</h1>
             <p class="fw-desc">用于构建用户界面的 JavaScript 库。由 Meta (Facebook) 开发和维护，以其声明式、组件化和高效的特点，成为全球最流行的前端框架。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">230k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">15M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2013</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Meta</span><span class="fw-stat-label">维护方</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://react.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/facebook/react" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://react.dev/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/facebook/react" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">React 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔄</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔄</span>
                     <h3>声明式 UI</h3>
                     <p>描述 UI 应该是什么样子，React 自动处理 DOM 更新。通过 Virtual DOM 和 Diff 算法高效更新真实 DOM。</p>
                     <div class="fw-tags"><span class="fw-tag">JSX</span><span class="fw-tag">Virtual DOM</span><span class="fw-tag">Fiber</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🪝</span>
+                    <span class="fw-card-icon" aria-hidden="true">🪝</span>
                     <h3>Hooks 系统</h3>
                     <p>在函数组件中使用状态和生命周期等 React 特性。useState、useEffect、useContext 等 Hook 让组件逻辑更清晰。</p>
                     <div class="fw-tags"><span class="fw-tag">useState</span><span class="fw-tag">useEffect</span><span class="fw-tag">useMemo</span><span class="fw-tag">useCallback</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>并发渲染</h3>
                     <p>React 18+ 引入的并发特性，允许同时准备多个版本的 UI，实现可中断渲染和优先级调度。</p>
                     <div class="fw-tags"><span class="fw-tag">Concurrent Mode</span><span class="fw-tag">Suspense</span><span class="fw-tag">Transitions</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🖥️</span>
+                    <span class="fw-card-icon" aria-hidden="true">🖥️</span>
                     <h3>Server Components</h3>
                     <p>在服务端运行的组件，零 Bundle 体积，可直接访问后端资源，与客户端组件无缝混合。</p>
                     <div class="fw-tags"><span class="fw-tag">RSC</span><span class="fw-tag">Server Actions</span><span class="fw-tag">流式渲染</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 React 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧭</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧭</span>
                     <h3>路由</h3>
                     <p>React Router 是事实标准，TanStack Router 提供类型安全路由，wouter 是轻量替代。</p>
                     <div class="fw-tags"><span class="fw-tag">React Router</span><span class="fw-tag">TanStack Router</span><span class="fw-tag">wouter</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>状态管理</h3>
                     <p>从 Redux 到 Zustand、Jotai，再到 Valtio 和 MobX，覆盖从简单到复杂的所有场景。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux Toolkit</span><span class="fw-tag">Zustand</span><span class="fw-tag">Jotai</span><span class="fw-tag">MobX</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔍</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔍</span>
                     <h3>数据获取</h3>
                     <p>TanStack Query 和 SWR 处理服务端状态缓存，Apollo Client 和 Relay 用于 GraphQL。</p>
                     <div class="fw-tags"><span class="fw-tag">TanStack Query</span><span class="fw-tag">SWR</span><span class="fw-tag">Apollo</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>UI 组件库</h3>
                     <p>Ant Design 适合中后台，MUI 遵循 Material Design，Shadcn/ui 和 Radix UI 提供无头组件。</p>
                     <div class="fw-tags"><span class="fw-tag">Ant Design</span><span class="fw-tag">MUI</span><span class="fw-tag">Shadcn/ui</span><span class="fw-tag">Radix</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📝</span>
+                    <span class="fw-card-icon" aria-hidden="true">📝</span>
                     <h3>表单</h3>
                     <p>React Hook Form 高性能无重渲染，Formik 最流行，React Final Form 订阅式更新。</p>
                     <div class="fw-tags"><span class="fw-tag">React Hook Form</span><span class="fw-tag">Formik</span><span class="fw-tag">Zod</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎬</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎬</span>
                     <h3>动画</h3>
                     <p>Framer Motion 提供声明式动画 API，React Spring 基于物理弹簧模型。</p>
                     <div class="fw-tags"><span class="fw-tag">Framer Motion</span><span class="fw-tag">React Spring</span><span class="fw-tag">GSAP</span></div>
@@ -124,19 +130,19 @@
             <p class="fw-section-desc">基于 React 的全栈开发解决方案</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">▲</span>
+                    <span class="fw-card-icon" aria-hidden="true">▲</span>
                     <h3>Next.js</h3>
                     <p>最流行的 React 全栈框架，支持 SSR/SSG/ISR/RSC，内置 API 路由、图片优化、中间件等企业级特性。</p>
                     <div class="fw-tags"><span class="fw-tag">App Router</span><span class="fw-tag">RSC</span><span class="fw-tag">Server Actions</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">💿</span>
+                    <span class="fw-card-icon" aria-hidden="true">💿</span>
                     <h3>Remix</h3>
                     <p>专注于 Web 标准的全栈框架，采用嵌套路由和并行数据加载，充分利用 HTTP 缓存。</p>
                     <div class="fw-tags"><span class="fw-tag">嵌套路由</span><span class="fw-tag">Loader</span><span class="fw-tag">Form增强</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🚀</span>
+                    <span class="fw-card-icon" aria-hidden="true">🚀</span>
                     <h3>Gatsby</h3>
                     <p>基于 GraphQL 的静态站点生成器，拥有丰富的插件生态，适合博客和文档站点。</p>
                     <div class="fw-tags"><span class="fw-tag">GraphQL</span><span class="fw-tag">SSG</span><span class="fw-tag">插件系统</span></div>
@@ -170,17 +176,17 @@ function Counter() {
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>包含交互式教程、API 参考和最佳实践。</p>
-                    <a href="https://react.dev/learn" target="_blank">react.dev/learn →</a>
+                    <a href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">react.dev/learn →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>React GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/facebook/react" target="_blank">github.com/facebook/react →</a>
+                    <a href="https://github.com/facebook/react" target="_blank" rel="noopener noreferrer">github.com/facebook/react →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Awesome React</h4>
                     <p>社区维护的 React 资源大全。</p>
-                    <a href="https://github.com/enaqx/awesome-react" target="_blank">awesome-react →</a>
+                    <a href="https://github.com/enaqx/awesome-react" target="_blank" rel="noopener noreferrer">awesome-react →</a>
                 </div>
             </div>
         </section>

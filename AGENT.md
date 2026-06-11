@@ -10,12 +10,16 @@
 - **字体**: Space Grotesk + Inter (Google Fonts)
 - **设计**: 深色主题，响应式设计
 - **构建**: 无构建工具，纯静态文件
+- **校验环境**: Node.js 18+
 
 ## 项目结构规范
 
 ```
 frontend-nav/
 ├── index.html                 # 主页入口
+├── favicon.svg                # 站点图标
+├── robots.txt                 # 搜索引擎抓取规则
+├── package.json               # 站点校验命令
 ├── AGENT.md                   # 项目开发约束文档
 ├── css/
 │   ├── style.css             # 主样式（全局变量、布局、组件）
@@ -29,6 +33,9 @@ frontend-nav/
 │   │   └── tech-details.js    # 技术详细信息（一句话介绍+官网）
 │   └── components/
 │       └── tech-card.js       # 卡片组件逻辑
+├── scripts/
+│   ├── validate-site.js       # 离线结构、链接、SEO与数据校验
+│   └── check-external-links.js # 在线外链失效检查
 └── pages/
     ├── react.html             # React 生态详解
     ├── vue.html               # Vue.js 生态详解
@@ -209,6 +216,15 @@ frontend-nav/
 - 内存使用合理
 - 无内存泄漏
 
+### 4. 发布前校验
+```bash
+# 离线校验：HTML结构、本地链接、SEO、数据和颜色对比度
+npm run validate
+
+# 在线校验：检查官网和详情页资源是否出现404/410
+npm run validate:links
+```
+
 ## 部署要求
 
 ### 1. 静态部署
@@ -259,3 +275,4 @@ frontend-nav/
 ## 更新记录
 
 - 2026-06-10: 初始版本，建立项目开发约束
+- 2026-06-11: 完善技术生态数据、交互可访问性与发布前自动校验

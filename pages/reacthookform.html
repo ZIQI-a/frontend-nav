@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 React Hook Form 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="React Hook Form 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 React Hook Form 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>React Hook Form 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(236, 72, 153, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #EC4899; }
         .fw-btn-primary { background: #EC4899; }
-        .fw-btn-primary:hover { background: #db2777; box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3); }
         .fw-btn-outline { border-color: #EC4899; color: #EC4899; }
         .fw-btn-outline:hover { background: rgba(236, 72, 153, 0.1); }
         .back-link:hover { color: #EC4899; }
@@ -25,26 +32,25 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">📋</span>
+            <span class="fw-logo" aria-hidden="true">📋</span>
             <h1>React Hook Form</h1>
             <p class="fw-desc">高性能、灵活的React表单验证库。基于Hooks，性能卓越，体积小。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">40k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">5M+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2019</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Beier Luo</span><span class="fw-stat-label">作者</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://react-hook-form.com/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/react-hook-form/react-hook-form" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://react-hook-form.com/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/react-hook-form/react-hook-form" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">React Hook Form 的设计哲学和关键技术特性</p>
@@ -127,7 +133,7 @@ import { useForm } from 'react-hook-form'
 function App() {
   const { register, handleSubmit, formState: { errors } } = useForm()
   
-  const onSubmit = (data) => {
+  const onSubmit = (data) =&gt; {
     console.log(data)
   }
   
@@ -160,7 +166,7 @@ const schema = z.object({
   email: z.string().email('请输入有效的邮箱'),
   password: z.string().min(8, '密码至少8位'),
   confirmPassword: z.string(),
-}).refine((data) => data.password === data.confirmPassword, {
+}).refine((data) =&gt; data.password === data.confirmPassword, {
   message: '两次密码不一致',
   path: ['confirmPassword'],
 })
@@ -189,13 +195,13 @@ function AdvancedForm() {
   const watchPassword = watch('password')
   
   // 手动设置值
-  const handleReset = () => {
+  const handleReset = () =&gt; {
     reset() // 重置表单
   }
   
   // 异步提交
-  const onSubmit = async (data) => {
-    await new Promise(resolve => setTimeout(resolve, 1000))
+  const onSubmit = async (data) =&gt; {
+    await new Promise(resolve =&gt; setTimeout(resolve, 1000))
     console.log(data)
   }
   
@@ -259,17 +265,17 @@ function FormWithController() {
                 <div class="fw-resource">
                     <h3>官方资源</h3>
                     <ul>
-                        <li><a href="https://react-hook-form.com/get-started" target="_blank">React Hook Form 官方文档</a></li>
-                        <li><a href="https://github.com/react-hook-form/react-hook-form" target="_blank">React Hook Form GitHub仓库</a></li>
-                        <li><a href="https://react-hook-form.com/api" target="_blank">API文档</a></li>
+                        <li><a href="https://react-hook-form.com/get-started" target="_blank" rel="noopener noreferrer">React Hook Form 官方文档</a></li>
+                        <li><a href="https://github.com/react-hook-form/react-hook-form" target="_blank" rel="noopener noreferrer">React Hook Form GitHub仓库</a></li>
+                        <li><a href="https://react-hook-form.com/docs" target="_blank" rel="noopener noreferrer">API文档</a></li>
                     </ul>
                 </div>
                 <div class="fw-resource">
                     <h3>学习路径</h3>
                     <ul>
-                        <li><a href="https://react-hook-form.com/get-started" target="_blank">快速入门</a></li>
-                        <li><a href="https://react-hook-form.com/api/useform" target="_blank">useForm钩子</a></li>
-                        <li><a href="https://react-hook-form.com/api/usecontroller" target="_blank">useController钩子</a></li>
+                        <li><a href="https://react-hook-form.com/get-started" target="_blank" rel="noopener noreferrer">快速入门</a></li>
+                        <li><a href="https://react-hook-form.com/docs/useform" target="_blank" rel="noopener noreferrer">useForm钩子</a></li>
+                        <li><a href="https://react-hook-form.com/docs/usecontroller" target="_blank" rel="noopener noreferrer">useController钩子</a></li>
                     </ul>
                 </div>
             </div>
@@ -291,7 +297,7 @@ function FormWithController() {
     </main>
 
     <footer class="fw-footer">
-        <p>© 2026 前端技术导航 | 更新时间：2026-06-10</p>
+        <p>© 2026 前端技术导航 | 更新时间：2026-06-11</p>
     </footer>
 </body>
 </html>

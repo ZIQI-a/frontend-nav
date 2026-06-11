@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深入了解 React Native 的核心特性、生态系统、快速入门与学习资源。">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:title" content="React Native 生态详解 | 前端技术导航">
+    <meta property="og:description" content="深入了解 React Native 的核心特性、生态系统、快速入门与学习资源。">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>React Native 生态详解 | 前端技术导航</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +21,7 @@
         .fw-hero::before { background: radial-gradient(circle at 30% 50%, rgba(97, 218, 251, 0.12) 0%, transparent 50%); }
         .fw-hero h1, .fw-stat-num { color: #61DAFB; }
         .fw-btn-primary { background: #61DAFB; color: #0a0a0a; }
-        .fw-btn-primary:hover { background: #4dc8e8; box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3); }
+        .fw-btn-primary:hover { box-shadow: 0 8px 25px rgba(97, 218, 251, 0.3); }
         .fw-btn-outline { border-color: #61DAFB; color: #61DAFB; }
         .fw-btn-outline:hover { background: rgba(97, 218, 251, 0.1); }
         .back-link:hover { color: #61DAFB; }
@@ -25,50 +32,49 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="fw-hero">
         <div class="fw-hero-content">
-            <span class="fw-logo">⚛️</span>
+            <span class="fw-logo" aria-hidden="true">⚛️</span>
             <h1>React Native</h1>
             <p class="fw-desc">使用React构建原生移动应用的框架。一套代码，同时运行在iOS和Android平台。</p>
             <div class="fw-stats">
-                <div class="fw-stat"><span class="fw-stat-num">115k+</span><span class="fw-stat-label">GitHub Stars</span></div>
-                <div class="fw-stat"><span class="fw-stat-num">500k+</span><span class="fw-stat-label">周下载量</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">2015</span><span class="fw-stat-label">发布年份</span></div>
                 <div class="fw-stat"><span class="fw-stat-num">Facebook</span><span class="fw-stat-label">开发团队</span></div>
             </div>
             <div class="fw-actions">
-                <a href="https://reactnative.dev/" target="_blank" class="fw-btn fw-btn-primary">访问官网 →</a>
-                <a href="https://github.com/facebook/react-native" target="_blank" class="fw-btn fw-btn-outline">GitHub</a>
+                <a href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-primary">访问官网 →</a>
+                <a href="https://github.com/facebook/react-native" target="_blank" rel="noopener noreferrer" class="fw-btn fw-btn-outline">GitHub</a>
                 <a href="../index.html" class="back-link">← 返回首页</a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="fw-section">
             <h2 class="fw-section-title">核心特性</h2>
             <p class="fw-section-desc">React Native 的设计哲学和关键技术特性</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>跨平台开发</h3>
                     <p>一套代码，同时运行在iOS和Android平台。开发效率高，维护成本低。</p>
                     <div class="fw-tags"><span class="fw-tag">跨平台</span><span class="fw-tag">iOS</span><span class="fw-tag">Android</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>原生性能</h3>
                     <p>使用原生组件，性能接近原生应用。支持原生模块扩展。</p>
                     <div class="fw-tags"><span class="fw-tag">原生组件</span><span class="fw-tag">高性能</span><span class="fw-tag">原生模块</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚡</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚡</span>
                     <h3>热重载</h3>
                     <p>支持热重载，修改代码后立即生效。开发体验流畅，效率高。</p>
                     <div class="fw-tags"><span class="fw-tag">热重载</span><span class="fw-tag">开发体验</span><span class="fw-tag">效率</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🔧</span>
+                    <span class="fw-card-icon" aria-hidden="true">🔧</span>
                     <h3>React生态</h3>
                     <p>使用React语法和生态。Web开发者可快速上手，代码可复用。</p>
                     <div class="fw-tags"><span class="fw-tag">React</span><span class="fw-tag">JSX</span><span class="fw-tag">生态</span></div>
@@ -81,37 +87,37 @@
             <p class="fw-section-desc">围绕 React Native 构建的完整工具链</p>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">⚛️</span>
+                    <span class="fw-card-icon" aria-hidden="true">⚛️</span>
                     <h3>Expo</h3>
                     <p>React Native开发工具链。提供开箱即用的开发环境，简化开发流程。</p>
                     <div class="fw-tags"><span class="fw-tag">Expo</span><span class="fw-tag">开发工具</span><span class="fw-tag">简化</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🧪</span>
+                    <span class="fw-card-icon" aria-hidden="true">🧪</span>
                     <h3>React Navigation</h3>
                     <p>React Native导航库。支持栈导航、标签导航、抽屉导航等。</p>
                     <div class="fw-tags"><span class="fw-tag">React Navigation</span><span class="fw-tag">导航</span><span class="fw-tag">路由</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📄</span>
+                    <span class="fw-card-icon" aria-hidden="true">📄</span>
                     <h3>NativeBase</h3>
                     <p>跨平台UI组件库。提供丰富的原生风格组件。</p>
                     <div class="fw-tags"><span class="fw-tag">NativeBase</span><span class="fw-tag">UI组件</span><span class="fw-tag">跨平台</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🎨</span>
+                    <span class="fw-card-icon" aria-hidden="true">🎨</span>
                     <h3>React Native Paper</h3>
                     <p>Material Design组件库。提供Material Design风格的UI组件。</p>
                     <div class="fw-tags"><span class="fw-tag">React Native Paper</span><span class="fw-tag">Material Design</span><span class="fw-tag">UI</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📦</span>
+                    <span class="fw-card-icon" aria-hidden="true">📦</span>
                     <h3>状态管理</h3>
                     <p>支持Redux、Zustand、MobX等状态管理库。与React生态完全兼容。</p>
                     <div class="fw-tags"><span class="fw-tag">Redux</span><span class="fw-tag">Zustand</span><span class="fw-tag">MobX</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">🌐</span>
+                    <span class="fw-card-icon" aria-hidden="true">🌐</span>
                     <h3>测试工具</h3>
                     <p>支持Jest、React Native Testing Library等测试工具。单元测试、组件测试。</p>
                     <div class="fw-tags"><span class="fw-tag">Jest</span><span class="fw-tag">Testing Library</span><span class="fw-tag">测试</span></div>
@@ -141,10 +147,10 @@ export default function App() {
     const [count, setCount] = React.useState(0);
     
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Count: {count}</Text>
-            <Button title="Increment" onPress={() => setCount(count + 1)} />
-        </View>
+        &lt;View style={styles.container}&gt;
+            &lt;Text style={styles.text}&gt;Count: {count}&lt;/Text&gt;
+            &lt;Button title="Increment" onPress={() =&gt; setCount(count + 1)} /&gt;
+        &lt;/View&gt;
     );
 }
 
@@ -222,22 +228,22 @@ const styles = StyleSheet.create({
                 <div class="fw-resource">
                     <h4>官方文档</h4>
                     <p>全面的指南、API参考和教程。</p>
-                    <a href="https://reactnative.dev/docs/getting-started" target="_blank">reactnative.dev/docs →</a>
+                    <a href="https://reactnative.dev/docs/getting-started" target="_blank" rel="noopener noreferrer">reactnative.dev/docs →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>React Native GitHub</h4>
                     <p>源代码仓库，可查看源码和参与贡献。</p>
-                    <a href="https://github.com/facebook/react-native" target="_blank">github.com/facebook/react-native →</a>
+                    <a href="https://github.com/facebook/react-native" target="_blank" rel="noopener noreferrer">github.com/facebook/react-native →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>Expo文档</h4>
                     <p>Expo开发工具链的完整文档。</p>
-                    <a href="https://docs.expo.dev/" target="_blank">docs.expo.dev →</a>
+                    <a href="https://docs.expo.dev/" target="_blank" rel="noopener noreferrer">docs.expo.dev →</a>
                 </div>
                 <div class="fw-resource">
                     <h4>React Native示例</h4>
                     <p>官方示例项目和模板。</p>
-                    <a href="https://github.com/react-native-community/react-native-example" target="_blank">Examples →</a>
+                    <a href="https://github.com/react-native-community/react-native-example" target="_blank" rel="noopener noreferrer">Examples →</a>
                 </div>
             </div>
         </section>
@@ -246,19 +252,19 @@ const styles = StyleSheet.create({
             <h2 class="fw-section-title">与其他跨平台框架对比</h2>
             <div class="fw-grid">
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Flutter</h3>
                     <p>React Native使用JavaScript，Web开发者易上手。Flutter性能更好，UI一致性更强。</p>
                     <div class="fw-tags"><span class="fw-tag">JavaScript</span><span class="fw-tag">性能</span><span class="fw-tag">UI一致性</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs Ionic</h3>
                     <p>React Native使用原生组件，性能更好。Ionic使用WebView，开发更简单。</p>
                     <div class="fw-tags"><span class="fw-tag">原生组件</span><span class="fw-tag">WebView</span><span class="fw-tag">性能</span></div>
                 </div>
                 <div class="fw-card">
-                    <span class="fw-card-icon">📊</span>
+                    <span class="fw-card-icon" aria-hidden="true">📊</span>
                     <h3>vs .NET MAUI</h3>
                     <p>React Native使用JavaScript，生态更丰富。.NET MAUI使用C#，适合.NET开发者。</p>
                     <div class="fw-tags"><span class="fw-tag">JavaScript</span><span class="fw-tag">C#</span><span class="fw-tag">生态</span></div>

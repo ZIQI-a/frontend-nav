@@ -63,7 +63,7 @@
 
 .fw-stat-label {
     font-size: 0.8rem;
-    color: #666;
+    color: #858585;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -147,7 +147,7 @@
 /* 特性卡片网格 */
 .fw-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 24px;
 }
 
@@ -218,7 +218,7 @@
 /* 资源卡片 */
 .fw-resources {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 20px;
 }
 
@@ -261,7 +261,7 @@
     padding: 40px 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #666;
+    color: #858585;
     font-size: 0.9rem;
 }
 

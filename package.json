@@ -1,0 +1,11 @@
+{
+  "name": "frontend-ecosystem-nav",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-site.js",
+    "validate:links": "node scripts/check-external-links.js"
+  }
+}
